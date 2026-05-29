@@ -1,0 +1,229 @@
+[
+  {
+    "id": "raisins-clairs",
+    "name": "Plage des Raisins Clairs",
+    "tagline": "Eau turquoise, cocotiers, familles bienvenues",
+    "description": "La plage la plus proche de Villa Kisara. Sable blanc, eau calme protégée par la barrière de corail, idéale pour les enfants. Snack-bars et location de transats sur place.",
+    "coordinates": {
+      "lat": 16.2541,
+      "lng": -61.283
+    },
+    "facilities": [
+      "Parking",
+      "Snack-bar",
+      "Location transats",
+      "Ombre cocotiers"
+    ],
+    "safety": "Eau calme, baignade sécurisée. Pas de surveillance en semaine.",
+    "bestTime": "Matin avant 11h, fin d'après-midi",
+    "photo": "/photos/beaches/raisins-clairs.webp",
+    "i18n": {
+      "en": {
+        "name": "Raisins Clairs Beach",
+        "tagline": "Turquoise water, coconut trees, family-friendly",
+        "description": "The closest beach to Villa Kisara. White sand, calm water sheltered by the coral reef, ideal for kids. Snack bars and lounger rental on-site.",
+        "facilities": [
+          "Parking",
+          "Snack bar",
+          "Lounger rental",
+          "Coconut tree shade"
+        ],
+        "safety": "Calm water, safe swimming. No lifeguard on weekdays.",
+        "bestTime": "Morning before 11am, late afternoon"
+      }
+    }
+  },
+  {
+    "id": "caravelle",
+    "name": "Plage de la Caravelle (Sainte-Anne)",
+    "tagline": "La plus belle plage de Grande-Terre",
+    "description": "À 15 min de la villa. Lagon turquoise, sable fin, palmiers. Plage publique d'un côté, hôtel Club Med de l'autre.",
+    "coordinates": {
+      "lat": 16.2249,
+      "lng": -61.3742
+    },
+    "facilities": [
+      "Parking",
+      "Restaurants",
+      "Location matériel nautique"
+    ],
+    "safety": "Eau très calme et peu profonde, idéal familles.",
+    "bestTime": "Toute la journée",
+    "photo": "/photos/beaches/caravelle.jpg",
+    "i18n": {
+      "en": {
+        "name": "Caravelle Beach (Sainte-Anne)",
+        "tagline": "The most beautiful beach on Grande-Terre",
+        "description": "15 min from the villa. Turquoise lagoon, fine sand, palm trees. Public beach on one side, Club Med hotel on the other.",
+        "facilities": [
+          "Parking",
+          "Restaurants",
+          "Water sports rental"
+        ],
+        "safety": "Very calm shallow water, ideal for families.",
+        "bestTime": "All day"
+      }
+    }
+  },
+  {
+    "id": "anse-a-la-gourde",
+    "name": "Anse à la Gourde",
+    "tagline": "Lagon préservé, sable blanc, ambiance carte postale",
+    "description": "Entre Saint-François et la Pointe des Châteaux. Lagon protégé, peu profond, idéal snorkeling tranquille. Restaurant de plage simple et bon.",
+    "coordinates": {
+      "lat": 16.2667,
+      "lng": -61.2161
+    },
+    "facilities": [
+      "Parking",
+      "Restaurant de plage"
+    ],
+    "safety": "Eau calme, sécurisée.",
+    "bestTime": "Matin",
+    "photo": "/photos/beaches/anse-a-la-gourde.jpg",
+    "i18n": {
+      "en": {
+        "tagline": "Preserved lagoon, white sand, postcard-perfect",
+        "description": "Between Saint-François and Pointe des Châteaux. Sheltered shallow lagoon, ideal for relaxed snorkeling. Simple, good beach restaurant.",
+        "facilities": [
+          "Parking",
+          "Beach restaurant"
+        ],
+        "safety": "Calm and safe water.",
+        "bestTime": "Morning"
+      }
+    }
+  },
+  {
+    "id": "anse-a-leau",
+    "name": "Anse à l'eau",
+    "tagline": "Petit lagon protégé, idéal pour le snorkeling tranquille",
+    "description": "Petite anse abritée au sud de Saint-François, eau peu profonde et calme. Très peu de monde en semaine.",
+    "coordinates": {
+      "lat": 16.253,
+      "lng": -61.2683
+    },
+    "facilities": [
+      "Parking sauvage",
+      "Sans services"
+    ],
+    "safety": "Eau très calme, sécurisée.",
+    "bestTime": "Toute la journée",
+    "photo": "/photos/beaches/anse-a-leau.jpg",
+    "i18n": {
+      "en": {
+        "name": "Anse à l'eau",
+        "tagline": "Small sheltered lagoon, perfect for quiet snorkeling",
+        "description": "Small protected cove south of Saint-Francois, shallow calm water. Very quiet on weekdays.",
+        "facilities": [
+          "Wild parking",
+          "No services"
+        ],
+        "safety": "Very calm and safe water.",
+        "bestTime": "All day"
+      }
+    }
+  },
+  {
+    "id": "plage-sainte-anne",
+    "name": "Plage du bourg de Sainte-Anne",
+    "tagline": "Sable blanc, lagon turquoise, restos et glaciers au bord",
+    "description": "La plage emblématique de Sainte-Anne au cœur du village. Sable blanc fin, lagon transparent, ombragée par les cocotiers. Animation, food trucks et terrasses tout proches.",
+    "coordinates": {
+      "lat": 16.2272,
+      "lng": -61.3811
+    },
+    "facilities": [
+      "Parking village",
+      "Restaurants",
+      "Toilettes",
+      "Glaciers"
+    ],
+    "safety": "Eau peu profonde, idéal familles.",
+    "bestTime": "Matin, ou fin d'après-midi pour le coucher de soleil",
+    "photo": "/photos/beaches/plage-sainte-anne.webp",
+    "photoCredit": "Guillaume Aricique / Les Iles de Guadeloupe",
+    "i18n": {
+      "en": {
+        "name": "Sainte-Anne village beach",
+        "tagline": "White sand, turquoise lagoon, restaurants and ice cream nearby",
+        "description": "Iconic Sainte-Anne beach in the heart of the village. Fine white sand, transparent lagoon, shaded by coconut palms.",
+        "facilities": [
+          "Village parking",
+          "Restaurants",
+          "Toilets",
+          "Ice cream"
+        ],
+        "safety": "Shallow water, ideal for families.",
+        "bestTime": "Morning or late afternoon for sunset"
+      }
+    }
+  },
+  {
+    "id": "anse-souffleur-port-louis",
+    "name": "Anse du Souffleur (Port-Louis)",
+    "tagline": "Sable blanc, eau lagon, l'une des plus belles du Nord Grande-Terre",
+    "description": "Longue plage de sable blanc bordée de raisiniers et cocotiers, à Port-Louis. Eau translucide et peu profonde, idéale pour les enfants. Snacks créoles et restos de plage le long du front de mer. Compter 50 min de route depuis Saint-François.",
+    "coordinates": {
+      "lat": 16.4203,
+      "lng": -61.5275
+    },
+    "facilities": [
+      "Parking",
+      "Snack-bars créoles",
+      "Restaurants de plage",
+      "Ombre raisiniers"
+    ],
+    "safety": "Eau calme, baignade familiale. Pas de surveillance.",
+    "bestTime": "Toute la journée — magnifique en fin d'après-midi",
+    "photo": "/photos/beaches/anse-souffleur-port-louis.webp",
+    "i18n": {
+      "en": {
+        "name": "Anse du Souffleur (Port-Louis)",
+        "tagline": "White sand, lagoon water — one of the finest in northern Grande-Terre",
+        "description": "Long white-sand beach lined with sea grapes and coconut palms, in Port-Louis. Translucent shallow water, perfect for kids. Creole snack bars and beach restaurants along the seafront. About a 50-minute drive from Saint-François.",
+        "facilities": [
+          "Parking",
+          "Creole snack bars",
+          "Beach restaurants",
+          "Sea-grape shade"
+        ],
+        "safety": "Calm water, family-friendly swimming. Unsupervised.",
+        "bestTime": "All day — gorgeous in late afternoon"
+      }
+    }
+  },
+  {
+    "id": "grande-anse-deshaies",
+    "name": "Plage de Grande Anse à Deshaies",
+    "tagline": "Notre favorite — sable doré, palmiers, coucher de soleil mythique",
+    "description": "La plus belle plage de Basse-Terre. Immense croissant de sable doré bordé de cocotiers, eau cristalline. Quelques restos de plage. Coucher de soleil mythique.",
+    "coordinates": {
+      "lat": 16.3133,
+      "lng": -61.79
+    },
+    "facilities": [
+      "Parking",
+      "Restaurants de plage",
+      "Vendeurs ambulants"
+    ],
+    "safety": "Vagues parfois fortes selon la houle.",
+    "bestTime": "Fin d'après-midi pour le coucher de soleil",
+    "photo": "/photos/beaches/grande-anse-deshaies.png",
+    "highlight": true,
+    "i18n": {
+      "en": {
+        "name": "Grande Anse beach in Deshaies",
+        "tagline": "Our favourite - golden sand, palm trees, legendary sunsets",
+        "description": "The most beautiful beach on Basse-Terre. Vast crescent of golden sand lined with coconut palms.",
+        "facilities": [
+          "Parking",
+          "Beach restaurants",
+          "Mobile vendors"
+        ],
+        "safety": "Waves can be strong depending on the swell.",
+        "bestTime": "Late afternoon for sunset"
+      }
+    }
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "intro": "Parce que nous avons à cœur que vous viviez la meilleure expérience pour vos vacances, Corail Conciergerie vous propose une gamme de services premium testés et approuvés par nos soins.",
+  "intro_en": "We want you to enjoy the very best experience during your holiday. Corail Concierge offers a range of premium services we've personally tested and approved.",
+  "services": [
+    {
+      "id": "bateau",
+      "icon": "boat",
+      "name": "Location de bateaux",
+      "description": "Catamarans, semi-rigides, jet-skis. Avec ou sans skipper, à la demi-journée ou à la journée.",
+      "i18n": { "en": { "name": "Boat rental", "description": "Catamarans, RIBs, jet-skis. With or without skipper, half-day or full-day." }}
+    },
+    {
+      "id": "voiture",
+      "icon": "car",
+      "name": "Location de voitures",
+      "description": "Livraison directement à la villa, contrat clé en main.",
+      "i18n": { "en": { "name": "Car rental", "description": "Delivered directly to the villa, turn-key contract." }}
+    },
+    {
+      "id": "excursions",
+      "icon": "compass",
+      "name": "Réservation d'excursions",
+      "description": "Petite Terre, Marie-Galante, Désirade, plongée Cousteau. Nous testons et sélectionnons les meilleurs prestataires.",
+      "i18n": { "en": { "name": "Excursion booking", "description": "Petite Terre, Marie-Galante, Désirade, Cousteau diving. We test and select the best providers." }}
+    },
+    {
+      "id": "courses",
+      "icon": "shopping",
+      "name": "Courses à domicile",
+      "description": "Frigo plein à votre arrivée — vous nous envoyez votre liste, nous nous occupons du reste.",
+      "i18n": { "en": { "name": "Grocery delivery", "description": "Full fridge on arrival — send us your list, we take care of the rest." }}
+    },
+    {
+      "id": "chef",
+      "icon": "chef",
+      "name": "Chef à domicile",
+      "description": "Menu créole ou gastronomique, dans votre villa. Idéal pour une soirée spéciale.",
+      "i18n": { "en": { "name": "Private chef", "description": "Creole or gourmet menu, in your villa. Perfect for a special evening." }}
+    },
+    {
+      "id": "babysitter",
+      "icon": "baby",
+      "name": "Baby-sitter",
+      "description": "Personnes de confiance pour vos soirées en amoureux ou entre amis.",
+      "i18n": { "en": { "name": "Babysitter", "description": "Trusted people for your date nights or evenings with friends." }}
+    },
+    {
+      "id": "yoga",
+      "icon": "yoga",
+      "name": "Cours de yoga",
+      "description": "Sur votre terrasse face à la mer, en privé ou en duo.",
+      "i18n": { "en": { "name": "Yoga classes", "description": "On your terrace facing the sea, private or duo." }}
+    },
+    {
+      "id": "massage",
+      "icon": "spa",
+      "name": "Massage à domicile",
+      "description": "Praticiens diplômés, modalités au choix : relaxant, sportif, ayurvédique.",
+      "i18n": { "en": { "name": "In-villa massage", "description": "Certified practitioners, your choice: relaxing, sport, ayurvedic." }}
+    }
+  ]
+}

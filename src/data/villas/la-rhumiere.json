@@ -1,0 +1,335 @@
+{
+  "id": "la-rhumiere",
+  "name": "Villa La Rhumière",
+  "tagline": "Confort, élégance et nature à deux pas du Lagon",
+  "welcomeMessage": "Soyez les bienvenus à La Rhumière. Cette parenthèse moderne au cœur d'un jardin tropical, à 100 mètres seulement de la plage du Lagon, n'attend que vous. Nous vous souhaitons un excellent séjour et restons à votre écoute pour toute demande.",
+  "description": "Villa neuve nichée dans un cadre paisible, sécurisé et verdoyant à Saint-François. Quatre chambres climatisées, quatre salles de bain, et une piscine privée — un véritable bijou au cœur du jardin tropical. À seulement 100 mètres de la plage du Lagon, vous profiterez d'eaux turquoises cristallines pour la baignade, le snorkeling et le farniente. Confort moderne, raffinement et convivialité pour des vacances d'exception.",
+  "capacity": {
+    "guests": 8,
+    "bedrooms": 4,
+    "bathrooms": 4
+  },
+  "location": {
+    "address": "Quartier du Lagon, 97118 Saint-François, Guadeloupe",
+    "coordinates": {
+      "lat": 16.259209,
+      "lng": -61.25648
+    },
+    "neighborhood": "Quartier résidentiel calme et verdoyant",
+    "mapsUrl": "https://maps.app.goo.gl/TL2bYNaEVXnozp8R7"
+  },
+  "distances": {
+    "beach": {
+      "name": "Plage du Lagon",
+      "minutes": 2,
+      "mode": "à pied"
+    },
+    "centre": {
+      "name": "Centre-ville Saint-François",
+      "minutes": 8,
+      "mode": "voiture"
+    },
+    "marina": {
+      "name": "Marina de Saint-François",
+      "minutes": 7,
+      "mode": "voiture"
+    },
+    "airport": {
+      "name": "Aéroport Pôle Caraïbes",
+      "minutes": 50,
+      "mode": "voiture"
+    }
+  },
+  "amenities": [
+    {
+      "icon": "pool",
+      "label": "Piscine privée"
+    },
+    {
+      "icon": "ac",
+      "label": "4 chambres climatisées"
+    },
+    {
+      "icon": "terrace",
+      "label": "Jardin tropical"
+    },
+    {
+      "icon": "shield",
+      "label": "Cadre sécurisé"
+    },
+    {
+      "icon": "wifi",
+      "label": "WiFi haut débit"
+    },
+    {
+      "icon": "parking",
+      "label": "Parking privé"
+    },
+    {
+      "icon": "kitchen",
+      "label": "Cuisine équipée"
+    },
+    {
+      "icon": "bbq",
+      "label": "Barbecue"
+    }
+  ],
+  "wifi": {
+    "ssid": "LaRhumiere",
+    "password": "À COMMUNIQUER",
+    "security": "WPA2",
+    "notes": "Le mot de passe vous sera transmis à l'arrivée."
+  },
+  "stay": {
+    "checkin": "16:00",
+    "checkout": "10:00",
+    "minNights": 7
+  },
+  "security": {
+    "portail": "Accès direct à la villa — code à communiquer à l'arrivée.",
+    "digicode": "À COMMUNIQUER",
+    "portillonPieton": "À COMMUNIQUER",
+    "cles": "Le trousseau de clés vous sera remis lors du check-in par votre concierge."
+  },
+  "appliances": {
+    "wifi": "WiFi haut débit disponible dans toute la villa.",
+    "tv": "Smart TV au salon — Netflix accessible avec vos identifiants.",
+    "coffee": "Cafetière à filtre + bouilloire. Capsules / dosettes à apporter selon vos préférences.",
+    "ac": "Climatisation dans les 4 chambres. Merci de couper la clim quand vous sortez de la villa pour préserver l'environnement.",
+    "water": "Eau du robinet potable. Une carafe filtrante est mise à disposition.",
+    "septic": "Fosse septique : merci de ne JAMAIS jeter lingettes, cotons, tampons ou produits chimiques agressifs dans les WC."
+  },
+  "pool": {
+    "alarm": "Surveillance enfants OBLIGATOIRE à tout moment. Pas de baignade sans adulte présent au bord. Refermez systématiquement les abords de la piscine après baignade.",
+    "rules": "Pas de crème solaire dans l'eau (douche avant baignade), pas de verre près du bassin, pas de plongeons.",
+    "maintenance": "L'entretien hebdomadaire est assuré par notre prestataire. Pour tout souci (pompe, niveau d'eau, propreté inhabituelle), contactez votre concierge."
+  },
+  "houseRules": [
+    "Pas de fête / événement bruyant sans accord préalable du propriétaire.",
+    "Pas de fumée à l'intérieur. Espace fumeur autorisé sur la terrasse extérieure.",
+    "Animaux non admis sauf accord écrit préalable.",
+    "Respect du voisinage : silence après 22h, musique modérée le soir.",
+    "Merci de signaler toute casse ou dégât à votre concierge — pas de panique, on gère ensemble."
+  ],
+  "trashSchedule": {
+    "ordures": "Collecte les mardis et vendredis matin. Sortir les bacs la veille au soir.",
+    "tri": "Bac jaune — collecte le mercredi matin. Carton, plastique, métal acceptés.",
+    "verre": "Conteneur à verre le plus proche : à proximité du Lagon."
+  },
+  "bebettes": {
+    "intro": "En Guadeloupe, nous partageons la maison avec quelques visiteurs. Voici les amis et les moins amis.",
+    "amis": [
+      {
+        "name": "Iguanes verts",
+        "note": "Inoffensifs mais gourmands d'hibiscus."
+      },
+      {
+        "name": "Colibris",
+        "note": "Admirez la vitesse de battement d'ailes."
+      },
+      {
+        "name": "Sucriers",
+        "note": "Viendront si vous mettez du sucre dans un nichoir."
+      },
+      {
+        "name": "Anolis & margouillats",
+        "note": "Petits lézards sans danger — mangent les insectes."
+      }
+    ],
+    "moinsAimes": [
+      {
+        "name": "Moustiques",
+        "note": "Répulsifs + spirales auto-combustibles. Si fièvre, consultez un médecin."
+      },
+      {
+        "name": "Scolopendre",
+        "note": "Mille-pattes venimeux. Aime les coins humides. Bien visible, à éviter."
+      },
+      {
+        "name": "Blattes (« ravets »)",
+        "note": "Gros mais sans danger. Pièges dans la cuisine. Cela ne veut pas dire que la maison est sale."
+      }
+    ]
+  },
+  "departure": [
+    "Lancer une machine sur les draps et serviettes utilisées.",
+    "Vider les poubelles et sortir les bacs si jour de collecte.",
+    "Vider le frigo des denrées périssables.",
+    "Refermer toutes les fenêtres et baies, éteindre clim et lumières.",
+    "Laisser les clés dans la boîte sécurisée (code communiqué la veille)."
+  ],
+  "weather": {
+    "alerte": "En cas d'alerte cyclonique (juillet-octobre), suivez les consignes de la Préfecture. Votre concierge vous contactera et restera joignable.",
+    "saison": "Saison sèche : déc-avril (idéale). Saison humide : juillet-octobre (averses courtes, parfois alertes cycloniques)."
+  },
+  "contacts": {
+    "concierge_name": "Claire",
+    "concierge_phone": "+590690518468",
+    "concierge_whatsapp": "590690518468",
+    "concierge_email": "contact@corailconciergerie.com",
+    "owner_phone": "+33660468028",
+    "owner_name": "Maxence",
+    "instagram": "@corail_conciergerie",
+    "facebook": "fb.me/villaCorailConciergerie"
+  },
+  "photos": [
+    "/photos/villas/la-rhumiere/cover.jpg",
+    "/photos/villas/la-rhumiere/pool-01.jpg",
+    "/photos/villas/la-rhumiere/exterior-01.jpg",
+    "/photos/villas/la-rhumiere/interior-01.jpg",
+    "/photos/villas/la-rhumiere/interior-02.jpg",
+    "/photos/villas/la-rhumiere/interior-03.jpg",
+    "/photos/villas/la-rhumiere/bedroom-01.jpg",
+    "/photos/villas/la-rhumiere/bedroom-02.jpg",
+    "/photos/villas/la-rhumiere/bathroom-01.jpg",
+    "/photos/villas/la-rhumiere/garden-01.jpg",
+    "/photos/villas/la-rhumiere/garden-02.jpg"
+  ],
+  "coverPhoto": "/photos/villas/la-rhumiere/cover.jpg",
+  "i18n": {
+    "en": {
+      "tagline": "Comfort, elegance and nature steps from the Lagoon",
+      "welcomeMessage": "Welcome to La Rhumière. This modern getaway in the heart of a tropical garden, just 100 metres from Lagoon beach, is yours to enjoy. We wish you a wonderful stay and remain at your service for any request.",
+      "description": "A brand-new villa tucked into a peaceful, secure, lush setting in Saint-François. Four air-conditioned bedrooms, four bathrooms, and a private pool — a true gem in the heart of the tropical garden. Just 100 metres from Lagoon beach, you'll enjoy crystal-clear turquoise water for swimming, snorkelling and lazy days. Modern comfort, refinement and conviviality for an exceptional holiday.",
+      "distances": {
+        "beach": {
+          "name": "Lagoon beach",
+          "mode": "walk"
+        },
+        "centre": {
+          "name": "Saint-François town centre",
+          "mode": "drive"
+        },
+        "marina": {
+          "name": "Saint-François Marina",
+          "mode": "drive"
+        },
+        "airport": {
+          "name": "Pôle Caraïbes airport",
+          "mode": "drive"
+        }
+      },
+      "amenities": [
+        {
+          "icon": "pool",
+          "label": "Private pool"
+        },
+        {
+          "icon": "ac",
+          "label": "4 air-conditioned bedrooms"
+        },
+        {
+          "icon": "terrace",
+          "label": "Tropical garden"
+        },
+        {
+          "icon": "shield",
+          "label": "Secure setting"
+        },
+        {
+          "icon": "wifi",
+          "label": "High-speed WiFi"
+        },
+        {
+          "icon": "parking",
+          "label": "Private parking"
+        },
+        {
+          "icon": "kitchen",
+          "label": "Fully equipped kitchen"
+        },
+        {
+          "icon": "bbq",
+          "label": "Barbecue"
+        }
+      ],
+      "wifi": {
+        "password": "TO BE SHARED",
+        "notes": "Password provided upon arrival."
+      },
+      "security": {
+        "portail": "Direct villa access — code provided upon arrival.",
+        "digicode": "TO BE SHARED",
+        "portillonPieton": "TO BE SHARED",
+        "cles": "Keys handed over at check-in by your concierge."
+      },
+      "appliances": {
+        "wifi": "High-speed WiFi throughout the villa.",
+        "tv": "Smart TV in the lounge — Netflix accessible with your credentials.",
+        "coffee": "Filter coffee maker + kettle. Bring your own capsules / pods if preferred.",
+        "ac": "Air conditioning in all 4 bedrooms. Please switch it off when leaving the villa to save energy.",
+        "water": "Tap water is drinkable. A filter jug is provided.",
+        "septic": "Septic tank: NEVER flush wipes, cotton, tampons or harsh chemicals."
+      },
+      "pool": {
+        "alarm": "Adult supervision required at all times. No swimming without an adult present. Re-secure the pool area after each use.",
+        "rules": "No sunscreen in the water (shower before swimming), no glass near the pool, no diving.",
+        "maintenance": "Weekly servicing by our provider. For any issue (pump, water level, unusual cleanliness), contact your concierge."
+      },
+      "houseRules": [
+        "No parties / loud events without prior owner approval.",
+        "No smoking indoors. Smoking allowed on the outdoor terrace.",
+        "No pets unless prior written approval.",
+        "Respect neighbours: quiet hours after 10pm, moderate music in the evening.",
+        "Report any breakage or damage to your concierge — no stress, we sort it together."
+      ],
+      "trashSchedule": {
+        "ordures": "Collection Tuesday and Friday mornings. Bins out the evening before.",
+        "tri": "Yellow bin — collection Wednesday morning. Cardboard, plastic, metal accepted.",
+        "verre": "Nearest glass container: close to Lagoon."
+      },
+      "bebettes": {
+        "intro": "In Guadeloupe, we share the home with a few visitors. Here are the friends and the less loved.",
+        "amis": [
+          {
+            "name": "Green iguanas",
+            "note": "Harmless but fond of hibiscus."
+          },
+          {
+            "name": "Hummingbirds",
+            "note": "Admire their wing-beat speed."
+          },
+          {
+            "name": "Bananaquits",
+            "note": "They'll come if you put sugar in a feeder."
+          },
+          {
+            "name": "Anoles & geckos",
+            "note": "Small harmless lizards — they eat insects."
+          }
+        ],
+        "moinsAimes": [
+          {
+            "name": "Mosquitoes",
+            "note": "Repellents + spirals. If you get a fever, see a doctor."
+          },
+          {
+            "name": "Centipedes",
+            "note": "Venomous millipede. Likes damp corners. Visible, easy to avoid."
+          },
+          {
+            "name": "Cockroaches (« ravets »)",
+            "note": "Big but harmless. Traps in the kitchen. It doesn't mean the house is dirty."
+          }
+        ]
+      },
+      "departure": [
+        "Run a load of laundry on used sheets and towels.",
+        "Empty all bins and put them out if it's a collection day.",
+        "Empty the fridge of any perishables.",
+        "Close all windows and doors, switch off AC and lights.",
+        "Leave the keys in the secure box (code shared the day before)."
+      ],
+      "weather": {
+        "alerte": "In case of cyclone alert (Jul–Oct), follow Prefecture guidance. Your concierge will reach out and stay on hand.",
+        "saison": "Dry season: Dec–April (ideal). Wet season: July–October (short showers, occasional cyclone alerts)."
+      }
+    }
+  },
+  "prochesOverride": [
+    "jardin-secret",
+    "rhumerie-pirate",
+    "le-colombo",
+    "ti-tab-kreyol"
+  ]
+}

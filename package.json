@@ -1,0 +1,18 @@
+{
+  "name": "corail-livret",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy:kisara": "astro build && node scripts/deploy.mjs kisara"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.16.0",
+    "qrcode": "^1.5.4",
+    "tailwindcss": "^3.4.0"
+  }
+}

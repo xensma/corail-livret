@@ -1,0 +1,676 @@
+{
+  "proches": {
+    "label": "Proches de la villa",
+    "label_en": "Close to the villa",
+    "items": [
+      {
+        "id": "autre-version",
+        "name": "L'Autre Version - La Table d'Éric",
+        "tagline": "Gastronomique - Maître Restaurateur, 1er prix Sésame 2025",
+        "cuisine": [
+          "Gastronomique",
+          "Française",
+          "Fine dining"
+        ],
+        "priceRange": "€€€€",
+        "rating": 4.8,
+        "specialty": "Langouste, loup caraïbes, cave 100+ références (80% Bourgogne)",
+        "phone": "+590590930915",
+        "coordinates": {
+          "lat": 16.2496,
+          "lng": -61.2825
+        },
+        "notes": "1er étage Galerie Crystal Beach. Mardi-Samedi soir, dimanche midi (privatisation). Menus 79-149€.",
+        "website": "https://www.lautreversion.net",
+        "photo": "/photos/restos/autre-version.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Gastronomic - Master Restaurateur, 1st prize Sésame 2025",
+            "cuisine": [
+              "Gastronomic",
+              "French",
+              "Fine dining"
+            ],
+            "specialty": "Lobster, Caribbean sea bass, 100+ wine references (80% Burgundy)",
+            "notes": "1st floor Crystal Beach gallery. Tue-Sat evenings, Sunday lunch (private events). Menus 79-149€."
+          }
+        }
+      },
+      {
+        "id": "la-plage-crystal",
+        "name": "La Plage — Crystal Beach",
+        "tagline": "Les pieds dans le sable, traditionnel",
+        "cuisine": [
+          "Créole",
+          "Traditionnel"
+        ],
+        "priceRange": "€€",
+        "rating": 4.4,
+        "specialty": "Cuisine traditionnelle au bord de mer",
+        "phone": "+590590680704",
+        "coordinates": {
+          "lat": 16.2496,
+          "lng": -61.2825
+        },
+        "photo": "/photos/restos/la-plage-crystal.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Feet in the sand, traditional",
+            "cuisine": [
+              "Creole",
+              "Traditional"
+            ],
+            "specialty": "Traditional seaside cuisine"
+          }
+        },
+        "website": "https://la-plage-crystal-beach.com"
+      },
+      {
+        "id": "ogaiana",
+        "name": "Ô'Gaïana",
+        "tagline": "#1 sur TripAdvisor — Émilie & Bertrand, cuisine de caractère",
+        "cuisine": [
+          "Bistronomique",
+          "Pizzas",
+          "Burgers",
+          "Poissons"
+        ],
+        "priceRange": "€€€",
+        "rating": 4.9,
+        "specialty": "Suggestions du jour inspirées, pâtes savoureuses, cocktails créatifs",
+        "phone": "+590788280601",
+        "coordinates": {
+          "lat": 16.251,
+          "lng": -61.28
+        },
+        "notes": "Domaine de Tuscany, route touristique (nouvel emplacement). Mardi-Samedi 18h30-21h. Réservation conseillée — classé n°1 des 511 restos de Saint-François.",
+        "website": "https://www.instagram.com/restaurant_ogaiana_/",
+        "photo": "/photos/restos/ogaiana.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "#1 on TripAdvisor — Émilie & Bertrand, signature cuisine",
+            "cuisine": [
+              "Bistronomy",
+              "Pizza",
+              "Burgers",
+              "Fish"
+            ],
+            "specialty": "Inspired daily specials, savoury pasta, creative cocktails",
+            "notes": "Domaine de Tuscany, tourist road (new location). Tuesday-Saturday 6:30-9pm. Booking recommended — ranked #1 of 511 restaurants in Saint-François."
+          }
+        }
+      },
+      {
+        "id": "le-carre",
+        "name": "Le Carré",
+        "tagline": "Pizzas, salades, plats du jour, cocktails",
+        "cuisine": [
+          "Pizzeria",
+          "Bistrot"
+        ],
+        "priceRange": "€€",
+        "rating": 4.5,
+        "specialty": "Pizzas (sur place ou à emporter)",
+        "phone": "+590690509390",
+        "coordinates": {
+          "lat": 16.2515,
+          "lng": -61.279
+        },
+        "photo": "/photos/restos/le-carre.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Pizza, salads, daily specials, cocktails",
+            "cuisine": [
+              "Pizzeria",
+              "Bistro"
+            ],
+            "specialty": "Pizza (dine-in or takeaway)"
+          }
+        }
+      }
+    ]
+  },
+  "marina": {
+    "label": "Saint-François Marina et centre-ville",
+    "label_en": "Saint-François Marina & town centre",
+    "items": [
+      {
+        "id": "maison-accras",
+        "name": "La Maison de l'Accras",
+        "tagline": "Le temple de l'accras revisité par Tania",
+        "cuisine": [
+          "Créole",
+          "Tapas",
+          "Lounge"
+        ],
+        "priceRange": "€€",
+        "rating": 4.7,
+        "specialty": "Accras à la morue, chorizo, olives-poivrons, accras sucrés",
+        "phone": null,
+        "coordinates": {
+          "lat": 16.2527,
+          "lng": -61.266
+        },
+        "notes": "Marina. Charme et passion de Tania. Sur place, à emporter ou livraison. Réservation conseillée — peu de tables.",
+        "website": "https://www.instagram.com/lamaisondelaccras/",
+        "photo": "/photos/restos/maison-accras.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "The accras temple, reimagined by Tania",
+            "cuisine": [
+              "Creole",
+              "Tapas",
+              "Lounge"
+            ],
+            "specialty": "Cod accras, chorizo, olive-pepper, sweet accras",
+            "notes": "Marina. Tania's charm and passion. Dine-in, takeaway or delivery. Booking recommended — few tables."
+          }
+        }
+      },
+      {
+        "id": "le-nautic",
+        "name": "Le Nautic by Mitch",
+        "tagline": "Gastronomie audacieuse au Port de Saint-François",
+        "cuisine": [
+          "Créole",
+          "Française",
+          "Asiatique",
+          "Fusion"
+        ],
+        "priceRange": "€€€",
+        "rating": 4.6,
+        "specialty": "Fusion créole-asiatique signée Chef Mitch",
+        "phone": "+590690411862",
+        "coordinates": {
+          "lat": 16.2533,
+          "lng": -61.2786
+        },
+        "notes": "Port de Saint-François. Fermé mardi-mercredi.",
+        "website": "https://lenauticbymitch.com",
+        "photo": "/photos/restos/le-nautic.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Bold gastronomy at Saint-François Marina",
+            "cuisine": [
+              "Creole",
+              "French",
+              "Asian",
+              "Fusion"
+            ],
+            "specialty": "Creole-Asian fusion by Chef Mitch",
+            "notes": "Saint-François Marina. Closed Tuesday-Wednesday."
+          }
+        }
+      },
+      {
+        "id": "tiki-bar",
+        "name": "Tiki Bar 971",
+        "tagline": "Bar tapas lounge - cocktails, tapas, déco insulaire",
+        "cuisine": [
+          "Tapas",
+          "Cocktails",
+          "Burgers"
+        ],
+        "priceRange": "€€",
+        "rating": 4.7,
+        "specialty": "Cocktails créatifs, planches de tapas, burgers craft, mojitos",
+        "phone": "+590613067899",
+        "coordinates": {
+          "lat": 16.2528,
+          "lng": -61.2668
+        },
+        "notes": "Immeuble Kayela, Marina. Mar-Jeu 17h-23h, Ven-Sam 11h-23h (fermé dim-lun).",
+        "website": "https://www.instagram.com/tikibar_971/",
+        "photo": "/photos/restos/tiki-bar.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Tapas & cocktails lounge - island vibes",
+            "cuisine": [
+              "Tapas",
+              "Cocktails",
+              "Burgers"
+            ],
+            "specialty": "Creative cocktails, tapas boards, craft burgers, mojitos",
+            "notes": "Kayela building, Marina. Tue-Thu 5pm-11pm, Fri-Sat 11am-11pm (closed Sun-Mon)."
+          }
+        }
+      },
+      {
+        "id": "zagaya",
+        "name": "Le Zagaya",
+        "tagline": "Cuisine créative bistronomique, vue sur le lagon",
+        "cuisine": [
+          "Bistronomique",
+          "Créole moderne",
+          "Local"
+        ],
+        "priceRange": "€€€",
+        "rating": 4.7,
+        "specialty": "Langouste fraîche et ceviche de poisson",
+        "phone": "+590590886721",
+        "coordinates": {
+          "lat": 16.2515,
+          "lng": -61.2727
+        },
+        "notes": "21 rue République. Soirées musicales le mardi. Réservation conseillée.",
+        "website": "https://www.lezagaya.fr",
+        "photo": "/photos/restos/zagaya.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Creative bistronomy with lagoon views",
+            "cuisine": [
+              "Bistronomy",
+              "Modern Creole",
+              "Local"
+            ],
+            "specialty": "Fresh lobster and fish ceviche",
+            "notes": "21 rue République. Live music Tuesdays. Booking recommended."
+          }
+        }
+      },
+      {
+        "id": "cafe-corail",
+        "name": "Café Corail",
+        "tagline": "Bar à jus & cuisine vegan/végétarienne",
+        "cuisine": [
+          "Vegan",
+          "Végétarien",
+          "Bar à jus"
+        ],
+        "priceRange": "€€",
+        "rating": 4.6,
+        "specialty": "Jus frais, bowls, déjeuners healthy",
+        "phone": null,
+        "coordinates": {
+          "lat": 16.2533,
+          "lng": -61.278
+        },
+        "notes": "Atmosphère paisible au cœur de la Marina.",
+        "website": "https://cafecorail.fr",
+        "photo": "/photos/restos/cafe-corail.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Juice bar & vegan/vegetarian cuisine",
+            "cuisine": [
+              "Vegan",
+              "Vegetarian",
+              "Juice bar"
+            ],
+            "specialty": "Fresh juices, bowls, healthy lunches",
+            "notes": "Peaceful spot at the heart of the Marina."
+          }
+        }
+      },
+      {
+        "id": "jardin-secret",
+        "name": "Le Jardin Secret",
+        "tagline": "Tapas, cocktails et jeux dans un cadre exceptionnel",
+        "cuisine": [
+          "Tapas",
+          "Bistronomique",
+          "Cocktails"
+        ],
+        "priceRange": "€€€",
+        "rating": 4.4,
+        "specialty": "Tataki de bœuf mariné 72h, salade gésiers, gaufre caramel signature",
+        "phone": "+590690709649",
+        "coordinates": {
+          "lat": 16.258,
+          "lng": -61.262
+        },
+        "notes": "Lieu-dit Bel Arbre, Chemin de Bouquet (Ld Ste Marthe). Mardi-Samedi 17h-23h. Pétanque, billard, fléchettes et baby-foot sur place — l'adresse idéale pour une soirée chill.",
+        "website": "https://www.lejardinsecret.restaurant",
+        "photo": "/photos/restos/jardin-secret.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Tapas, cocktails and games in an exceptional setting",
+            "cuisine": [
+              "Tapas",
+              "Bistronomy",
+              "Cocktails"
+            ],
+            "specialty": "72h-marinated beef tataki, gizzard salad, signature caramel waffle",
+            "notes": "Bel Arbre, Chemin de Bouquet (Ld Ste Marthe). Tue-Sat 5pm-11pm. Pétanque, pool, darts and table football on-site — the perfect spot for a laid-back evening."
+          }
+        }
+      },
+      {
+        "id": "rhumarin",
+        "name": "Le RhuMarin",
+        "tagline": "Métissage Provence-Créole avec vue mer",
+        "cuisine": [
+          "Bistronomique",
+          "Fusion"
+        ],
+        "priceRange": "€€€",
+        "rating": 4.7,
+        "specialty": "Carte courte, desserts maison",
+        "phone": null,
+        "coordinates": {
+          "lat": 16.251,
+          "lng": -61.274
+        },
+        "photo": "/photos/restos/rhumarin.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Provence-Creole fusion with sea views",
+            "cuisine": [
+              "Bistronomy",
+              "Fusion"
+            ],
+            "specialty": "Short menu, homemade desserts"
+          }
+        },
+        "notes": "12 Rue de la République, vue lagon. Travellers Choice 2025. #5/154. Fermé mercredi.",
+        "website": "https://saint-francois.lerhumarin.fr"
+      },
+      {
+        "id": "poivrier",
+        "name": "Le Poivrier",
+        "tagline": "Cuisine raffinée, vue lagon",
+        "cuisine": [
+          "Gastronomique"
+        ],
+        "priceRange": "€€€€",
+        "rating": 4.7,
+        "specialty": "Produits de qualité, derrière la marina",
+        "phone": "+590590247929",
+        "coordinates": {
+          "lat": 16.253,
+          "lng": -61.2778
+        },
+        "photo": "/photos/restos/poivrier.webp",
+        "i18n": {
+          "en": {
+            "tagline": "Refined cuisine with lagoon view",
+            "cuisine": [
+              "Gastronomic"
+            ],
+            "specialty": "Quality produce, behind the marina"
+          }
+        }
+      },
+      {
+        "id": "mabouya",
+        "name": "Le Mabouya dans la Bouteille",
+        "tagline": "Cuisine raffinée, cave à vin exceptionnelle",
+        "cuisine": [
+          "Gastronomique"
+        ],
+        "priceRange": "€€€€",
+        "rating": 4.3,
+        "specialty": "Œnologie de pointe",
+        "phone": "+590690755027",
+        "coordinates": {
+          "lat": 16.2519,
+          "lng": -61.2761
+        },
+        "photo": "/photos/restos/mabouya.webp",
+        "i18n": {
+          "en": {
+            "tagline": "Refined cuisine, exceptional wine cellar",
+            "cuisine": [
+              "Gastronomic"
+            ],
+            "specialty": "Cutting-edge oenology"
+          }
+        },
+        "notes": "17 Salines Est. Master Restaurateur, 200+ refs vin. Open 19h-22h, fermé jeu-dim. Le Petit Futé + Routard.",
+        "website": "https://www.lesilesdeguadeloupe.com/restaurant/le-mabouya-dans-la-bouteille/"
+      }
+    ]
+  },
+  "sainte-anne": {
+    "label": "Direction Sainte-Anne",
+    "label_en": "Towards Sainte-Anne",
+    "items": [
+      {
+        "id": "mango-moulin",
+        "name": "Le Mango — Relais du Moulin",
+        "tagline": "Méchoui le vendredi, langouste le samedi en saison",
+        "cuisine": [
+          "Gastronomique"
+        ],
+        "priceRange": "€€€€",
+        "rating": 4.7,
+        "specialty": "Magnifique cadre, bar à cocktails",
+        "phone": "+590590884848",
+        "coordinates": {
+          "lat": 16.23,
+          "lng": -61.35
+        },
+        "photo": "/photos/restos/mango-moulin.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Mechoui on Fridays, lobster on Saturdays in season",
+            "cuisine": [
+              "Gastronomic"
+            ],
+            "specialty": "Stunning setting, cocktail bar"
+          }
+        },
+        "website": "https://www.relaisdumoulin.com"
+      }
+    ]
+  },
+  "pointe-chateaux": {
+    "label": "Direction Pointe des Châteaux",
+    "label_en": "Towards Pointe des Châteaux",
+    "items": [
+      {
+        "id": "le-colombo",
+        "name": "Le Colombo",
+        "tagline": "Adresse renommée, barbecue langouste",
+        "cuisine": [
+          "Créole"
+        ],
+        "priceRange": "€€€",
+        "rating": 4.6,
+        "specialty": "Langouste le dimanche (réservation indispensable)",
+        "phone": "+590590884129",
+        "coordinates": {
+          "lat": 16.2589,
+          "lng": -61.2003
+        },
+        "photo": "/photos/restos/le-colombo.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Renowned address, lobster BBQ",
+            "cuisine": [
+              "Creole"
+            ],
+            "specialty": "Sunday lobster (booking essential)"
+          }
+        },
+        "website": "https://www.tripadvisor.fr/Restaurant_Review-g147304-d2536361-Reviews-Le_Colombo-Saint_Francois_Grande_Terre_Island_Guadeloupe.html"
+      },
+      {
+        "id": "ti-tab-kreyol",
+        "name": "Ti Tab Kréyol",
+        "tagline": "Cuisine créole maison, Anse à la Gourde",
+        "cuisine": [
+          "Créole"
+        ],
+        "priceRange": "€€",
+        "rating": 4.5,
+        "specialty": "Langouste, ragoût, plats à emporter",
+        "phone": "+590690567278",
+        "coordinates": {
+          "lat": 16.2655,
+          "lng": -61.2204
+        },
+        "photo": "/photos/restos/ti-tab-kreyol.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Home-style Creole cuisine, Anse à la Gourde",
+            "cuisine": [
+              "Creole"
+            ],
+            "specialty": "Lobster, stews, takeaway dishes"
+          }
+        },
+        "website": "https://www.tripadvisor.fr/Restaurant_Review-g147304-d12408559-Reviews-Ti_Tab_Kreyol-Saint_Francois_Grande_Terre_Island_Guadeloupe.html"
+      },
+      {
+        "id": "rhumerie-pirate",
+        "name": "La Rhumerie du Pirate",
+        "tagline": "Cuisine créole sur la route de la Pointe",
+        "cuisine": [
+          "Créole"
+        ],
+        "priceRange": "€€",
+        "rating": 4.2,
+        "specialty": "Cuisine créole traditionnelle",
+        "phone": "+590590832594",
+        "coordinates": {
+          "lat": 16.2562,
+          "lng": -61.231
+        },
+        "photo": "/photos/restos/rhumerie-pirate.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Creole cuisine on the road to the Pointe",
+            "cuisine": [
+              "Creole"
+            ],
+            "specialty": "Traditional Creole cuisine"
+          }
+        },
+        "website": "https://la-rhumerie-du-pirate-saint-francois.fr"
+      }
+    ]
+  },
+  "le-moule": {
+    "label": "Direction Le Moule",
+    "label_en": "Towards Le Moule",
+    "items": [
+      {
+        "id": "porte-des-indes",
+        "name": "La Porte des Indes",
+        "tagline": "Indien gastronomique, Desvarieux route du Moule",
+        "cuisine": [
+          "Indien",
+          "Pakistanais"
+        ],
+        "priceRange": "€€€",
+        "rating": 4.5,
+        "specialty": "Tandoori, biryani, naan maison",
+        "phone": "+590590213087",
+        "coordinates": {
+          "lat": 16.29,
+          "lng": -61.31
+        },
+        "photo": "/photos/restos/porte-des-indes.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Indian gastronomy, Desvarieux Le Moule road",
+            "cuisine": [
+              "Indian",
+              "Pakistani"
+            ],
+            "specialty": "Tandoori, biryani, homemade naan"
+          }
+        },
+        "website": "https://piedsdanslesable.fr/restaurant/porte-des-indes/"
+      }
+    ]
+  },
+  "traiteurs": {
+    "label": "Traiteurs & à emporter",
+    "label_en": "Caterers & takeaway",
+    "items": [
+      {
+        "id": "atelier-crystal",
+        "name": "L'Atelier de Crystal Beach",
+        "tagline": "Pizzas napolitaines au feu de bois, burgers et pâtes maison",
+        "cuisine": [
+          "Pizzeria napolitaine",
+          "Burgers",
+          "Italien"
+        ],
+        "priceRange": "€€",
+        "rating": 4.7,
+        "specialty": "Pizzas napolitaines au four à bois, burgers gourmets",
+        "phone": "+590690490521",
+        "coordinates": {
+          "lat": 16.2496,
+          "lng": -61.2825
+        },
+        "notes": "Galerie Crystal Beach. Mardi-Samedi 11h30-14h + 18h30-21h30. À emporter aussi.",
+        "website": "https://www.tripadvisor.fr/Restaurant_Review-g147304-d23803681-Reviews-L_atelier_De_Crystal_Beach-Saint_Francois_Grande_Terre_Island_Guadeloupe.html",
+        "photo": "/photos/restos/atelier-crystal.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Wood-fired Neapolitan pizzas, burgers and homemade pasta",
+            "cuisine": [
+              "Neapolitan pizzeria",
+              "Burgers",
+              "Italian"
+            ],
+            "specialty": "Wood-fired Neapolitan pizzas, gourmet burgers",
+            "notes": "Crystal Beach gallery. Tue-Sat 11:30am-2pm + 6:30pm-9:30pm. Takeaway available."
+          }
+        }
+      },
+      {
+        "id": "umami-sushi",
+        "name": "Umami Sushi Gwada",
+        "tagline": "Sushi premium en livraison & à emporter",
+        "cuisine": [
+          "Japonais",
+          "Sushi",
+          "Asiatique"
+        ],
+        "priceRange": "€€€",
+        "rating": 4.8,
+        "specialty": "Sushi, sashimi, makis, plats chauds japonais",
+        "phone": null,
+        "coordinates": {
+          "lat": 16.252,
+          "lng": -61.275
+        },
+        "notes": "Livraison Saint-François et environs. Commande via Facebook.",
+        "website": "https://www.facebook.com/p/Umami-Sushi-Gwada-61583982211172/",
+        "photo": "/photos/restos/umami-sushi.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Premium sushi delivery & takeaway",
+            "cuisine": [
+              "Japanese",
+              "Sushi",
+              "Asian"
+            ],
+            "specialty": "Sushi, sashimi, makis, hot Japanese dishes",
+            "notes": "Delivery to Saint-François area. Order via Facebook."
+          }
+        }
+      },
+      {
+        "id": "sabino-pizza",
+        "name": "Sabino Pizza",
+        "tagline": "Délicieuses pizzas, livraison à domicile",
+        "cuisine": [
+          "Pizzeria"
+        ],
+        "priceRange": "€",
+        "rating": 4.6,
+        "specialty": "Livraison directement à la villa",
+        "phone": "+590690676113",
+        "coordinates": {
+          "lat": 16.251,
+          "lng": -61.2755
+        },
+        "photo": "/photos/restos/sabino.jpg",
+        "i18n": {
+          "en": {
+            "tagline": "Delicious pizzas, home delivery",
+            "cuisine": [
+              "Pizzeria"
+            ],
+            "specialty": "Delivery direct to your villa"
+          }
+        }
+      }
+    ]
+  }
+}

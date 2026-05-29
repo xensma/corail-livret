@@ -1,0 +1,9 @@
+[
+  { "id": "samu", "name": "SAMU", "number": "15", "context": "Urgence médicale vitale", "i18n": { "en": { "name": "Medical emergency (SAMU)", "context": "Life-threatening medical emergency" }}},
+  { "id": "pompiers", "name": "Pompiers", "number": "18", "context": "Incendie, secours", "i18n": { "en": { "name": "Fire brigade", "context": "Fire, rescue" }}},
+  { "id": "police", "name": "Police / Gendarmerie", "number": "17", "context": "Urgence sécuritaire", "i18n": { "en": { "name": "Police", "context": "Security emergency" }}},
+  { "id": "europe", "name": "Numéro européen d'urgence", "number": "112", "context": "Tous les cas, depuis tout mobile", "i18n": { "en": { "name": "European emergency number", "context": "All cases, from any mobile" }}},
+  { "id": "gendarmerie-sf", "name": "Gendarmerie de Saint-François", "number": "+590590884117", "context": "Plainte, dépôt", "i18n": { "en": { "name": "Saint-François Police station", "context": "Complaints, reports" }}},
+  { "id": "centre-anti-poison", "name": "Centre antipoison Antilles", "number": "+596596745252", "context": "Intoxication, morsure", "i18n": { "en": { "name": "Caribbean Poison Control", "context": "Poisoning, bites" }}},
+  { "id": "secours-mer", "name": "CROSS Antilles-Guyane", "number": "196", "context": "Urgence en mer", "i18n": { "en": { "name": "Maritime rescue", "context": "Emergency at sea" }}}
+]

@@ -1,0 +1,319 @@
+{
+  "id": "crystal-beach",
+  "name": "N°72 Crystal Beach",
+  "tagline": "Appartement à Crystal Beach — 2 piscines + accès direct plage par badge",
+  "welcomeMessage": "Bienvenue chez vous pour les prochains jours. Nous sommes ravis de vous accueillir au sein de cet appartement N°72 à Crystal Beach. Vous disposez de 2 piscines en accès libre dans la résidence ET d'un accès direct à la plage via un portillon (badge fourni) situé devant la grande piscine, au bout du jardin. Appartement non-fumeur, animaux non acceptés.",
+  "description": "Appartement N°72 dans la résidence Crystal Beach à Saint-François. Cuisine entièrement équipée, salle de bain avec sèche-cheveux, climatisation dans chaque chambre (télécommande dédiée), store électrique commandé depuis la chambre parentale, TV chaînes locales, deux grands ventilateurs sur pieds, machine à laver, fer à repasser, glacière et jeux d'enfants. Vous disposez de 2 piscines en accès libre (7h-20h) et d'un accès direct à la plage par badge. À deux pas de la boulangerie Aléonard, du Carré, de L'Atelier Crystal Beach et de La Plage Crystal Beach.",
+  "capacity": {
+    "guests": 4,
+    "bedrooms": 2,
+    "bathrooms": 1
+  },
+  "location": {
+    "address": "Résidence Crystal Beach, appartement N°72, 97118 Saint-François, Guadeloupe",
+    "coordinates": {
+      "lat": 16.247209,
+      "lng": -61.28677
+    },
+    "neighborhood": "Résidence Crystal Beach — accès direct plage",
+    "mapsUrl": "https://maps.app.goo.gl/BjDqe99CJRuoHWPo8"
+  },
+  "distances": {
+    "beach": {
+      "name": "Plage Crystal Beach — accès direct (portillon + badge)",
+      "minutes": 1,
+      "mode": "à pied"
+    },
+    "centre": {
+      "name": "Centre-ville Saint-François",
+      "minutes": 5,
+      "mode": "voiture"
+    },
+    "marina": {
+      "name": "Marina de Saint-François",
+      "minutes": 5,
+      "mode": "voiture"
+    },
+    "airport": {
+      "name": "Aéroport Pôle Caraïbes",
+      "minutes": 45,
+      "mode": "voiture"
+    }
+  },
+  "amenities": [
+    {
+      "icon": "pool",
+      "label": "2 piscines (enfants + adultes, 7h-20h)"
+    },
+    {
+      "icon": "shield",
+      "label": "Accès direct plage (portillon + badge)"
+    },
+    {
+      "icon": "ac",
+      "label": "Chambres climatisées (télécommande)"
+    },
+    {
+      "icon": "terrace",
+      "label": "Store électrique chambre parentale"
+    },
+    {
+      "icon": "wifi",
+      "label": "WiFi Airbox"
+    },
+    {
+      "icon": "parking",
+      "label": "Place 72 + 1 bip portail"
+    },
+    {
+      "icon": "kitchen",
+      "label": "Cuisine équipée"
+    },
+    {
+      "icon": "tv",
+      "label": "TV chaînes locales + ventilateurs"
+    }
+  ],
+  "wifi": {
+    "ssid": "Airbox-D7E0",
+    "password": "Crystalbeach971",
+    "security": "WPA2",
+    "notes": "Box Airbox dans l'appartement."
+  },
+  "stay": {
+    "checkin": "16:00",
+    "checkout": "11:00",
+    "minNights": 3
+  },
+  "security": {
+    "portail": "1 bip vous est remis pour ouvrir le portail. Le portail se referme automatiquement.",
+    "digicode": "2510A (grand portail)",
+    "portillonPieton": "2513A",
+    "cles": "Clés + bip + badge plage remis au check-in par votre concierge. Place de parking : N°72. Local poubelles (en face du grand portail, en dehors de la résidence) : code 1025A — s'ouvre aussi avec le badge."
+  },
+  "appliances": {
+    "wifi": "WiFi Airbox dans l'appartement — SSID Airbox-D7E0, mot de passe Crystalbeach971.",
+    "tv": "Télévision au salon avec chaînes locales.",
+    "coffee": "Cuisine entièrement équipée — apportez vos propres dosettes/capsules selon vos préférences.",
+    "ac": "Climatisation dans chaque chambre, télécommande dédiée. Deux grands ventilateurs sur pieds également disponibles.",
+    "water": "Appartement équipé d'une réserve d'eau individuelle en cas de coupure du réseau ville.",
+    "septic": "Tout-à-l'égout : merci de ne pas jeter lingettes, tampons, serviettes hygiéniques ou produits chimiques dans les WC."
+  },
+  "pool": {
+    "alarm": "2 piscines en accès libre dans la résidence (7h-20h) + accès direct plage par portillon (badge) au bout du jardin. ⚠ Surveillance enfants OBLIGATOIRE à tout moment, autour des bassins comme sur la plage. 1 piscine spéciale enfants avec pataugeoire et 1,4 m de profondeur. 1 piscine d'1,6 m.",
+    "rules": "Pas de crème solaire dans l'eau (douche avant baignade), pas de verre, pas d'objets coupants. Refermez les portillons après chaque passage.",
+    "maintenance": "Entretien des piscines assuré par la résidence. En cas de souci visible, signalez-le à votre concierge."
+  },
+  "houseRules": [
+    "Appartement non-fumeur (intérieur). Possibilité de fumer sur la terrasse extérieure.",
+    "Animaux non acceptés.",
+    "Fermez la porte à clé et la baie vitrée en partant de l'appartement.",
+    "Fermez la baie vitrée durant la journée (réduit chaleur et insectes).",
+    "Signalez toute casse ou souci à votre concierge — on règle ensemble."
+  ],
+  "trashSchedule": {
+    "ordures": "Local poubelles en face du grand portail (en dehors de la résidence). Code 1025A — s'ouvre aussi avec le badge.",
+    "tri": "Bac jaune dans le local poubelles : bouteilles plastique, papier/carton, fer/aluminium.",
+    "verre": "Conteneurs verre les plus proches : indiqués par votre concierge à l'arrivée."
+  },
+  "bebettes": {
+    "intro": "En Guadeloupe, nous partageons la maison avec quelques visiteurs. Voici les amis et les moins amis.",
+    "amis": [
+      {
+        "name": "Iguanes verts",
+        "note": "Inoffensifs mais gourmands d'hibiscus."
+      },
+      {
+        "name": "Colibris",
+        "note": "Admirez la vitesse de battement d'ailes."
+      },
+      {
+        "name": "Sucriers",
+        "note": "Viendront si vous mettez du sucre dans un nichoir."
+      },
+      {
+        "name": "Anolis & margouillats",
+        "note": "Petits lézards sans danger — mangent les insectes."
+      }
+    ],
+    "moinsAimes": [
+      {
+        "name": "Moustiques",
+        "note": "Répulsifs + spirales auto-combustibles. Si fièvre, consultez un médecin."
+      },
+      {
+        "name": "Scolopendre",
+        "note": "Mille-pattes venimeux. Aime les coins humides. Bien visible, à éviter."
+      },
+      {
+        "name": "Blattes (« ravets »)",
+        "note": "Gros mais sans danger. Pièges dans la cuisine. Cela ne veut pas dire que la maison est sale."
+      }
+    ]
+  },
+  "departure": [
+    "Check-out à 11h. Merci de rendre l'appartement comme vous l'avez trouvé.",
+    "Éteindre toutes les lumières et climatisations.",
+    "Fermer le volet de la cuisine.",
+    "Vider les poubelles (local en face du grand portail).",
+    "Rendre clés + bip + badge à votre concierge."
+  ],
+  "weather": {
+    "alerte": "En cas d'alerte météo (juillet-octobre), suivre Météo France (www.meteofrance.gp) et la Préfecture (www.guadeloupe.gouv.fr). Stockez 3 jours d'eau et nourriture. Votre concierge reste joignable.",
+    "saison": "Saison sèche : déc-avril (idéale). Saison humide : juillet-octobre (averses courtes, parfois cyclones)."
+  },
+  "contacts": {
+    "concierge_name": "Claire",
+    "concierge_phone": "+590690518468",
+    "concierge_whatsapp": "590690518468",
+    "concierge_email": "contact@corailconciergerie.com",
+    "owner_phone": "+33660468028",
+    "owner_name": "Maxence",
+    "instagram": "@corail_conciergerie",
+    "facebook": "fb.me/villaCorailConciergerie"
+  },
+  "photos": [
+    "/photos/villas/crystal-beach/cover.jpg",
+    "/photos/villas/crystal-beach/gallery-01.jpg",
+    "/photos/villas/crystal-beach/gallery-02.jpg"
+  ],
+  "coverPhoto": "/photos/villas/crystal-beach/cover.jpg",
+  "i18n": {
+    "en": {
+      "tagline": "Apartment at Crystal Beach — 2 pools + direct beach access via badge",
+      "welcomeMessage": "Welcome home for the coming days. We are delighted to host you at apartment N°72 at Crystal Beach. You have free access to 2 pools in the residence AND direct beach access via a gate (badge provided) located by the big pool, at the end of the garden. Non-smoking apartment, no pets.",
+      "description": "Apartment N°72 in the Crystal Beach residence in Saint-François. Fully equipped kitchen, bathroom with hairdryer, AC in each bedroom (dedicated remote), electric blind controlled from the master bedroom, local TV channels, two large standing fans, washing machine, iron, cooler and kids' games. Free access to 2 pools (7am-8pm) and direct beach access via badge. Steps from boulangerie Aléonard, Le Carré, L'Atelier Crystal Beach and La Plage Crystal Beach.",
+      "distances": {
+        "beach": {
+          "name": "Crystal Beach — direct access (gate + badge)",
+          "mode": "walk"
+        },
+        "centre": {
+          "name": "Saint-François town centre",
+          "mode": "drive"
+        },
+        "marina": {
+          "name": "Saint-François Marina",
+          "mode": "drive"
+        },
+        "airport": {
+          "name": "Pôle Caraïbes airport",
+          "mode": "drive"
+        }
+      },
+      "amenities": [
+        {
+          "icon": "pool",
+          "label": "2 pools (kids + adults, 7am-8pm)"
+        },
+        {
+          "icon": "shield",
+          "label": "Direct beach access (gate + badge)"
+        },
+        {
+          "icon": "ac",
+          "label": "AC bedrooms (remote)"
+        },
+        {
+          "icon": "terrace",
+          "label": "Electric blind in master bedroom"
+        },
+        {
+          "icon": "wifi",
+          "label": "Airbox WiFi"
+        },
+        {
+          "icon": "parking",
+          "label": "Spot 72 + 1 gate remote"
+        },
+        {
+          "icon": "kitchen",
+          "label": "Fully equipped kitchen"
+        },
+        {
+          "icon": "tv",
+          "label": "Local TV + fans"
+        }
+      ],
+      "wifi": {
+        "notes": "Airbox router in the apartment."
+      },
+      "security": {
+        "portail": "1 remote to open the gate. The gate closes automatically.",
+        "cles": "Keys + remote + beach badge handed over at check-in. Parking spot: N°72. Bin room (opposite the main gate, outside the residence): code 1025A — also opens with the badge."
+      },
+      "appliances": {
+        "wifi": "Airbox WiFi in the apartment — SSID Airbox-D7E0, password Crystalbeach971.",
+        "tv": "Living room TV with local channels.",
+        "coffee": "Fully equipped kitchen — bring your own coffee pods/capsules.",
+        "ac": "AC in each bedroom, dedicated remote. Two large standing fans also available.",
+        "water": "Apartment has an individual water reserve in case of mains cuts.",
+        "septic": "Mains drainage: no wipes, tampons, sanitary pads or harsh chemicals down the toilet."
+      },
+      "pool": {
+        "alarm": "2 free-access pools in the residence (7am-8pm) + direct beach access via gate (badge) at the end of the garden. ⚠ Adult supervision REQUIRED at all times, by the pools and on the beach. 1 dedicated children's pool with paddling area and 1.4 m depth. 1 pool of 1.6 m depth.",
+        "rules": "No sunscreen in the water (shower before swimming), no glass, no sharp objects. Close gates after passage.",
+        "maintenance": "Pool servicing by the residence. Report any visible issue to your concierge."
+      },
+      "houseRules": [
+        "Non-smoking indoors. Smoking allowed on the outdoor terrace.",
+        "No pets.",
+        "Lock the door and close the sliding bay when leaving the apartment.",
+        "Close the sliding bay during the day (reduces heat and insects).",
+        "Report any breakage or issue to your concierge — we sort it together."
+      ],
+      "trashSchedule": {
+        "ordures": "Bin room opposite the main gate (outside the residence). Code 1025A — also opens with the badge.",
+        "tri": "Yellow bin in the bin room: plastic bottles, paper/cardboard, metal/aluminium.",
+        "verre": "Nearest glass containers: shown by your concierge on arrival."
+      },
+      "bebettes": {
+        "intro": "In Guadeloupe we share the home with a few visitors. Here are the friendly ones and the less-loved ones.",
+        "amis": [
+          {
+            "name": "Green iguanas",
+            "note": "Harmless but fond of hibiscus."
+          },
+          {
+            "name": "Hummingbirds",
+            "note": "Admire the wingbeat speed."
+          },
+          {
+            "name": "Bananaquits",
+            "note": "Will come if you put sugar in a feeder."
+          },
+          {
+            "name": "Anoles & geckos",
+            "note": "Small harmless lizards — eat insects."
+          }
+        ],
+        "moinsAimes": [
+          {
+            "name": "Mosquitoes",
+            "note": "Repellents + coils. If fever, see a doctor."
+          },
+          {
+            "name": "Centipedes",
+            "note": "Venomous millipedes. Like damp corners. Avoid."
+          },
+          {
+            "name": "Cockroaches («ravets»)",
+            "note": "Large but harmless. Traps in the kitchen. Doesn't mean the place is dirty."
+          }
+        ]
+      },
+      "departure": [
+        "Check-out at 11am. Please leave the apartment as you found it.",
+        "Switch off all lights and AC.",
+        "Close the kitchen blind.",
+        "Empty bins (bin room opposite the main gate).",
+        "Return keys + remote + badge to your concierge."
+      ],
+      "weather": {
+        "alerte": "In case of weather alert (Jul-Oct), follow Météo France (meteofrance.gp) and Prefecture (guadeloupe.gouv.fr). Store 3 days of water and food. Concierge stays on hand.",
+        "saison": "Dry season: Dec-April (ideal). Wet season: July-October (short showers, occasional cyclones)."
+      }
+    }
+  },
+  "propertyType": "apartment"
+}

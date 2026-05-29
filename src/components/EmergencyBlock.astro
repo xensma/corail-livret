@@ -1,0 +1,35 @@
+---
+import emergencyData from '../data/saint-francois/emergency.json';
+import { t, tField, type Locale } from '../i18n/ui';
+
+interface Props { locale?: Locale; }
+const { locale = 'fr' } = Astro.props;
+---
+
+<div class="bg-corail-ink text-white rounded-2xl p-6 md:p-8">
+  <div class="flex items-center gap-3 mb-5">
+    <div class="w-10 h-10 rounded-full bg-corail-accent flex items-center justify-center">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/></svg>
+    </div>
+    <div>
+      <p class="text-xs uppercase tracking-[0.2em] opacity-70">{t(locale, 'hEnCasUrgence')}</p>
+      <h3 class="text-2xl font-display">{t(locale, 'hNumerosUtiles')}</h3>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+    {emergencyData.map((e: any) => {
+      const name = tField(e, 'name', locale);
+      const context = tField(e, 'context', locale);
+      return (
+        <a href={`tel:${e.number.replace(/\s/g, '')}`} class="flex items-center justify-between p-4 bg-white/5 hover:bg-white/10 rounded-xl transition-colors group">
+          <div>
+            <p class="font-medium">{name}</p>
+            <p class="text-xs opacity-60">{context}</p>
+          </div>
+          <div class="text-corail-turquoise-light font-display text-xl group-hover:scale-110 transition-transform">{e.number}</div>
+        </a>
+      );
+    })}
+  </div>
+</div>

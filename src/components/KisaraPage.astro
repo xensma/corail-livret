@@ -1,0 +1,435 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from './Hero.astro';
+import Section from './Section.astro';
+import WifiBlock from './WifiBlock.astro';
+import BebettesBlock from './BebettesBlock.astro';
+import ServicesCorail from './ServicesCorail.astro';
+import RestaurantCard from './RestaurantCard.astro';
+import BeachCard from './BeachCard.astro';
+import ActivityCard from './ActivityCard.astro';
+import ContactBar from './ContactBar.astro';
+import EmergencyBlock from './EmergencyBlock.astro';
+import ShopCard from './ShopCard.astro';
+import Logo from './Logo.astro';
+import NavMenu from './NavMenu.astro';
+
+import defaultVilla from '../data/villas/kisara.json';
+import restaurants from '../data/saint-francois/restaurants.json';
+import beaches from '../data/saint-francois/beaches.json';
+import activities from '../data/saint-francois/activities.json';
+import services from '../data/saint-francois/services.json';
+import shops from '../data/saint-francois/shops.json';
+
+import { t, tField, type Locale } from '../i18n/ui';
+
+interface Props {
+  locale?: Locale;
+  villa?: any;
+}
+const { locale = 'fr', villa = defaultVilla } = Astro.props;
+
+// Translated villa content
+const tagline = tField(villa, 'tagline', locale);
+const welcomeMessage = tField(villa, 'welcomeMessage', locale);
+const description = tField(villa, 'description', locale);
+const amenities = tField(villa, 'amenities', locale);
+const distances = tField(villa, 'distances', locale);
+const security = tField(villa, 'security', locale);
+const appliances = tField(villa, 'appliances', locale);
+const pool = tField(villa, 'pool', locale);
+const houseRules = tField(villa, 'houseRules', locale);
+const trashSchedule = tField(villa, 'trashSchedule', locale);
+const bebettes = tField(villa, 'bebettes', locale);
+const departure = tField(villa, 'departure', locale);
+const weather = tField(villa, 'weather', locale);
+
+// Translated distances merged (FR distances has full data, EN only has name overrides)
+const distancesData = Object.fromEntries(
+  Object.entries(villa.distances).map(([k, v]: [string, any]) => {
+    const enOverride = locale === 'en' && (villa as any).i18n?.en?.distances?.[k];
+    return [k, { ...v, name: enOverride?.name || v.name }];
+  })
+);
+
+// Split activities by source: Gwadatrip catalog vs Corail-curated external picks
+const gwadatripActivities = activities.filter((a: any) => a.source === 'gwadatrip');
+const gwadatripHighlights = gwadatripActivities.filter((a: any) => a.highlight);
+const gwadatripOthers = gwadatripActivities.filter((a: any) => !a.highlight);
+const suggestionActivities = activities.filter((a: any) => a.source === 'external');
+
+// "Proches de la villa" — three modes:
+//   1. villa.prochesOverride = [id, id, ...] → curated list (e.g. Rhumière, Verdéa)
+//   2. villa.prochesMode === 'dynamic'      → top 4 closest by Haversine (e.g. Prairies)
+//   3. default                              → restaurants.proches.items (Kisara's curated 4,
+//                                              reused by all near-Kisara villas)
+// In every case, restos picked into proches are REMOVED from their original zone
+// category to avoid duplicates. Empty zone categories are hidden.
+const PROCHES_COUNT = 4;
+const villaCoords = villa.location?.coordinates;
+function haversineKm(a: {lat: number, lng: number}, b: {lat: number, lng: number}) {
+  const R = 6371;
+  const toRad = (x: number) => x * Math.PI / 180;
+  const dLat = toRad(b.lat - a.lat);
+  const dLng = toRad(b.lng - a.lng);
+  const h = Math.sin(dLat/2)**2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLng/2)**2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+// Lookup all restos across all categories (including the default proches)
+const allItemsById: Record<string, any> = {};
+for (const [, cat] of Object.entries(restaurants)) {
+  for (const item of ((cat as any).items || [])) allItemsById[item.id] = item;
+}
+let procheItems: any[] = (restaurants as any).proches.items || [];
+if (Array.isArray(villa.prochesOverride) && villa.prochesOverride.length > 0) {
+  procheItems = villa.prochesOverride.map((id: string) => allItemsById[id]).filter(Boolean);
+} else if (villa.prochesMode === 'dynamic' && villaCoords) {
+  procheItems = Object.values(allItemsById)
+    .filter((r: any) => r.coordinates?.lat != null && r.coordinates?.lng != null)
+    .map((r: any) => ({ resto: r, d: haversineKm(villaCoords, r.coordinates) }))
+    .sort((a, b) => a.d - b.d)
+    .slice(0, PROCHES_COUNT)
+    .map(({ resto }) => resto);
+}
+// Build deduplicated restaurant groups: hide proches IDs in other categories, hide empties
+const procheIds = new Set(procheItems.map((r: any) => r.id));
+const dynamicRestaurants: Record<string, any> = {};
+for (const [key, cat] of Object.entries(restaurants)) {
+  if (key === 'proches') {
+    dynamicRestaurants[key] = { ...(cat as any), items: procheItems };
+  } else {
+    const filtered = ((cat as any).items || []).filter((r: any) => !procheIds.has(r.id));
+    if (filtered.length > 0) dynamicRestaurants[key] = { ...(cat as any), items: filtered };
+  }
+}
+const restaurantGroups = Object.entries(dynamicRestaurants);
+
+const title = `${villa.name} — ${locale === 'en' ? 'Welcome guide' : "Livret d'accueil"}`;
+---
+
+<Layout title={title} description={tagline} villaName={villa.name} coverImage={villa.coverPhoto}>
+  <NavMenu locale={locale} villaName={villa.name} propertyType={villa.propertyType} hasPool={!!villa.pool} />
+
+  <Hero
+    name={villa.name}
+    tagline={tagline}
+    welcomeMessage={welcomeMessage}
+    coverPhoto={villa.coverPhoto}
+    locale={locale}
+    villaSlug={villa.id}
+  />
+
+  <!-- ═══════════════ A. SECTION VILLA ═══════════════ -->
+
+  <Section id="maison" kicker={t(locale, 'kVotreMaison')} title={`${t(locale, 'tToutSavoir')} ${villa.name}`} background="white">
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="md:col-span-2">
+        <p class="text-corail-ink/80 leading-relaxed mb-6">{description}</p>
+        <h3 class="text-xl mt-6 mb-4">{t(locale, 'hEquipements')}</h3>
+        <ul class="grid grid-cols-2 gap-2 text-sm">
+          {(amenities || []).map((a: any) => (
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-corail-turquoise"></span>
+              {a.label}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <aside class="space-y-4">
+        <div class="bg-corail-cream rounded-2xl p-5">
+          <p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lVotreSejour')}</p>
+          <p class="text-sm"><span class="opacity-50">{t(locale, 'lCheckin')} :</span> {t(locale, 'lCheckinPrefix')} {villa.stay.checkin}</p>
+          <p class="text-sm"><span class="opacity-50">{t(locale, 'lCheckout')} :</span> {t(locale, 'lCheckoutPrefix')} {villa.stay.checkout}</p>
+          <p class="text-sm"><span class="opacity-50">{t(locale, 'lCapacite')} :</span> {villa.capacity.guests} {t(locale, 'lPersAbbr')} · {villa.capacity.bedrooms} {t(locale, 'lChAbbr')} · {villa.capacity.bathrooms} {t(locale, 'lSdbAbbr')}</p>
+        </div>
+
+        <div class="bg-corail-cream rounded-2xl p-5">
+          <p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lAProximite')}</p>
+          {Object.values(distancesData).map((d: any) => (
+            <p class="text-sm flex justify-between border-b border-corail-sand/30 last:border-0 py-1.5">
+              <span>{d.name}</span>
+              <span class="text-corail-turquoise-dark font-medium">{d.minutes} {t(locale, 'lMinutes')}</span>
+            </p>
+          ))}
+        </div>
+
+        {villa.location?.mapsUrl && (
+          <div class="bg-corail-cream rounded-2xl p-5">
+            <p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lLocalisation')}</p>
+            <p class="text-sm text-corail-ink/80 mb-3 leading-snug">{villa.location.address}</p>
+            <a
+              href={villa.location.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-sm font-medium text-corail-turquoise-dark hover:text-corail-turquoise transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+              </svg>
+              {t(locale, 'btnOuvrirMaps')}
+            </a>
+          </div>
+        )}
+      </aside>
+    </div>
+  </Section>
+
+  <!-- WIFI -->
+  <Section id="wifi" kicker={t(locale, 'kConnexion')} title={t(locale, 'tWifi')} background="cream">
+    <div class="max-w-3xl">
+      <WifiBlock ssid={villa.wifi.ssid} password={villa.wifi.password} security={villa.wifi.security} notes={villa.wifi.notes} locale={locale} />
+    </div>
+  </Section>
+
+  <!-- SÉCURITÉ -->
+  <Section id="securite" kicker={t(locale, 'kSecurite')} title={t(locale, 'tPortailCles')} background="white">
+    <div class="grid md:grid-cols-2 gap-6 max-w-4xl">
+      <div class="bg-corail-cream rounded-2xl p-6">
+        <p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'hPortailResidence')}</p>
+        <p class="text-sm text-corail-ink/80 mb-3">{security.portail}</p>
+        <div class="space-y-2">
+          <p class="text-sm flex justify-between border-t border-corail-sand/30 pt-2">
+            <span class="opacity-60">{t(locale, 'lDigicodeVoiture')}</span>
+            <code class="font-mono font-medium">{villa.security.digicode}</code>
+          </p>
+          <p class="text-sm flex justify-between border-t border-corail-sand/30 pt-2">
+            <span class="opacity-60">{t(locale, 'lPortillonPieton')}</span>
+            <code class="font-mono font-medium">{villa.security.portillonPieton}</code>
+          </p>
+        </div>
+      </div>
+      <div class="bg-corail-cream rounded-2xl p-6">
+        <p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'hCles')}</p>
+        <p class="text-sm text-corail-ink/80">{security.cles}</p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- BIEN UTILISER -->
+  <Section id="equipements" kicker={t(locale, 'kAuQuotidien')} title={t(locale, villa.propertyType === 'apartment' ? 'tBienUtiliserApt' : 'tBienUtiliser')} background="cream">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl">
+      <div class="card p-5"><p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lTV')}</p><p class="text-sm text-corail-ink/80">{appliances.tv}</p></div>
+      <div class="card p-5"><p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lCafetiere')}</p><p class="text-sm text-corail-ink/80">{appliances.coffee}</p></div>
+      <div class="card p-5"><p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lClimatisation')}</p><p class="text-sm text-corail-ink/80">{appliances.ac}</p></div>
+      <div class="card p-5"><p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lEauPotable')}</p><p class="text-sm text-corail-ink/80">{appliances.water}</p></div>
+      <div class="card p-5"><p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lFosseSeptique')}</p><p class="text-sm text-corail-ink/80">{appliances.septic}</p></div>
+      <div class="card p-5 bg-corail-accent/5 border-corail-accent/30"><p class="text-xs uppercase tracking-wider text-corail-accent mb-2">{t(locale, 'lAlerteCyclone')}</p><p class="text-sm text-corail-ink/80">{weather.alerte}</p></div>
+    </div>
+  </Section>
+
+  {pool && (
+    <!-- PISCINE -->
+    <Section id="piscine" kicker={t(locale, 'kDetente')} title={t(locale, villa.propertyType === 'apartment' ? 'tPiscinesResidence' : 'tVotrePiscine')} background="white">
+      <div class="grid md:grid-cols-3 gap-4 max-w-5xl">
+        <div class="card p-5 md:col-span-2 bg-corail-accent/5 border-corail-accent/30">
+          <p class="text-xs uppercase tracking-wider text-corail-accent mb-2">{t(locale, 'lAlarme')}</p>
+          <p class="text-sm text-corail-ink/80">{pool.alarm}</p>
+        </div>
+        <div class="card p-5"><p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lBonnesPratiques')}</p><p class="text-sm text-corail-ink/80">{pool.rules}</p></div>
+        <div class="card p-5 md:col-span-3"><p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lEntretien')}</p><p class="text-sm text-corail-ink/80">{pool.maintenance}</p></div>
+      </div>
+    </Section>
+  )}
+
+  <!-- TRI SÉLECTIF -->
+  <Section id="tri" kicker={t(locale, 'kEcoTips')} title={t(locale, 'tTriSelectif')} background="cream">
+    <div class="grid md:grid-cols-3 gap-4 max-w-4xl">
+      <div class="card p-5"><p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lOrdures')}</p><p class="text-sm text-corail-ink/80">{trashSchedule.ordures}</p></div>
+      <div class="card p-5"><p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lTriJaune')}</p><p class="text-sm text-corail-ink/80">{trashSchedule.tri}</p></div>
+      <div class="card p-5"><p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lVerre')}</p><p class="text-sm text-corail-ink/80">{trashSchedule.verre}</p></div>
+    </div>
+  </Section>
+
+  <!-- BÉBETTES -->
+  <Section id="bebettes" kicker={t(locale, 'kVieTropiques')} title={t(locale, 'tBebettes')} background="white">
+    <div class="max-w-4xl"><BebettesBlock data={bebettes} locale={locale} /></div>
+  </Section>
+
+  <!-- RÈGLES + DÉPART -->
+  <Section id="regles" kicker={t(locale, 'kSavoirVivre')} title={t(locale, 'tReglesDepart')} background="cream">
+    <div class="grid md:grid-cols-2 gap-6 max-w-5xl">
+      <div>
+        <h3 class="text-xl font-display mb-4">{t(locale, 'hReglesMaison')}</h3>
+        <ul class="space-y-3">
+          {(houseRules || []).map((rule: string) => (
+            <li class="flex items-start gap-3 p-4 rounded-xl bg-white">
+              <span class="w-1.5 h-1.5 rounded-full bg-corail-turquoise mt-2 flex-shrink-0"></span>
+              <span class="text-sm text-corail-ink/80">{rule}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-display mb-4">{t(locale, 'hJourDepart')}</h3>
+        <ul class="space-y-3">
+          {(departure || []).map((step: string) => (
+            <li class="flex items-start gap-3 p-4 rounded-xl bg-white">
+              <span class="w-5 h-5 rounded-full bg-corail-turquoise/20 text-corail-turquoise-dark text-xs flex items-center justify-center flex-shrink-0 mt-0.5">✓</span>
+              <span class="text-sm text-corail-ink/80">{step}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <!-- URGENCES -->
+  <Section id="urgences" kicker={t(locale, 'kEnCasDePepin')} title={t(locale, 'tUrgences')} background="white">
+    <EmergencyBlock locale={locale} />
+  </Section>
+
+  <!-- ═══════════════ B. PRESTATIONS CORAIL ═══════════════ -->
+  <Section id="services-corail" kicker={t(locale, 'kPrestationsPremium')} title={t(locale, 'tServicesCorail')} subtitle={t(locale, 'sServicesIntro')} background="cream">
+    <ServicesCorail whatsapp={villa.contacts.concierge_whatsapp} locale={locale} />
+  </Section>
+
+  <!-- ═══════════════ C. ALENTOURS ═══════════════ -->
+
+  <Section id="restos" kicker={t(locale, 'kSaveursLocales')} title={t(locale, 'tRestaurants')} subtitle={t(locale, 'sRestaurants')} background="white">
+    <div class="space-y-12">
+      {restaurantGroups.map(([key, group]: [string, any]) => {
+        const label = locale === 'en' && group.label_en ? group.label_en : group.label;
+        return (
+          <div>
+            <header class="mb-5">
+              <h3 class="font-display text-2xl text-corail-ink mb-1">{label}</h3>
+              <div class="h-px w-16 bg-corail-turquoise"></div>
+            </header>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {group.items.map((r: any) => <RestaurantCard resto={r} locale={locale} />)}
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </Section>
+
+  <!-- SECTION GWADATRIP — 7 activités réservables -->
+  <Section id="activites" kicker={t(locale, 'kAFaireAbsolument')} title={t(locale, 'tIncontournables')} subtitle={t(locale, 'sIncontournables')} background="cream">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      {gwadatripHighlights.map((a: any) => <ActivityCard activity={a} locale={locale} />)}
+    </div>
+    {gwadatripOthers.length > 0 && (
+      <>
+        <header class="mb-6 mt-12">
+          <p class="section-subtitle">{t(locale, 'kEtAussi')}</p>
+          <h3 class="text-2xl font-display">{t(locale, 'tAutresExperiences')}</h3>
+        </header>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {gwadatripOthers.map((a: any) => <ActivityCard activity={a} locale={locale} />)}
+        </div>
+      </>
+    )}
+
+    <!-- Gwadatrip × Corail signature footer -->
+    <div class="mt-10 flex items-center justify-center gap-3 text-xs text-corail-ink/60">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5BA8A2" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span>{t(locale, 'sGwadatripPower')}</span>
+    </div>
+  </Section>
+
+  <!-- SECTION BONS PLANS CORAIL — 3 suggestions externes -->
+  {suggestionActivities.length > 0 && (
+    <Section id="suggestions" kicker={t(locale, 'kBonsPlans')} title={t(locale, 'tSuggestions')} subtitle={t(locale, 'sSuggestions')} background="white">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {suggestionActivities.map((a: any) => <ActivityCard activity={a} locale={locale} />)}
+      </div>
+      <div class="mt-8 text-center text-xs text-corail-ink/50 italic">
+        {t(locale, 'sSuggestionsFooter')}
+      </div>
+    </Section>
+  )}
+
+  <Section id="plages" kicker={t(locale, 'kSelEtSable')} title={t(locale, 'tPlages')} subtitle={t(locale, 'sPlages')} background="white">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+      {beaches.map((b: any) => <BeachCard beach={b} locale={locale} />)}
+    </div>
+    <div class="max-w-3xl bg-corail-turquoise/10 rounded-2xl p-6">
+      <p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'kSargasses')}</p>
+      <p class="text-sm text-corail-ink/80">{t(locale, 'sSargasses')}</p>
+    </div>
+  </Section>
+
+  <Section id="boutiques" kicker={t(locale, 'kLifestyle')} title={t(locale, 'tBoutiques')} subtitle={t(locale, 'sBoutiques')} background="cream">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl">
+      {shops.map((s: any) => <ShopCard shop={s} locale={locale} />)}
+    </div>
+  </Section>
+
+  <Section id="services" kicker={t(locale, 'kLeQuotidien')} title={t(locale, 'tServicesPratiques')} background="white">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {services.map((s: any) => {
+        const name = tField(s, 'name', locale);
+        const category = tField(s, 'category', locale);
+        const hours = tField(s, 'hours', locale);
+        const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${s.coordinates.lat},${s.coordinates.lng}`;
+        return (
+          <div class="card p-5">
+            <p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-1">{category}</p>
+            <h3 class="text-lg mb-1">{name}</h3>
+            <p class="text-sm text-corail-ink/60 mb-3">{hours}</p>
+            <div class="flex gap-2">
+              {s.phone && (
+                <a href={`tel:${s.phone.replace(/\s/g, '')}`} class="btn-ghost">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+                  {t(locale, 'btnAppeler')}
+                </a>
+              )}
+              <a href={mapsUrl} target="_blank" rel="noopener" class="btn-ghost">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                {t(locale, 'btnYAller')}
+              </a>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  </Section>
+
+  <!-- DEMANDE D'AVIS -->
+  <section class="bg-corail-turquoise text-white py-16 text-center">
+    <div class="container-narrow">
+      <p class="font-display italic text-5xl mb-3">{t(locale, 'tMerci')}</p>
+      <p class="text-sm uppercase tracking-[0.3em] opacity-90 mb-6">{t(locale, 'kPourVotreAvis')}</p>
+      <p class="max-w-md mx-auto mb-8 opacity-90">
+        {t(locale, 'sReviews')} {villa.name}.<br/>
+        {t(locale, 'sReviewsEnd')}
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="https://g.page/corailconciergerie/review" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white text-corail-turquoise-dark font-medium hover:scale-105 transition-transform">
+          <span>{t(locale, 'btnAvisGoogle')}</span>
+        </a>
+        <a href={`https://${villa.contacts.facebook}`} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white/10 backdrop-blur text-white border border-white/30 font-medium hover:bg-white/20 transition-colors">
+          <span>{t(locale, 'btnFacebook')}</span>
+        </a>
+        <a href={`https://instagram.com/${villa.contacts.instagram.replace('@','')}`} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white/10 backdrop-blur text-white border border-white/30 font-medium hover:bg-white/20 transition-colors">
+          <span>{t(locale, 'btnInstagram')}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-corail-ink text-white py-16 text-center">
+    <div class="flex justify-center mb-8">
+      <Logo variant="dark" size="md" />
+    </div>
+    <p class="text-[10px] uppercase tracking-[0.5em] text-corail-cream/50 mb-10">{t(locale, 'lGuadeloupe')}</p>
+
+    <div class="h-px w-12 bg-corail-turquoise/40 mx-auto mb-8"></div>
+
+    <p class="font-display italic text-xl text-corail-cream mb-1">Claire & Maxence</p>
+    <p class="text-sm text-corail-cream/60 mb-8">{t(locale, 'sAVite')}</p>
+    <div class="text-xs text-corail-cream/40 space-y-1.5">
+      <p><a href={`mailto:${villa.contacts.concierge_email}`} class="hover:text-corail-turquoise transition-colors">{villa.contacts.concierge_email}</a></p>
+      <p>
+        Claire <a href={`tel:${villa.contacts.concierge_phone}`} class="hover:text-corail-turquoise transition-colors">{villa.contacts.concierge_phone}</a>
+        <span class="mx-2 opacity-40">·</span>
+        Maxence <a href={`tel:${villa.contacts.owner_phone}`} class="hover:text-corail-turquoise transition-colors">{villa.contacts.owner_phone}</a>
+      </p>
+    </div>
+  </footer>
+
+  <ContactBar whatsapp={villa.contacts.concierge_whatsapp} phone={villa.contacts.concierge_phone} villaName={villa.name} locale={locale} />
+</Layout>

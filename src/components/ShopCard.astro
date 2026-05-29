@@ -1,0 +1,50 @@
+---
+import { t, tField, type Locale } from '../i18n/ui';
+
+interface Props {
+  shop: any;
+  locale?: Locale;
+}
+const { shop, locale = 'fr' } = Astro.props;
+const category = tField(shop, 'category', locale);
+const tagline = tField(shop, 'tagline', locale);
+const description = tField(shop, 'description', locale);
+const services = tField(shop, 'services', locale) || [];
+const hours = tField(shop, 'hours', locale);
+
+const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${shop.coordinates.lat},${shop.coordinates.lng}`;
+---
+
+<article class={`card group overflow-hidden ${shop.highlight ? 'ring-2 ring-corail-turquoise/30' : ''}`}>
+  <div class="aspect-[16/10] bg-gradient-to-br from-corail-turquoise-light to-corail-sand overflow-hidden relative">
+    <img src={shop.photo} alt={shop.name} loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" onerror="this.style.display='none';" />
+    <div class="absolute top-3 left-3 bg-white/95 backdrop-blur px-2.5 py-1 text-xs font-medium rounded-full">{category}</div>
+  </div>
+  <div class="p-5">
+    <h3 class="text-xl mb-1">{shop.name}</h3>
+    <p class="font-display italic text-sm text-corail-ink/70 mb-3">{tagline}</p>
+    <p class="text-sm text-corail-ink/70 mb-4">{description}</p>
+
+    {services.length > 0 && (
+      <div class="flex flex-wrap gap-1 mb-4">
+        {services.map((s: string) => <span class="chip">{s}</span>)}
+      </div>
+    )}
+
+    <p class="text-xs text-corail-ink/60 mb-3">
+      <span class="opacity-50">{t(locale, 'lHoraires')} :</span> {hours}
+    </p>
+
+    <div class="flex flex-wrap gap-2 pt-2 border-t border-corail-sand/30">
+      {shop.website && (
+        <a href={shop.website} target="_blank" rel="noopener" class="btn-secondary text-sm flex-1 justify-center">
+          {t(locale, 'btnVoirSite')}
+        </a>
+      )}
+      <a href={mapsUrl} target="_blank" rel="noopener" class="btn-ghost" aria-label={t(locale, 'btnItineraire')}>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        {t(locale, 'btnYAller')}
+      </a>
+    </div>
+  </div>
+</article>

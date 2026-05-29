@@ -1,0 +1,48 @@
+---
+interface Props {
+  variant?: 'full' | 'icon' | 'dark' | 'compact';
+  size?: 'sm' | 'md' | 'lg';
+  className?: string;
+}
+const { variant = 'full', size = 'md', className = '' } = Astro.props;
+
+const LOGO_FULL = '/brand/logo-corail.png';   // horizontal with text — for light backgrounds
+const LOGO_ICON = '/brand/logo-icon.png';     // motif only — clean turquoise transparent
+const LOGO_FOOTER = '/brand/logo-final.png';  // new transparent-bg logo for dark footer
+
+const heights = {
+  sm: 'h-8',
+  md: 'h-12 md:h-14',
+  lg: 'h-16 md:h-20'
+};
+const heightCls = heights[size];
+
+const iconSizes = {
+  sm: 'h-10',
+  md: 'h-16 md:h-20',
+  lg: 'h-24 md:h-28'
+};
+const iconHeight = iconSizes[size];
+---
+
+{variant === 'icon' && (
+  <img src={LOGO_ICON} alt="Corail" class={`${iconHeight} w-auto ${className}`} loading="eager" />
+)}
+
+{variant === 'full' && (
+  <img src={LOGO_FULL} alt="Corail Conciergerie" class={`${heightCls} w-auto ${className}`} loading="eager" />
+)}
+
+{variant === 'compact' && (
+  <img src={LOGO_FULL} alt="Corail Conciergerie" class={`h-8 w-auto ${className}`} loading="eager" />
+)}
+
+{variant === 'dark' && (
+  <div class={`flex flex-col items-center gap-3 ${className}`}>
+    <img src={LOGO_FOOTER} alt="" class={`${iconHeight} w-auto`} loading="eager" />
+    <div class="text-center">
+      <p class="font-sans font-light text-3xl md:text-4xl tracking-[0.15em] text-corail-cream leading-none">CORAIL</p>
+      <p class="font-sans text-xs md:text-sm tracking-[0.45em] text-corail-turquoise mt-2">CONCIERGERIE</p>
+    </div>
+  </div>
+)}

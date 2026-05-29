@@ -1,0 +1,322 @@
+{
+  "id": "reve-indigo",
+  "name": "Villa Rêve Indigo",
+  "tagline": "Une parenthèse indigo à deux pas du centre",
+  "welcomeMessage": "Bienvenue à Rêve Indigo. Profitez de la piscine balnéo et de la quiétude du cadre. Un coffre-fort est à votre disposition dans le cellier (code à l'intérieur).",
+  "description": "Villa raffinée dans une résidence sécurisée de Saint-François. Piscine avec jets balnéo, eau chaude solaire, cuisine gaz, coffre-fort. 3 chambres climatisées, jardin tropical. Proche centre et plages.",
+  "capacity": {
+    "guests": 6,
+    "bedrooms": 3,
+    "bathrooms": 2
+  },
+  "location": {
+    "address": "Saint-François, Guadeloupe",
+    "coordinates": {
+      "lat": 16.2540313,
+      "lng": -61.2921683
+    },
+    "neighborhood": "Résidence sécurisée — proche centre et plages",
+    "mapsUrl": "https://maps.app.goo.gl/5xn7Dwf5YkyVCHjz7"
+  },
+  "distances": {
+    "beach": {
+      "name": "Plage des Raisins Clairs",
+      "minutes": 3,
+      "mode": "voiture"
+    },
+    "centre": {
+      "name": "Centre-ville Saint-François",
+      "minutes": 5,
+      "mode": "voiture"
+    },
+    "marina": {
+      "name": "Marina de Saint-François",
+      "minutes": 5,
+      "mode": "voiture"
+    },
+    "airport": {
+      "name": "Aéroport Pôle Caraïbes",
+      "minutes": 45,
+      "mode": "voiture"
+    }
+  },
+  "amenities": [
+    {
+      "icon": "pool",
+      "label": "Piscine privée + balnéo"
+    },
+    {
+      "icon": "ac",
+      "label": "Chambres climatisées"
+    },
+    {
+      "icon": "shield",
+      "label": "Coffre-fort, résidence sécurisée"
+    },
+    {
+      "icon": "wifi",
+      "label": "WiFi fibre optique"
+    },
+    {
+      "icon": "parking",
+      "label": "Parking privé"
+    },
+    {
+      "icon": "kitchen",
+      "label": "Cuisine gaz + Nespresso"
+    },
+    {
+      "icon": "terrace",
+      "label": "Eau chaude solaire"
+    },
+    {
+      "icon": "bbq",
+      "label": "Barbecue"
+    }
+  ],
+  "wifi": {
+    "ssid": "Rêve Indigo",
+    "password": "Guadeloupe",
+    "security": "WPA2",
+    "notes": "Mot de passe transmis à l'arrivée."
+  },
+  "stay": {
+    "checkin": "16:00",
+    "checkout": "10:00",
+    "minNights": 7
+  },
+  "security": {
+    "portail": "Le portail de la résidence se ferme automatiquement. Télécommande/bip à proximité, ou digicode.",
+    "digicode": "0310",
+    "portillonPieton": "1962",
+    "cles": "Clés et bip remis au check-in par votre concierge. Local poubelles à code : À COMMUNIQUER."
+  },
+  "appliances": {
+    "wifi": "WiFi fibre optique haut débit dans toute la villa.",
+    "tv": "Box TV Orange (sélectionner source HDMI 1). Bouquet chaînes locales et internationales.",
+    "coffee": "Cafetière filtre (filtres papier taille 4) + machine Nespresso (capsules dans les supermarchés).",
+    "ac": "Climatisation dans chaque chambre — utiliser uniquement quand la pièce est occupée, portes/fenêtres fermées. La nuit : régler sur 26 °C, ventilation auto.",
+    "water": "Eau potable + réserve 1 250 L et suppresseur → autonomie ~48h en cas de coupure réseau. Robinet extérieur du cabanon = indicateur réseau ville.",
+    "septic": "Fosse septique : pas de lingettes, tampons, serviettes hygiéniques, ni javel/huile/produits chimiques."
+  },
+  "pool": {
+    "alarm": "⚠ Surveillance enfants OBLIGATOIRE. Alarme avec aimant (logo plongeur) : voyant rouge = désactivée, vert = surveillance. La surveillance se réactive automatiquement ~15 min après la fin de baignade calme.",
+    "rules": "Pas de crème solaire dans l'eau (douche avant baignade), pas de verre, pas d'objets coupants. L'accès au local technique est interdit.",
+    "maintenance": "Nettoyage assuré par notre prestataire. Une épuisette est disponible. En cas de souci, contactez votre concierge."
+  },
+  "houseRules": [
+    "Pas de fête / événement bruyant sans accord préalable.",
+    "Pas de fumée à l'intérieur. Espace fumeur sur la terrasse extérieure.",
+    "Animaux non admis sauf accord écrit préalable.",
+    "Respect du voisinage : silence après 22h, musique modérée.",
+    "Signalez toute casse ou souci à votre concierge — on règle ensemble."
+  ],
+  "trashSchedule": {
+    "ordures": "Containers gris dans le local poubelles à la sortie de la résidence. Sacs poubelle fermés. Évacuation tous les jours conseillée (chaleur).",
+    "tri": "Container jaune dans le local : bouteilles plastique, papier/carton, fer/aluminium.",
+    "verre": "Conteneurs verts : indiqué par votre concierge à l'arrivée."
+  },
+  "bebettes": {
+    "intro": "En Guadeloupe, nous partageons la maison avec quelques visiteurs. Voici les amis et les moins amis.",
+    "amis": [
+      {
+        "name": "Iguanes verts",
+        "note": "Inoffensifs mais gourmands d'hibiscus."
+      },
+      {
+        "name": "Colibris",
+        "note": "Admirez la vitesse de battement d'ailes."
+      },
+      {
+        "name": "Sucriers",
+        "note": "Viendront si vous mettez du sucre dans un nichoir."
+      },
+      {
+        "name": "Anolis & margouillats",
+        "note": "Petits lézards sans danger — mangent les insectes."
+      }
+    ],
+    "moinsAimes": [
+      {
+        "name": "Moustiques",
+        "note": "Répulsifs + spirales auto-combustibles. Si fièvre, consultez un médecin."
+      },
+      {
+        "name": "Scolopendre",
+        "note": "Mille-pattes venimeux. Aime les coins humides. Bien visible, à éviter."
+      },
+      {
+        "name": "Blattes (« ravets »)",
+        "note": "Gros mais sans danger. Pièges dans la cuisine. Cela ne veut pas dire que la maison est sale."
+      }
+    ]
+  },
+  "departure": [
+    "Lancer une machine sur draps et serviettes utilisées.",
+    "Vider toutes les poubelles, sortir les bacs si jour de collecte.",
+    "Vider le frigo des denrées périssables.",
+    "Nettoyer la grille du barbecue (si utilisé).",
+    "Fermer fenêtres, baies, clim et lumières. État des lieux à 10h."
+  ],
+  "weather": {
+    "alerte": "En cas d'alerte météo (juillet-octobre), suivre Météo France (www.meteofrance.gp) et la Préfecture (www.guadeloupe.gouv.fr). Stockez 3 jours d'eau et nourriture. Votre concierge reste joignable.",
+    "saison": "Saison sèche : déc-avril (idéale). Saison humide : juillet-octobre (averses courtes, parfois cyclones)."
+  },
+  "contacts": {
+    "concierge_name": "Claire",
+    "concierge_phone": "+590690518468",
+    "concierge_whatsapp": "590690518468",
+    "concierge_email": "contact@corailconciergerie.com",
+    "owner_phone": "+33660468028",
+    "owner_name": "Maxence",
+    "instagram": "@corail_conciergerie",
+    "facebook": "fb.me/villaCorailConciergerie"
+  },
+  "photos": [
+    "/photos/villas/reve-indigo/cover.jpg",
+    "/photos/villas/reve-indigo/gallery-01.jpg",
+    "/photos/villas/reve-indigo/gallery-02.jpg",
+    "/photos/villas/reve-indigo/gallery-03.jpg",
+    "/photos/villas/reve-indigo/gallery-04.jpg",
+    "/photos/villas/reve-indigo/gallery-05.jpg",
+    "/photos/villas/reve-indigo/gallery-06.jpg"
+  ],
+  "coverPhoto": "/photos/villas/reve-indigo/cover.jpg",
+  "i18n": {
+    "en": {
+      "tagline": "An indigo escape steps from the centre",
+      "welcomeMessage": "Welcome to Rêve Indigo. Enjoy the spa-jet pool and the peaceful setting. A safe is available in the utility room (code inside).",
+      "description": "Refined villa in a secure Saint-François residence. Pool with spa jets, solar hot water, gas kitchen, safe. 3 air-conditioned bedrooms, tropical garden. Near town and beaches.",
+      "distances": {
+        "beach": {
+          "name": "Raisins Clairs beach",
+          "mode": "drive"
+        },
+        "centre": {
+          "name": "Saint-François town centre",
+          "mode": "drive"
+        },
+        "marina": {
+          "name": "Saint-François Marina",
+          "mode": "drive"
+        },
+        "airport": {
+          "name": "Pôle Caraïbes airport",
+          "mode": "drive"
+        }
+      },
+      "amenities": [
+        {
+          "icon": "pool",
+          "label": "Private pool + spa jets"
+        },
+        {
+          "icon": "ac",
+          "label": "Air-conditioned bedrooms"
+        },
+        {
+          "icon": "shield",
+          "label": "Safe, secure residence"
+        },
+        {
+          "icon": "wifi",
+          "label": "Fibre WiFi"
+        },
+        {
+          "icon": "parking",
+          "label": "Private parking"
+        },
+        {
+          "icon": "kitchen",
+          "label": "Gas kitchen + Nespresso"
+        },
+        {
+          "icon": "terrace",
+          "label": "Solar hot water"
+        },
+        {
+          "icon": "bbq",
+          "label": "Barbecue"
+        }
+      ],
+      "wifi": {
+        "notes": "Password provided on arrival."
+      },
+      "security": {
+        "portail": "Residence gate closes automatically. Remote nearby, or keypad.",
+        "cles": "Keys and remote handed over at check-in by your concierge. Bin room code: À COMMUNIQUER."
+      },
+      "appliances": {
+        "wifi": "High-speed fibre WiFi throughout the villa.",
+        "tv": "Orange TV box (HDMI 1 source). Local and international channels.",
+        "coffee": "Filter coffee maker (size 4 paper filters) + Nespresso machine (capsules in supermarkets).",
+        "ac": "AC in each bedroom — use only when occupied, doors/windows closed. At night: 26 °C, auto fan.",
+        "water": "Drinkable water + 1,250 L reserve and pressure pump → ~48h autonomy during mains cuts. Outdoor garden shed tap = mains indicator.",
+        "septic": "Septic tank: no wipes, tampons, sanitary pads, bleach, oil or harsh chemicals."
+      },
+      "pool": {
+        "alarm": "⚠ Adult supervision REQUIRED. Alarm with magnet (diver logo): red light = disarmed, green = active. Auto-rearms ~15 min after calm water returns.",
+        "rules": "No sunscreen in the water (shower before), no glass, no sharp objects. Technical room is off-limits.",
+        "maintenance": "Servicing by our provider. A skimmer net is available. Contact your concierge for any issue."
+      },
+      "houseRules": [
+        "No parties / loud events without prior approval.",
+        "No smoking indoors. Smoking allowed on the outdoor terrace.",
+        "No pets unless written approval.",
+        "Respect neighbours: quiet after 10pm, moderate music.",
+        "Report any breakage or issue to your concierge — we sort it together."
+      ],
+      "trashSchedule": {
+        "ordures": "Grey containers in the bin room at the residence exit. Closed bin bags. Daily disposal recommended (heat).",
+        "tri": "Yellow container in the bin room: plastic bottles, paper/cardboard, metal/aluminium.",
+        "verre": "Green glass containers: shown by your concierge on arrival."
+      },
+      "bebettes": {
+        "intro": "In Guadeloupe, we share the home with a few visitors. Here are the friends and the less loved.",
+        "amis": [
+          {
+            "name": "Green iguanas",
+            "note": "Harmless but fond of hibiscus."
+          },
+          {
+            "name": "Hummingbirds",
+            "note": "Admire their wing-beat speed."
+          },
+          {
+            "name": "Bananaquits",
+            "note": "They'll come if you put sugar in a feeder."
+          },
+          {
+            "name": "Anoles & geckos",
+            "note": "Small harmless lizards — they eat insects."
+          }
+        ],
+        "moinsAimes": [
+          {
+            "name": "Mosquitoes",
+            "note": "Repellents + spirals. If you get a fever, see a doctor."
+          },
+          {
+            "name": "Centipedes",
+            "note": "Venomous millipede. Likes damp corners. Visible, easy to avoid."
+          },
+          {
+            "name": "Cockroaches (« ravets »)",
+            "note": "Big but harmless. Traps in the kitchen. It doesn't mean the house is dirty."
+          }
+        ]
+      },
+      "departure": [
+        "Run a load of laundry on used sheets and towels.",
+        "Empty all bins, put them out if it's a collection day.",
+        "Empty the fridge of perishables.",
+        "Clean the BBQ grill (if used).",
+        "Close windows, doors, AC and lights. Check-out at 10am."
+      ],
+      "weather": {
+        "alerte": "In case of weather alert (Jul-Oct), follow Météo France (meteofrance.gp) and Prefecture (guadeloupe.gouv.fr). Store 3 days of water and food. Concierge stays on hand.",
+        "saison": "Dry season: Dec-April (ideal). Wet season: July-October (short showers, occasional cyclones)."
+      }
+    }
+  }
+}

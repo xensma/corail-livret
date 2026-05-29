@@ -1,0 +1,33 @@
+
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristInformationCenter",
+    "name": "GwadaTrip – Corail Conciergerie",
+    "description": "Réservation d'excursions en Guadeloupe : Petite Terre, Marie-Galante, jet-ski, bateau sans permis, snorkeling. Sélection premium accessible depuis votre villa.",
+    "url": "https://gwadatrip.com",
+    "telephone": "+590690518468",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Saint-François",
+      "addressRegion": "Guadeloupe",
+      "addressCountry": "FR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 16.2518,
+      "longitude": -61.2711
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "ratingCount": "47"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "19:00"
+    }
+  }
+  

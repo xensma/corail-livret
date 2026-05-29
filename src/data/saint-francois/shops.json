@@ -1,0 +1,39 @@
+[
+  {
+    "id": "corner-shop",
+    "name": "The Corner Shop",
+    "category": "Surf shop",
+    "tagline": "Mode surf, planches Fishbone et accessoires — Alexis & Margot",
+    "description": "Boutique surf ouverte fin 2023 par Alexis et Margot. Sélection unique de vêtements et accessoires inspirés de l'univers surf, planches shapées par Fishbone à la vente ET en location. Marques : Saltycrew, Vans, Rhythm, Dakine, Casio, Feather Fin, Moken.",
+    "address": "À côté du Jardin Secret — Ld Ste Marthe, Saint-François",
+    "coordinates": {
+      "lat": 16.258,
+      "lng": -61.262
+    },
+    "phone": null,
+    "hours": "Mardi à Samedi",
+    "website": "https://www.thecornershopfwi.com",
+    "facebook": "https://www.facebook.com/p/The-Corner-Shop-Surf-Shop-Guadeloupe-61553258612974/",
+    "services": [
+      "Vente vêtements & accessoires",
+      "Vente planches surf",
+      "Location planches surf"
+    ],
+    "photo": "/photos/shops/corner-shop.png",
+    "highlight": true,
+    "i18n": {
+      "en": {
+        "category": "Surf shop",
+        "tagline": "Surf fashion, Fishbone boards and accessories — Alexis & Margot",
+        "description": "Surf shop opened in late 2023 by Alexis and Margot. Unique selection of clothing and accessories from the surf world, Fishbone-shaped boards for sale AND rental. Brands: Saltycrew, Vans, Rhythm, Dakine, Casio, Feather Fin, Moken.",
+        "address": "Next to Le Jardin Secret — Ld Ste Marthe, Saint-François",
+        "hours": "Tuesday to Saturday",
+        "services": [
+          "Clothing & accessories",
+          "Surfboard sales",
+          "Surfboard rental"
+        ]
+      }
+    }
+  }
+]

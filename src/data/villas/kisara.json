@@ -1,0 +1,319 @@
+{
+  "id": "kisara",
+  "name": "Villa Kisara",
+  "tagline": "Une parenthèse moderne au cœur de Saint-François",
+  "welcomeMessage": "Soyez les bienvenus à Kisara. Nous vous souhaitons un excellent séjour et restons à votre disposition pour toutes informations complémentaires.\n\nClaire & Maxence — Corail Conciergerie",
+  "description": "Villa moderne nichée dans une résidence privée et sécurisée. Trois chambres climatisées, une piscine pour vous seuls, et une grande terrasse pour les soirées qui s'étirent. À deux minutes de la plage des Raisins Clairs.",
+  "capacity": {
+    "guests": 6,
+    "bedrooms": 3,
+    "bathrooms": 2
+  },
+  "location": {
+    "address": "705 Richeplaine, 97118 Saint-François, Guadeloupe",
+    "coordinates": {
+      "lat": 16.2541761,
+      "lng": -61.2927855
+    },
+    "neighborhood": "Résidence sécurisée — même que Villa Rêve Indigo",
+    "mapsUrl": "https://maps.app.goo.gl/gGd1C9DLNhY7G8CH9"
+  },
+  "distances": {
+    "beach": {
+      "name": "Plage des Raisins Clairs",
+      "minutes": 2,
+      "mode": "voiture"
+    },
+    "centre": {
+      "name": "Centre-ville Saint-François",
+      "minutes": 5,
+      "mode": "voiture"
+    },
+    "marina": {
+      "name": "Marina de Saint-François",
+      "minutes": 5,
+      "mode": "voiture"
+    },
+    "airport": {
+      "name": "Aéroport Pôle Caraïbes",
+      "minutes": 45,
+      "mode": "voiture"
+    }
+  },
+  "amenities": [
+    {
+      "icon": "pool",
+      "label": "Piscine privée"
+    },
+    {
+      "icon": "ac",
+      "label": "3 chambres climatisées"
+    },
+    {
+      "icon": "terrace",
+      "label": "Grande terrasse"
+    },
+    {
+      "icon": "shield",
+      "label": "Résidence sécurisée"
+    },
+    {
+      "icon": "wifi",
+      "label": "WiFi fibre optique"
+    },
+    {
+      "icon": "parking",
+      "label": "Parking privé"
+    },
+    {
+      "icon": "kitchen",
+      "label": "Cuisine équipée + Nespresso"
+    },
+    {
+      "icon": "bbq",
+      "label": "Barbecue charbon"
+    }
+  ],
+  "wifi": {
+    "ssid": "VillaKisara",
+    "password": "Kisara971!",
+    "security": "WPA",
+    "notes": "Merci de respecter une utilisation raisonnable : pas de téléchargement illégal."
+  },
+  "stay": {
+    "checkin": "16:00",
+    "checkout": "10:00",
+    "minNights": 7
+  },
+  "security": {
+    "portail": "Le portail se ferme automatiquement après chaque passage. Vous avez 2 bips à disposition.",
+    "digicode": "0310",
+    "portillonPieton": "1962",
+    "cles": "2 clés de la porte d'entrée. En votre absence, fermez à clé et descendez les volets."
+  },
+  "appliances": {
+    "wifi": true,
+    "tv": "Bouquet Orange TV + chaînes locales et internationales. En cas de panne : débrancher la box 30s puis rebrancher.",
+    "coffee": "Cafetière filtre (filtres taille 4) + machine Nespresso (capsules en supermarché)",
+    "ac": "À utiliser uniquement la nuit, fenêtres fermées, sur 26°C automatique. Une consommation normale est incluse — l'usage abusif est refacturé.",
+    "water": "Réserve de 1 250 L + suppresseur (autonomie ~48h en cas de coupure réseau). Eau potable. Coupures planifiées : smgeag.fr",
+    "septic": "Fosse septique : pas de lingettes, tampons, javel ni huile dans les canalisations."
+  },
+  "pool": {
+    "alarm": "Alarme à aimant. Avant chaque baignade : passer l'aimant sur le logo plongeur (voyant rouge). Réactivation automatique 15 min après.",
+    "rules": "Pas de crèmes solaires, boissons ni objets dans le bassin. Douche extérieure obligatoire après la plage.",
+    "maintenance": "Nettoyage assuré 1 fois par semaine. Si vous voyez des feuilles : épuisette sur le côté de la villa."
+  },
+  "houseRules": [
+    "Villa non-fumeur à l'intérieur. Cendrier sur la terrasse — mégots dans un sac fermé.",
+    "Pas de soirée bruyante après 22h (résidence)",
+    "Animaux non admis",
+    "Éclairage piscine : pensez à l'éteindre en partant vous coucher",
+    "Économie d'eau : la Guadeloupe vit des épisodes de sécheresse"
+  ],
+  "trashSchedule": {
+    "ordures": "Tous les jours dans les containers gris du local poubelle (extérieur résidence à gauche après portail). Code local : RESET 2307",
+    "tri": "Container jaune : plastique, papier, carton, métal",
+    "verre": "Containers verts à 600 m direction Saint-François"
+  },
+  "bebettes": {
+    "intro": "En Guadeloupe, nous partageons la maison avec quelques visiteurs. Voici les amis et les moins amis.",
+    "amis": [
+      {
+        "name": "Iguanes verts",
+        "note": "Inoffensifs mais gourmands d'hibiscus."
+      },
+      {
+        "name": "Colibris",
+        "note": "Admirez la vitesse de battement d'ailes."
+      },
+      {
+        "name": "Sucriers",
+        "note": "Viendront si vous mettez du sucre dans un nichoir."
+      },
+      {
+        "name": "Anolis & margouillats",
+        "note": "Petits lézards sans danger — mangent les insectes."
+      }
+    ],
+    "moinsAimes": [
+      {
+        "name": "Moustiques",
+        "note": "Répulsifs + spirales auto-combustibles. Si fièvre, consultez un médecin."
+      },
+      {
+        "name": "Scolopendre",
+        "note": "Mille-pattes venimeux. Aime les coins humides. Bien visible, à éviter."
+      },
+      {
+        "name": "Blattes (« ravets »)",
+        "note": "Gros mais sans danger. Pièges dans la cuisine. Cela ne veut pas dire que la maison est sale."
+      }
+    ]
+  },
+  "departure": [
+    "Évacuer les poubelles",
+    "Nettoyer la grille du barbecue",
+    "Rassembler serviettes et torchons en tas",
+    "Rassembler draps et housses en tas",
+    "Être prêt à 10h pour l'état des lieux"
+  ],
+  "weather": {
+    "alerte": "En cas d'alerte cyclonique : suivez meteofrance.gp et guadeloupe.gouv.fr. Stockez 3 jours d'eau et nourriture.",
+    "saison": "Saison cyclonique : juin à novembre. Les alertes orange/rouge sont diffusées TV/Radio Guadeloupe La 1ère."
+  },
+  "contacts": {
+    "concierge_name": "Claire",
+    "concierge_phone": "+590690518468",
+    "concierge_whatsapp": "590690518468",
+    "concierge_email": "contact@corailconciergerie.com",
+    "owner_phone": "+33660468028",
+    "owner_name": "Maxence",
+    "instagram": "@corail_conciergerie",
+    "facebook": "fb.me/villaCorailConciergerie"
+  },
+  "photos": [
+    "/photos/kisara/kisara1.jpg",
+    "/photos/kisara/kisara2.jpg",
+    "/photos/kisara/kisara4.jpg",
+    "/photos/kisara/kisara6.jpg",
+    "/photos/kisara/kisara7.jpg",
+    "/photos/kisara/kisara8.jpg",
+    "/photos/kisara/kisara9.jpg",
+    "/photos/kisara/kisara10.jpg",
+    "/photos/kisara/kisara11.jpg",
+    "/photos/kisara/kisara13.jpg",
+    "/photos/kisara/kisara14.jpg",
+    "/photos/kisara/kisara15.jpg"
+  ],
+  "coverPhoto": "/photos/kisara/kisara1.jpg",
+  "i18n": {
+    "en": {
+      "tagline": "A modern getaway in the heart of Saint-François",
+      "welcomeMessage": "Welcome to Kisara. We wish you a wonderful stay and remain at your disposal for any further information.\n\nClaire & Maxence — Corail Concierge",
+      "description": "A modern villa tucked away in a private, secure residence. Three air-conditioned bedrooms, a private pool just for you, and a large terrace for evenings that linger. Two minutes from Raisins Clairs beach.",
+      "amenities": [
+        {
+          "icon": "pool",
+          "label": "Private pool"
+        },
+        {
+          "icon": "ac",
+          "label": "3 air-conditioned bedrooms"
+        },
+        {
+          "icon": "terrace",
+          "label": "Large terrace"
+        },
+        {
+          "icon": "shield",
+          "label": "Secure residence"
+        },
+        {
+          "icon": "wifi",
+          "label": "Fibre WiFi"
+        },
+        {
+          "icon": "parking",
+          "label": "Private parking"
+        },
+        {
+          "icon": "kitchen",
+          "label": "Fully equipped kitchen + Nespresso"
+        },
+        {
+          "icon": "bbq",
+          "label": "Charcoal BBQ"
+        }
+      ],
+      "distances": {
+        "beach": {
+          "name": "Raisins Clairs beach"
+        },
+        "centre": {
+          "name": "Saint-François town centre"
+        },
+        "marina": {
+          "name": "Saint-François Marina"
+        },
+        "airport": {
+          "name": "Pôle Caraïbes Airport"
+        }
+      },
+      "security": {
+        "portail": "The gate closes automatically after each entry. You have 2 remotes at your disposal.",
+        "cles": "2 front-door keys. When away, lock the door and close the shutters."
+      },
+      "appliances": {
+        "tv": "Orange TV bundle + local and international channels. If it freezes: unplug the box for 30s and plug it back in.",
+        "coffee": "Filter coffee maker (size 4 filters) + Nespresso machine (capsules available at supermarkets)",
+        "ac": "Use only at night, windows closed, set to 26°C automatic. Normal consumption is included — abusive use will be charged.",
+        "water": "1,250 L reservoir + booster pump (~48h autonomy in case of mains cut). Drinking water. Planned cuts at smgeag.fr",
+        "septic": "Septic tank: no wet wipes, tampons, bleach or oil down the drains."
+      },
+      "pool": {
+        "alarm": "Magnet alarm. Before each swim: pass the magnet over the diver logo (red light). Auto-reactivates 15 min after.",
+        "rules": "No sunscreen, drinks or objects in the water. Outdoor shower required after the beach.",
+        "maintenance": "Cleaning once a week. If you see leaves: the net is on the side of the villa."
+      },
+      "houseRules": [
+        "Non-smoking inside. Ashtray on the terrace — cigarette butts in a closed bag.",
+        "No loud evenings after 10pm (residence)",
+        "No pets",
+        "Pool light: please switch it off when going to bed",
+        "Water conservation: Guadeloupe experiences drought episodes"
+      ],
+      "trashSchedule": {
+        "ordures": "Daily in the grey bins of the waste room (outside residence, left after the gate). Local code: RESET 2307",
+        "tri": "Yellow bin: plastic, paper, cardboard, metal",
+        "verre": "Green containers 600 m towards Saint-François"
+      },
+      "bebettes": {
+        "intro": "In Guadeloupe, we share the home with a few visitors. Here are the friends and the less loved.",
+        "amis": [
+          {
+            "name": "Green iguanas",
+            "note": "Harmless but fond of hibiscus."
+          },
+          {
+            "name": "Hummingbirds",
+            "note": "Admire their wing-beat speed."
+          },
+          {
+            "name": "Bananaquits",
+            "note": "They'll come if you put sugar in a feeder."
+          },
+          {
+            "name": "Anoles & geckos",
+            "note": "Small harmless lizards — they eat insects."
+          }
+        ],
+        "moinsAimes": [
+          {
+            "name": "Mosquitoes",
+            "note": "Repellents + spirals. If you get a fever, see a doctor."
+          },
+          {
+            "name": "Centipedes",
+            "note": "Venomous millipede. Likes damp corners. Visible, easy to avoid."
+          },
+          {
+            "name": "Cockroaches (« ravets »)",
+            "note": "Big but harmless. Traps in the kitchen. It doesn't mean the house is dirty."
+          }
+        ]
+      },
+      "departure": [
+        "Empty all bins",
+        "Clean the BBQ grill",
+        "Pile towels and cloths together",
+        "Pile sheets and pillowcases together",
+        "Be ready at 10am for the check-out"
+      ],
+      "weather": {
+        "alerte": "Cyclone alert: follow meteofrance.gp and guadeloupe.gouv.fr. Stock 3 days of water and food.",
+        "saison": "Cyclone season: June to November. Orange/red alerts broadcast on TV/Radio Guadeloupe La 1ère."
+      }
+    }
+  }
+}

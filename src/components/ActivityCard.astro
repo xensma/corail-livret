@@ -1,0 +1,94 @@
+---
+import { t, tField, type Locale } from '../i18n/ui';
+
+interface Props {
+  activity: any;
+  locale?: Locale;
+}
+const { activity, locale = 'fr' } = Astro.props;
+
+const name = tField(activity, 'name', locale);
+const tagline = tField(activity, 'tagline', locale);
+const type = tField(activity, 'type', locale);
+const difficulty = tField(activity, 'difficulty', locale);
+const advanceBooking = tField(activity, 'advanceBooking', locale);
+
+const priceLabel = activity.priceFrom === 0 ? t(locale, 'lGratuit') :
+  activity.priceFrom === activity.priceTo ? `${activity.priceFrom} €` :
+  `${activity.priceFrom}–${activity.priceTo} €`;
+const showFromPrice = activity.priceFrom > 0;
+
+const mapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${activity.coordinates.lat},${activity.coordinates.lng}`;
+
+const difficultyColor = activity.difficulty === 'Sportif' || activity.difficulty === 'Sporty'
+  ? 'bg-corail-accent text-white'
+  : activity.difficulty === 'Modéré' || activity.difficulty === 'Moderate'
+  ? 'bg-corail-turquoise-dark text-white'
+  : 'bg-white/95 text-corail-ink';
+---
+
+<article class={`card flex flex-col group ${activity.highlight ? 'ring-2 ring-corail-turquoise/30' : ''}`}>
+  <!-- Photo with minimal chips overlay -->
+  <div class="aspect-[16/10] bg-corail-turquoise-light overflow-hidden relative">
+    <img
+      src={activity.photo}
+      alt={name}
+      loading="lazy"
+      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+      onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #A6DCD7 0%, #72C9C2 100%)';"
+    />
+
+    <div class="absolute top-3 left-3 flex gap-2 flex-wrap">
+      <span class="bg-white/95 backdrop-blur px-2.5 py-1 text-xs font-medium rounded-full text-corail-turquoise-dark">{type}</span>
+      {difficulty && (
+        <span class={`backdrop-blur px-2.5 py-1 text-xs font-medium rounded-full ${difficultyColor}`}>{difficulty}</span>
+      )}
+    </div>
+
+    <div class="absolute top-3 right-3 bg-white/95 backdrop-blur px-2.5 py-1 text-xs font-medium rounded-full flex items-center gap-1">
+      <span class="text-corail-accent">★</span>
+      <span>{activity.rating}</span>
+    </div>
+
+    {activity.highlight && (
+      <div class="absolute bottom-3 left-3 bg-corail-accent text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full font-medium">
+        {t(locale, 'lIncontournable')}
+      </div>
+    )}
+  </div>
+
+  <!-- Minimal text content (like RestaurantCard) -->
+  <div class="p-5 flex-1 flex flex-col">
+    <div class="flex items-start justify-between gap-3 mb-1">
+      <h3 class="text-xl leading-tight">{name}</h3>
+      <div class="text-right whitespace-nowrap shrink-0">
+        {showFromPrice && <div class="text-[9px] uppercase tracking-wider text-corail-ink/50 mb-0.5">{t(locale, 'lFromPrice')}</div>}
+        <div class="text-corail-turquoise-dark font-display font-semibold">
+          {priceLabel}
+          {showFromPrice && <span class="text-[10px] font-normal text-corail-ink/50 ml-0.5">{t(locale, 'lPerPerson')}</span>}
+        </div>
+      </div>
+    </div>
+
+    <p class="font-display italic text-sm text-corail-ink/70 mb-4">{tagline}</p>
+
+    {advanceBooking && (
+      <p class="text-xs text-corail-accent bg-corail-accent/10 px-3 py-1.5 rounded-lg mb-3">⚠ {advanceBooking}</p>
+    )}
+
+    {activity.photoCredit && (
+      <p class="text-[10px] text-corail-ink/40 italic mb-2 mt-auto">{activity.photoCredit}</p>
+    )}
+
+    <div class={`flex gap-2 pt-2 border-t border-corail-sand/30 ${activity.photoCredit ? '' : 'mt-auto'}`}>
+      {activity.bookingUrl && (
+        <a href={activity.bookingUrl} target="_blank" rel="noopener" class="btn-primary text-sm flex-1 justify-center">
+          {activity.source === 'external' ? t(locale, 'btnEnSavoirPlus') : t(locale, 'btnReserverGwada')}
+        </a>
+      )}
+      <a href={mapsUrl} target="_blank" rel="noopener" class="btn-secondary text-sm" aria-label={t(locale, 'btnItineraire')}>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      </a>
+    </div>
+  </div>
+</article>

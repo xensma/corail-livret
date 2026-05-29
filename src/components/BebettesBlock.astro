@@ -1,0 +1,49 @@
+---
+import { t, type Locale } from '../i18n/ui';
+
+interface Props {
+  data: {
+    intro: string;
+    amis: { name: string; note: string }[];
+    moinsAimes: { name: string; note: string }[];
+  };
+  locale?: Locale;
+}
+const { data, locale = 'fr' } = Astro.props;
+---
+
+<div class="grid md:grid-cols-2 gap-6">
+  <div class="md:col-span-2">
+    <p class="font-display italic text-lg text-corail-ink/80">{data.intro}</p>
+  </div>
+
+  <div>
+    <p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-3">{t(locale, 'hNosAmis')}</p>
+    <div class="space-y-3">
+      {data.amis.map((b) => (
+        <div class="flex items-start gap-3 p-4 bg-corail-turquoise/5 rounded-xl">
+          <span class="w-1.5 h-1.5 rounded-full bg-corail-turquoise mt-2"></span>
+          <div>
+            <p class="font-medium">{b.name}</p>
+            <p class="text-sm text-corail-ink/70">{b.note}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div>
+    <p class="text-xs uppercase tracking-wider text-corail-accent mb-3">{t(locale, 'hMoinsAimes')}</p>
+    <div class="space-y-3">
+      {data.moinsAimes.map((b) => (
+        <div class="flex items-start gap-3 p-4 bg-corail-accent/5 rounded-xl">
+          <span class="w-1.5 h-1.5 rounded-full bg-corail-accent mt-2"></span>
+          <div>
+            <p class="font-medium">{b.name}</p>
+            <p class="text-sm text-corail-ink/70">{b.note}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

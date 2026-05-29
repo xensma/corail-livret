@@ -1,0 +1,178 @@
+---
+import { t, type Locale } from '../i18n/ui';
+
+interface Props {
+  locale?: Locale;
+  villaName?: string;
+  propertyType?: 'villa' | 'apartment';
+  hasPool?: boolean;
+}
+const { locale = 'fr', villaName = 'Villa Kisara', propertyType = 'villa', hasPool = true } = Astro.props;
+
+const isApt = propertyType === 'apartment';
+
+// Map: anchor ID → translation key (apartment-aware for "Bien utiliser" + "Piscine")
+const sections = [
+  { anchor: 'maison', tKey: 'tToutSavoir' as const },
+  { anchor: 'wifi', tKey: 'tWifi' as const },
+  { anchor: 'securite', tKey: 'tPortailCles' as const },
+  { anchor: 'equipements', tKey: (isApt ? 'tBienUtiliserApt' : 'tBienUtiliser') as const },
+  ...(hasPool ? [{ anchor: 'piscine', tKey: (isApt ? 'tPiscinesResidence' : 'tVotrePiscine') as const }] : []),
+  { anchor: 'tri', tKey: 'tTriSelectif' as const },
+  { anchor: 'bebettes', tKey: 'tBebettes' as const },
+  { anchor: 'regles', tKey: 'tReglesDepart' as const },
+  { anchor: 'urgences', tKey: 'tUrgences' as const },
+  { anchor: 'services-corail', tKey: 'tServicesCorail' as const },
+  { anchor: 'restos', tKey: 'tRestaurants' as const },
+  { anchor: 'activites', tKey: 'tIncontournables' as const },
+  { anchor: 'suggestions', tKey: 'tSuggestions' as const },
+  { anchor: 'plages', tKey: 'tPlages' as const },
+  { anchor: 'boutiques', tKey: 'tBoutiques' as const },
+  { anchor: 'services', tKey: 'tServicesPratiques' as const }
+];
+
+// First group "Votre villa" / "Your villa" — same label even for apartment to keep it short.
+// Boundary between "your place" group and "Corail services" group: just before services-corail.
+const corailIdx = sections.findIndex((s) => s.anchor === 'services-corail');
+const groupLabel = locale === 'en' ? (isApt ? 'Your apartment' : 'Your villa') : (isApt ? 'Votre appartement' : 'Votre villa');
+const grouped = [
+  { label: groupLabel, items: sections.slice(0, corailIdx) },
+  { label: locale === 'en' ? 'Corail services' : 'Prestations Corail', items: sections.slice(corailIdx, corailIdx + 1) },
+  { label: locale === 'en' ? 'Around you' : 'Aux alentours', items: sections.slice(corailIdx + 1) }
+];
+// "Around you" now contains 6 items (restos, activites, suggestions, plages, boutiques, services)
+---
+
+<!-- Floating Burger Button -->
+<button
+  id="nav-toggle"
+  aria-label={locale === 'en' ? 'Open menu' : 'Ouvrir le menu'}
+  aria-expanded="false"
+  class="fixed top-5 right-5 z-50 w-12 h-12 rounded-full bg-white/95 backdrop-blur shadow-lg border border-corail-sand/30 hover:bg-corail-cream transition-all flex items-center justify-center group"
+>
+  <span class="sr-only">Menu</span>
+  <svg class="nav-icon-open w-5 h-5 text-corail-ink group-hover:text-corail-turquoise-dark transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <line x1="3" y1="12" x2="21" y2="12"/>
+    <line x1="3" y1="18" x2="21" y2="18"/>
+  </svg>
+  <svg class="nav-icon-close w-5 h-5 text-corail-ink hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <line x1="18" y1="6" x2="6" y2="18"/>
+    <line x1="6" y1="6" x2="18" y2="18"/>
+  </svg>
+</button>
+
+<!-- Backdrop -->
+<div id="nav-backdrop" class="fixed inset-0 z-40 bg-corail-ink/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+<!-- Slide-in Menu -->
+<nav
+  id="nav-drawer"
+  aria-label={locale === 'en' ? 'Main navigation' : 'Navigation principale'}
+  class="fixed top-0 right-0 z-50 h-full w-full sm:w-[380px] bg-corail-cream shadow-2xl translate-x-full transition-transform duration-300 overflow-y-auto"
+>
+  <div class="sticky top-0 bg-corail-cream/95 backdrop-blur px-6 pt-6 pb-4 border-b border-corail-sand/30 flex items-center justify-between">
+    <div>
+      <p class="text-[10px] uppercase tracking-[0.3em] text-corail-turquoise-dark mb-1">{locale === 'en' ? 'Navigation' : 'Sommaire'}</p>
+      <p class="font-display text-xl">{villaName}</p>
+    </div>
+    <button id="nav-close" aria-label={locale === 'en' ? 'Close menu' : 'Fermer le menu'} class="w-10 h-10 rounded-full hover:bg-white transition-colors flex items-center justify-center">
+      <svg class="w-5 h-5 text-corail-ink" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="px-6 py-6 space-y-8">
+    {grouped.map((group) => (
+      <div>
+        <p class="text-[10px] uppercase tracking-[0.25em] text-corail-turquoise-dark/70 mb-3">{group.label}</p>
+        <ul class="space-y-1">
+          {group.items.map((s) => (
+            <li>
+              <a
+                href={`#${s.anchor}`}
+                data-nav-link
+                class="flex items-center justify-between py-2.5 px-3 -mx-3 rounded-lg text-corail-ink hover:bg-white hover:text-corail-turquoise-dark transition-colors group"
+              >
+                <span class="font-display text-base">{t(locale, s.tKey)}</span>
+                <svg class="w-4 h-4 opacity-30 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18l6-6-6-6"/>
+                </svg>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+
+  <!-- Lang switcher in menu -->
+  <div class="px-6 py-6 border-t border-corail-sand/30">
+    <p class="text-[10px] uppercase tracking-[0.25em] text-corail-turquoise-dark/70 mb-3">{locale === 'en' ? 'Language' : 'Langue'}</p>
+    <div class="flex gap-2">
+      <a href="/kisara" class={`flex-1 text-center py-2.5 rounded-full font-medium text-sm transition-all ${locale === 'fr' ? 'bg-corail-turquoise text-white' : 'bg-white text-corail-ink/60 hover:text-corail-ink'}`}>Français</a>
+      <a href="/en/kisara" class={`flex-1 text-center py-2.5 rounded-full font-medium text-sm transition-all ${locale === 'en' ? 'bg-corail-turquoise text-white' : 'bg-white text-corail-ink/60 hover:text-corail-ink'}`}>English</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const close = document.getElementById('nav-close');
+  const drawer = document.getElementById('nav-drawer');
+  const backdrop = document.getElementById('nav-backdrop');
+  const openIcon = document.querySelector('.nav-icon-open');
+  const closeIcon = document.querySelector('.nav-icon-close');
+
+  function openMenu() {
+    drawer?.classList.remove('translate-x-full');
+    backdrop?.classList.remove('opacity-0', 'pointer-events-none');
+    backdrop?.classList.add('opacity-100');
+    toggle?.setAttribute('aria-expanded', 'true');
+    openIcon?.classList.add('hidden');
+    closeIcon?.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    drawer?.classList.add('translate-x-full');
+    backdrop?.classList.add('opacity-0', 'pointer-events-none');
+    backdrop?.classList.remove('opacity-100');
+    toggle?.setAttribute('aria-expanded', 'false');
+    openIcon?.classList.remove('hidden');
+    closeIcon?.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  toggle?.addEventListener('click', () => {
+    if (toggle.getAttribute('aria-expanded') === 'true') closeMenu();
+    else openMenu();
+  });
+  close?.addEventListener('click', closeMenu);
+  backdrop?.addEventListener('click', closeMenu);
+
+  // Close on link click + smooth scroll with offset for sticky bar
+  document.querySelectorAll('[data-nav-link]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const href = link.getAttribute('href');
+      if (!href) return;
+      closeMenu();
+      // Wait for menu close animation before scrolling
+      setTimeout(() => {
+        const target = document.querySelector(href);
+        if (target) {
+          const top = (target as HTMLElement).offsetTop - 20;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      }, 200);
+    });
+  });
+
+  // Close on ESC
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') closeMenu();
+  });
+</script>

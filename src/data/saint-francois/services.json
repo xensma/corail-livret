@@ -1,0 +1,154 @@
+[
+  {
+    "id": "monoprix-sf",
+    "name": "Monoprix Saint-François",
+    "category": "Supermarché",
+    "address": "Route de la Pointe des Châteaux, Saint-François",
+    "coordinates": {
+      "lat": 16.257,
+      "lng": -61.2897
+    },
+    "phone": null,
+    "hours": "Lun-Sam 8h-20h, Dim 8h-13h",
+    "website": "https://www.monoprix.fr",
+    "i18n": {
+      "en": {
+        "category": "Supermarket",
+        "hours": "Mon-Sat 8am-8pm, Sun 8am-1pm"
+      }
+    }
+  },
+  {
+    "id": "pharmacie-port-caraibes",
+    "name": "Pharmacie Port Caraïbes",
+    "category": "Pharmacie",
+    "address": "Saint-François",
+    "coordinates": {
+      "lat": 16.252,
+      "lng": -61.274
+    },
+    "phone": null,
+    "hours": "Lun-Sam 8h30-19h30, Dim de garde",
+    "website": "https://pharmacie-port-caraibe-saint-francois.pharmabest.com/",
+    "i18n": {
+      "en": {
+        "category": "Pharmacy",
+        "hours": "Mon-Sat 8:30am-7:30pm, Sun on duty"
+      }
+    }
+  },
+  {
+    "id": "cabinet-levant",
+    "name": "Cabinet du Levant",
+    "category": "Médecin",
+    "address": "Saint-François",
+    "coordinates": {
+      "lat": 16.2515,
+      "lng": -61.275
+    },
+    "phone": null,
+    "hours": "Sur rendez-vous",
+    "website": "https://cabinet-levant.com/",
+    "i18n": {
+      "en": {
+        "name": "Levant Medical Centre",
+        "category": "Doctor",
+        "hours": "By appointment"
+      }
+    }
+  },
+  {
+    "id": "boulangerie-aleonard",
+    "name": "Boulangerie Aléonard",
+    "category": "Boulangerie",
+    "address": "Crystal Beach, Saint-François",
+    "coordinates": {
+      "lat": 16.2496,
+      "lng": -61.2825
+    },
+    "phone": "+590590485327",
+    "hours": "Mar-Dim dès 6h30 (fermé lundi)",
+    "website": "http://aleonard-artisan-boulanger.com/",
+    "i18n": {
+      "en": {
+        "name": "Aléonard Bakery",
+        "category": "Bakery",
+        "hours": "Tue-Sun from 6:30am (closed Monday)"
+      }
+    }
+  },
+  {
+    "id": "super-u",
+    "name": "Super U Saint-François",
+    "category": "Supermarché",
+    "address": "Route de la Marina, Saint-François",
+    "coordinates": {
+      "lat": 16.2521,
+      "lng": -61.2702
+    },
+    "phone": "+590590884250",
+    "hours": "Lun-Sam 8h-20h, Dim 8h-13h",
+    "i18n": {
+      "en": {
+        "category": "Supermarket",
+        "hours": "Mon-Sat 8am-8pm, Sun 8am-1pm"
+      }
+    }
+  },
+  {
+    "id": "carrefour-market-sf",
+    "name": "Carrefour Market Saint-François",
+    "category": "Supermarché",
+    "address": "Rue de la République, Saint-François",
+    "coordinates": {
+      "lat": 16.2528,
+      "lng": -61.2769
+    },
+    "phone": "+590590889090",
+    "hours": "Lun-Sam 8h-20h, Dim 8h-13h",
+    "website": "https://www.carrefour.fr/magasin/market-saint-francois",
+    "i18n": {
+      "en": {
+        "category": "Supermarket",
+        "hours": "Mon-Sat 8am-8pm, Sun 8am-1pm"
+      }
+    }
+  },
+  {
+    "id": "station-total",
+    "name": "Total Saint-François",
+    "category": "Station-service",
+    "address": "RN5, Saint-François",
+    "coordinates": {
+      "lat": 16.2462,
+      "lng": -61.2745
+    },
+    "phone": null,
+    "hours": "24h/24 (paiement CB)",
+    "i18n": {
+      "en": {
+        "category": "Petrol station",
+        "hours": "24/7 (card payment)"
+      }
+    }
+  },
+  {
+    "id": "dab-credit-agricole",
+    "name": "DAB Crédit Agricole",
+    "category": "Distributeur",
+    "address": "Place du Marché, Saint-François",
+    "coordinates": {
+      "lat": 16.2513,
+      "lng": -61.2763
+    },
+    "phone": null,
+    "hours": "24h/24",
+    "i18n": {
+      "en": {
+        "name": "Crédit Agricole ATM",
+        "category": "ATM",
+        "hours": "24/7"
+      }
+    }
+  }
+]

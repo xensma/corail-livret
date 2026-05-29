@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.output/
+
+# Astro
+.astro/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Scripts internes (extraits PDF, scripts one-off de migration)
+scripts/_pdf_extracts/
+
+# Legacy backups (covers anciennes versions)
+public/photos/**/_legacy/
+public/photos/**/cover.legacy*.jpg
+public/brand/*.legacy.png
+
+# Temp
+*.tmp
+.cache/
+
+# Project root backups (anciennes covers, etc.)
+_backups/
+

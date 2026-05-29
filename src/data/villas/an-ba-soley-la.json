@@ -1,0 +1,333 @@
+{
+  "id": "an-ba-soley-la",
+  "name": "Villa An Ba Soley La",
+  "tagline": "« Sous le soleil » — escapade créole avec piscine privée",
+  "welcomeMessage": "Soyez les bienvenus à An Ba Soley La (« sous le soleil » en créole). Cette villa moderne au cœur de Saint-François, avec sa piscine privée et son jardin tropical, n'attend que vous. Nous vous souhaitons un excellent séjour et restons à votre disposition pour tout besoin.",
+  "description": "Villa contemporaine de plain-pied à Saint-François, avec piscine privée, grande terrasse couverte, salon extérieur, espace repas et coin bar. Cuisine ouverte entièrement équipée, chambres climatisées, jardin tropical luxuriant. Cadre paisible à quelques minutes des plages des Raisins Clairs et du centre-ville.",
+  "capacity": {
+    "guests": 6,
+    "bedrooms": 3,
+    "bathrooms": 2
+  },
+  "location": {
+    "address": "Saint-François 97118, Guadeloupe",
+    "coordinates": {
+      "lat": 16.261617,
+      "lng": -61.303395
+    },
+    "neighborhood": "Quartier résidentiel paisible",
+    "mapsUrl": "https://maps.app.goo.gl/BdFWZqczDgqXa54j7"
+  },
+  "distances": {
+    "beach": {
+      "name": "Plage des Raisins Clairs",
+      "minutes": 5,
+      "mode": "voiture"
+    },
+    "centre": {
+      "name": "Centre-ville Saint-François",
+      "minutes": 7,
+      "mode": "voiture"
+    },
+    "marina": {
+      "name": "Marina de Saint-François",
+      "minutes": 8,
+      "mode": "voiture"
+    },
+    "airport": {
+      "name": "Aéroport Pôle Caraïbes",
+      "minutes": 45,
+      "mode": "voiture"
+    }
+  },
+  "amenities": [
+    {
+      "icon": "pool",
+      "label": "Piscine privée"
+    },
+    {
+      "icon": "ac",
+      "label": "Chambres climatisées"
+    },
+    {
+      "icon": "terrace",
+      "label": "Grande terrasse couverte + bar"
+    },
+    {
+      "icon": "shield",
+      "label": "Cadre clos et sécurisé"
+    },
+    {
+      "icon": "wifi",
+      "label": "WiFi haut débit"
+    },
+    {
+      "icon": "parking",
+      "label": "Parking privé"
+    },
+    {
+      "icon": "kitchen",
+      "label": "Cuisine équipée ouverte"
+    },
+    {
+      "icon": "bbq",
+      "label": "Barbecue"
+    },
+    {
+      "icon": "terrace",
+      "label": "Terrain de pétanque"
+    }
+  ],
+  "wifi": {
+    "ssid": "AnBaSoleyLa",
+    "password": "À COMMUNIQUER",
+    "security": "WPA2",
+    "notes": "Le mot de passe vous sera transmis à l'arrivée."
+  },
+  "stay": {
+    "checkin": "16:00",
+    "checkout": "10:00",
+    "minNights": 7
+  },
+  "security": {
+    "portail": "Le portail se ferme automatiquement après chaque passage. Bip + clés remis à l'arrivée.",
+    "digicode": "À COMMUNIQUER",
+    "portillonPieton": "À COMMUNIQUER",
+    "cles": "Trousseau de clés remis lors du check-in par votre concierge."
+  },
+  "appliances": {
+    "wifi": "WiFi haut débit dans toute la villa.",
+    "tv": "Télévision au salon — chaînes locales et internationales.",
+    "coffee": "Cafetière + bouilloire dans la cuisine équipée.",
+    "ac": "Climatisation dans chaque chambre. Merci de couper la clim quand vous sortez de la villa.",
+    "water": "Eau du robinet potable. Une carafe filtrante est mise à disposition.",
+    "septic": "Fosse septique : merci de ne JAMAIS jeter lingettes, cotons, tampons ou produits chimiques agressifs dans les WC."
+  },
+  "pool": {
+    "alarm": "⚠ Surveillance enfants OBLIGATOIRE à tout moment. Pas de baignade sans adulte présent au bord. Refermez systématiquement les abords après baignade.",
+    "rules": "Pas de crème solaire dans l'eau (douche avant baignade), pas de verre près du bassin, pas de plongeons. L'accès au local technique est interdit.",
+    "maintenance": "Entretien hebdomadaire assuré par notre prestataire. Pour tout souci (pompe, niveau d'eau, propreté inhabituelle), contactez votre concierge."
+  },
+  "houseRules": [
+    "Pas de fête / événement bruyant sans accord préalable du propriétaire.",
+    "Pas de fumée à l'intérieur. Espace fumeur sur la terrasse extérieure.",
+    "Animaux non admis sauf accord écrit préalable.",
+    "Respect du voisinage : silence après 22h, musique modérée le soir.",
+    "Signalez toute casse ou souci à votre concierge — on règle ensemble."
+  ],
+  "trashSchedule": {
+    "ordures": "Collecte selon planning communal. Sortir les bacs la veille au soir.",
+    "tri": "Bac jaune : bouteilles plastique, papier/carton, fer/aluminium.",
+    "verre": "Conteneurs verre les plus proches : indiqués par votre concierge à l'arrivée."
+  },
+  "bebettes": {
+    "intro": "En Guadeloupe, nous partageons la maison avec quelques visiteurs. Voici les amis et les moins amis.",
+    "amis": [
+      {
+        "name": "Iguanes verts",
+        "note": "Inoffensifs mais gourmands d'hibiscus."
+      },
+      {
+        "name": "Colibris",
+        "note": "Admirez la vitesse de battement d'ailes."
+      },
+      {
+        "name": "Sucriers",
+        "note": "Viendront si vous mettez du sucre dans un nichoir."
+      },
+      {
+        "name": "Anolis & margouillats",
+        "note": "Petits lézards sans danger — mangent les insectes."
+      }
+    ],
+    "moinsAimes": [
+      {
+        "name": "Moustiques",
+        "note": "Répulsifs + spirales auto-combustibles. Si fièvre, consultez un médecin."
+      },
+      {
+        "name": "Scolopendre",
+        "note": "Mille-pattes venimeux. Aime les coins humides. Bien visible, à éviter."
+      },
+      {
+        "name": "Blattes (« ravets »)",
+        "note": "Gros mais sans danger. Pièges dans la cuisine. Cela ne veut pas dire que la maison est sale."
+      }
+    ]
+  },
+  "departure": [
+    "Lancer une machine sur draps et serviettes utilisées.",
+    "Vider toutes les poubelles, sortir les bacs si jour de collecte.",
+    "Vider le frigo des denrées périssables.",
+    "Nettoyer la grille du barbecue (si utilisé).",
+    "Fermer fenêtres, baies, clim et lumières. État des lieux à 10h."
+  ],
+  "weather": {
+    "alerte": "En cas d'alerte météo (juillet-octobre), suivre Météo France (www.meteofrance.gp) et la Préfecture (www.guadeloupe.gouv.fr). Stockez 3 jours d'eau et nourriture. Votre concierge reste joignable.",
+    "saison": "Saison sèche : déc-avril (idéale). Saison humide : juillet-octobre (averses courtes, parfois cyclones)."
+  },
+  "contacts": {
+    "concierge_name": "Claire",
+    "concierge_phone": "+590690518468",
+    "concierge_whatsapp": "590690518468",
+    "concierge_email": "contact@corailconciergerie.com",
+    "owner_phone": "+33660468028",
+    "owner_name": "Maxence",
+    "instagram": "@corail_conciergerie",
+    "facebook": "fb.me/villaCorailConciergerie"
+  },
+  "photos": [
+    "/photos/villas/an-ba-soley-la/cover.jpg",
+    "/photos/villas/an-ba-soley-la/gallery-01.jpg",
+    "/photos/villas/an-ba-soley-la/gallery-02.jpg",
+    "/photos/villas/an-ba-soley-la/gallery-03.jpg",
+    "/photos/villas/an-ba-soley-la/gallery-04.jpg",
+    "/photos/villas/an-ba-soley-la/gallery-05.jpg",
+    "/photos/villas/an-ba-soley-la/gallery-06.jpg",
+    "/photos/villas/an-ba-soley-la/gallery-07.jpg",
+    "/photos/villas/an-ba-soley-la/gallery-08.jpg",
+    "/photos/villas/an-ba-soley-la/gallery-09.jpg"
+  ],
+  "coverPhoto": "/photos/villas/an-ba-soley-la/cover.jpg",
+  "i18n": {
+    "en": {
+      "tagline": "« Under the sun » — Creole escape with private pool",
+      "welcomeMessage": "Welcome to An Ba Soley La (« under the sun » in Creole). This contemporary villa in Saint-François, with its private pool and tropical garden, awaits you. We wish you a wonderful stay and remain on hand for any need.",
+      "description": "Contemporary single-storey villa in Saint-François, with private pool, large covered terrace, outdoor lounge, dining area and bar corner. Open-plan equipped kitchen, air-conditioned bedrooms, lush tropical garden. Peaceful setting minutes from Raisins Clairs beach and town centre.",
+      "distances": {
+        "beach": {
+          "name": "Raisins Clairs beach",
+          "mode": "drive"
+        },
+        "centre": {
+          "name": "Saint-François town centre",
+          "mode": "drive"
+        },
+        "marina": {
+          "name": "Saint-François Marina",
+          "mode": "drive"
+        },
+        "airport": {
+          "name": "Pôle Caraïbes airport",
+          "mode": "drive"
+        }
+      },
+      "amenities": [
+        {
+          "icon": "pool",
+          "label": "Private pool"
+        },
+        {
+          "icon": "ac",
+          "label": "Air-conditioned bedrooms"
+        },
+        {
+          "icon": "terrace",
+          "label": "Large covered terrace + bar"
+        },
+        {
+          "icon": "shield",
+          "label": "Enclosed, secure grounds"
+        },
+        {
+          "icon": "wifi",
+          "label": "High-speed WiFi"
+        },
+        {
+          "icon": "parking",
+          "label": "Private parking"
+        },
+        {
+          "icon": "kitchen",
+          "label": "Open equipped kitchen"
+        },
+        {
+          "icon": "bbq",
+          "label": "Barbecue"
+        },
+        {
+          "icon": "terrace",
+          "label": "Pétanque court"
+        }
+      ],
+      "wifi": {
+        "notes": "Password provided on arrival."
+      },
+      "security": {
+        "portail": "Gate closes automatically. Remote + keys handed over on arrival.",
+        "cles": "Keys handed over at check-in by your concierge."
+      },
+      "appliances": {
+        "wifi": "High-speed WiFi throughout the villa.",
+        "tv": "Living room TV with local and international channels.",
+        "coffee": "Coffee maker + kettle in the equipped kitchen.",
+        "ac": "AC in each bedroom. Please switch off when leaving the villa.",
+        "water": "Tap water drinkable. Filter jug provided.",
+        "septic": "Septic tank: NEVER flush wipes, cotton, tampons or harsh chemicals."
+      },
+      "pool": {
+        "alarm": "⚠ Adult supervision REQUIRED at all times. No swimming without an adult present. Re-secure the pool area after each use.",
+        "rules": "No sunscreen in the water (shower before swimming), no glass, no diving. Technical room is off-limits.",
+        "maintenance": "Weekly servicing by our provider. Contact your concierge for any issue."
+      },
+      "houseRules": [
+        "No parties / loud events without prior owner approval.",
+        "No smoking indoors. Smoking allowed on the outdoor terrace.",
+        "No pets unless written approval.",
+        "Respect neighbours: quiet after 10pm, moderate music.",
+        "Report any breakage or issue to your concierge — we sort it together."
+      ],
+      "trashSchedule": {
+        "ordures": "Collection per municipal schedule. Bins out the evening before.",
+        "tri": "Yellow bin: plastic bottles, paper/cardboard, metal/aluminium.",
+        "verre": "Nearest glass containers: shown by your concierge on arrival."
+      },
+      "bebettes": {
+        "intro": "In Guadeloupe we share the home with a few visitors. Here are the friendly ones and the less-loved ones.",
+        "amis": [
+          {
+            "name": "Green iguanas",
+            "note": "Harmless but fond of hibiscus."
+          },
+          {
+            "name": "Hummingbirds",
+            "note": "Admire the wingbeat speed."
+          },
+          {
+            "name": "Bananaquits",
+            "note": "Will come if you put sugar in a feeder."
+          },
+          {
+            "name": "Anoles & geckos",
+            "note": "Small harmless lizards — eat insects."
+          }
+        ],
+        "moinsAimes": [
+          {
+            "name": "Mosquitoes",
+            "note": "Repellents + coils. If fever, see a doctor."
+          },
+          {
+            "name": "Centipedes",
+            "note": "Venomous millipedes. Like damp corners. Avoid."
+          },
+          {
+            "name": "Cockroaches («ravets»)",
+            "note": "Large but harmless. Traps in the kitchen. Doesn't mean the place is dirty."
+          }
+        ]
+      },
+      "departure": [
+        "Run a load of laundry on used sheets and towels.",
+        "Empty all bins, put them out if it's a collection day.",
+        "Empty the fridge of perishables.",
+        "Clean the BBQ grill (if used).",
+        "Close windows, doors, AC and lights. Check-out at 10am."
+      ],
+      "weather": {
+        "alerte": "In case of weather alert (Jul-Oct), follow Météo France (meteofrance.gp) and Prefecture (guadeloupe.gouv.fr). Store 3 days of water and food. Concierge stays on hand.",
+        "saison": "Dry season: Dec-April (ideal). Wet season: July-October (short showers, occasional cyclones)."
+      }
+    }
+  }
+}

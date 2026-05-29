@@ -1,0 +1,79 @@
+---
+import QRCode from 'qrcode';
+import { t, type Locale } from '../i18n/ui';
+
+interface Props {
+  ssid: string;
+  password: string;
+  security?: string;
+  notes?: string;
+  locale?: Locale;
+}
+const { ssid, password, security = 'WPA', notes, locale = 'fr' } = Astro.props;
+
+const wifiString = `WIFI:T:${security};S:${ssid};P:${password};;`;
+const rawSvg = await QRCode.toString(wifiString, {
+  type: 'svg', errorCorrectionLevel: 'M', margin: 1, width: 200,
+  color: { dark: '#1F2A2E', light: '#F5F2ED' }
+});
+const qrSvg = rawSvg
+  .replace(/\swidth="[^"]+"/, '')
+  .replace(/\sheight="[^"]+"/, '')
+  .replace('<svg ', '<svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" ');
+---
+
+<div class="bg-corail-cream rounded-2xl p-5 md:p-6">
+  <div class="flex items-start gap-4">
+    <div class="w-10 h-10 rounded-full bg-corail-turquoise/20 flex items-center justify-center flex-shrink-0">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5BA8A2" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+    </div>
+    <div class="flex-1">
+      <p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'tWifi')}</p>
+      <h3 class="text-xl font-display mb-3">{t(locale, 'hConnexionInternet')}</h3>
+    </div>
+  </div>
+
+  <div class="grid md:grid-cols-[1fr,auto] gap-5 items-center">
+    <div class="space-y-3">
+      <div>
+        <p class="text-xs text-corail-ink/50 uppercase tracking-wider mb-1">{t(locale, 'lReseau')}</p>
+        <div class="flex items-center gap-2">
+          <code class="font-mono text-sm bg-white px-3 py-1.5 rounded-lg border border-corail-sand/30">{ssid}</code>
+          <button data-copy={ssid} data-copied-label={t(locale, 'btnCopie')} class="btn-ghost text-xs">{t(locale, 'btnCopier')}</button>
+        </div>
+      </div>
+      <div>
+        <p class="text-xs text-corail-ink/50 uppercase tracking-wider mb-1">{t(locale, 'lMotDePasse')}</p>
+        <div class="flex items-center gap-2">
+          <code class="font-mono text-sm bg-white px-3 py-1.5 rounded-lg border border-corail-sand/30">{password}</code>
+          <button data-copy={password} data-copied-label={t(locale, 'btnCopie')} class="btn-ghost text-xs">{t(locale, 'btnCopier')}</button>
+        </div>
+      </div>
+      {notes && <p class="text-xs text-corail-ink/60 italic mt-3">{notes}</p>}
+    </div>
+
+    <div class="flex flex-col items-center justify-center bg-white rounded-xl p-4 border border-corail-sand/30 w-fit mx-auto md:mx-0">
+      <div class="qr-svg w-36 h-36 md:w-40 md:h-40" set:html={qrSvg} />
+      <p class="text-[10px] uppercase tracking-wider text-corail-ink/60 mt-3 text-center whitespace-pre-line">{t(locale, 'lScannerWifi')}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .qr-svg :global(svg) { width: 100%; height: 100%; display: block; }
+</style>
+
+<script>
+  document.querySelectorAll('[data-copy]').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const text = btn.getAttribute('data-copy') || '';
+      const copiedLabel = btn.getAttribute('data-copied-label') || '✓ Copied';
+      try {
+        await navigator.clipboard.writeText(text);
+        const original = btn.textContent;
+        btn.textContent = copiedLabel;
+        setTimeout(() => { btn.textContent = original; }, 1500);
+      } catch {}
+    });
+  });
+</script>

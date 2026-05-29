@@ -1,0 +1,308 @@
+{
+  "id": "savannah",
+  "name": "Résidence Savannah",
+  "tagline": "Appartement Saint-François — accès direct à la plage de la Pointe des Pies",
+  "welcomeMessage": "Bienvenue dans la Résidence Savannah. Appartement non-fumeur, animaux non acceptés. La plage de la Pointe des Pies est accessible directement depuis la résidence via le portillon au bout de l'allée centrale (code 2845). ⚠ Coupures d'eau possibles le soir après 18h — pensez à remplir une réserve.",
+  "description": "Appartement à la résidence Savannah à Saint-François, avec accès direct à la plage de la Pointe des Pies (eaux calmes protégées par la barrière de corail, idéale pour la baignade en famille). Cuisine entièrement équipée, douche italienne, télévision chaînes locales, lave-linge, fer à repasser, machine à café. Stores électriques. Coupures d'eau possibles le soir après 18h — bonne réserve recommandée.",
+  "capacity": {
+    "guests": 4,
+    "bedrooms": 2,
+    "bathrooms": 1
+  },
+  "location": {
+    "address": "Résidence Savannah, Saint-François",
+    "coordinates": {
+      "lat": 16.2512049,
+      "lng": -61.2659953
+    },
+    "neighborhood": "Résidence sécurisée avec accès direct plage",
+    "mapsUrl": "https://maps.app.goo.gl/ywV1j3aP4XjWQRuo6"
+  },
+  "distances": {
+    "beach": {
+      "name": "Plage de la Pointe des Pies (accès direct)",
+      "minutes": 1,
+      "mode": "à pied"
+    },
+    "centre": {
+      "name": "Centre-ville Saint-François",
+      "minutes": 5,
+      "mode": "voiture"
+    },
+    "marina": {
+      "name": "Marina de Saint-François",
+      "minutes": 5,
+      "mode": "voiture"
+    },
+    "airport": {
+      "name": "Aéroport Pôle Caraïbes",
+      "minutes": 45,
+      "mode": "voiture"
+    }
+  },
+  "amenities": [
+    {
+      "icon": "terrace",
+      "label": "Stores électriques"
+    },
+    {
+      "icon": "ac",
+      "label": "Chambres climatisées (télécommande)"
+    },
+    {
+      "icon": "shield",
+      "label": "Accès direct plage Pointe des Pies (portillon 2845)"
+    },
+    {
+      "icon": "wifi",
+      "label": "WiFi fibre optique"
+    },
+    {
+      "icon": "parking",
+      "label": "Place de parking + bip"
+    },
+    {
+      "icon": "kitchen",
+      "label": "Cuisine équipée"
+    },
+    {
+      "icon": "tv",
+      "label": "TV chaînes locales"
+    }
+  ],
+  "wifi": {
+    "ssid": "Savannah",
+    "password": "Guadeloupe",
+    "security": "WPA2",
+    "notes": "Mot de passe transmis à l'arrivée."
+  },
+  "stay": {
+    "checkin": "16:00",
+    "checkout": "11:00",
+    "minNights": 3
+  },
+  "security": {
+    "portail": "Le portail de la résidence se ferme automatiquement. Télécommande/bip à proximité, ou digicode.",
+    "digicode": "1 bip télécommande (parking)",
+    "portillonPieton": "2845 (accès plage)",
+    "cles": "Clés et bip remis au check-in par votre concierge. Local poubelles à code : À la sortie de la résidence."
+  },
+  "appliances": {
+    "wifi": "WiFi fibre optique haut débit dans toute la villa.",
+    "tv": "Box TV Orange (sélectionner source HDMI 1). Bouquet chaînes locales et internationales.",
+    "coffee": "Cafetière filtre (filtres papier taille 4) + machine Nespresso (capsules dans les supermarchés).",
+    "ac": "Climatisation dans chaque chambre — utiliser uniquement quand la pièce est occupée, portes/fenêtres fermées. La nuit : régler sur 26 °C, ventilation auto.",
+    "water": "Eau potable + réserve 1 250 L et suppresseur → autonomie ~48h en cas de coupure réseau. Robinet extérieur du cabanon = indicateur réseau ville.",
+    "septic": "Fosse septique : pas de lingettes, tampons, serviettes hygiéniques, ni javel/huile/produits chimiques."
+  },
+  "pool": null,
+  "houseRules": [
+    "Pas de fête / événement bruyant sans accord préalable.",
+    "Pas de fumée à l'intérieur. Espace fumeur sur la terrasse extérieure.",
+    "Animaux non admis sauf accord écrit préalable.",
+    "Respect du voisinage : silence après 22h, musique modérée.",
+    "Signalez toute casse ou souci à votre concierge — on règle ensemble."
+  ],
+  "trashSchedule": {
+    "ordures": "Containers gris dans le local poubelles à la sortie de la résidence. Sacs poubelle fermés. Évacuation tous les jours conseillée (chaleur).",
+    "tri": "Container jaune dans le local : bouteilles plastique, papier/carton, fer/aluminium.",
+    "verre": "Conteneurs verts : indiqué par votre concierge à l'arrivée."
+  },
+  "bebettes": {
+    "intro": "En Guadeloupe, nous partageons la maison avec quelques visiteurs. Voici les amis et les moins amis.",
+    "amis": [
+      {
+        "name": "Iguanes verts",
+        "note": "Inoffensifs mais gourmands d'hibiscus."
+      },
+      {
+        "name": "Colibris",
+        "note": "Admirez la vitesse de battement d'ailes."
+      },
+      {
+        "name": "Sucriers",
+        "note": "Viendront si vous mettez du sucre dans un nichoir."
+      },
+      {
+        "name": "Anolis & margouillats",
+        "note": "Petits lézards sans danger — mangent les insectes."
+      }
+    ],
+    "moinsAimes": [
+      {
+        "name": "Moustiques",
+        "note": "Répulsifs + spirales auto-combustibles. Si fièvre, consultez un médecin."
+      },
+      {
+        "name": "Scolopendre",
+        "note": "Mille-pattes venimeux. Aime les coins humides. Bien visible, à éviter."
+      },
+      {
+        "name": "Blattes (« ravets »)",
+        "note": "Gros mais sans danger. Pièges dans la cuisine. Cela ne veut pas dire que la maison est sale."
+      }
+    ]
+  },
+  "departure": [
+    "Lancer une machine sur draps et serviettes utilisées.",
+    "Vider toutes les poubelles, sortir les bacs si jour de collecte.",
+    "Vider le frigo des denrées périssables.",
+    "Nettoyer la grille du barbecue (si utilisé).",
+    "Fermer fenêtres, baies, clim et lumières. État des lieux à 11h."
+  ],
+  "weather": {
+    "alerte": "En cas d'alerte météo (juillet-octobre), suivre Météo France (www.meteofrance.gp) et la Préfecture (www.guadeloupe.gouv.fr). Stockez 3 jours d'eau et nourriture. Votre concierge reste joignable.",
+    "saison": "Saison sèche : déc-avril (idéale). Saison humide : juillet-octobre (averses courtes, parfois cyclones)."
+  },
+  "contacts": {
+    "concierge_name": "Claire",
+    "concierge_phone": "+590690518468",
+    "concierge_whatsapp": "590690518468",
+    "concierge_email": "contact@corailconciergerie.com",
+    "owner_phone": "+33660468028",
+    "owner_name": "Maxence",
+    "instagram": "@corail_conciergerie",
+    "facebook": "fb.me/villaCorailConciergerie"
+  },
+  "photos": [
+    "/photos/villas/savannah/cover.jpg",
+    "/photos/villas/savannah/gallery-01.jpg",
+    "/photos/villas/savannah/gallery-02.jpg",
+    "/photos/villas/savannah/gallery-03.jpg"
+  ],
+  "coverPhoto": "/photos/villas/savannah/cover.jpg",
+  "i18n": {
+    "en": {
+      "tagline": "Saint-François apartment — direct access to Pointe des Pies beach",
+      "welcomeMessage": "Welcome to Résidence Savannah. Non-smoking apartment, no pets. Pointe des Pies beach is directly accessible from the residence via the gate at the end of the central path (code 2845). ⚠ Water cuts possible in the evening after 6pm — keep a reserve.",
+      "description": "Apartment at Résidence Savannah in Saint-François, with direct access to Pointe des Pies beach (calm reef-protected water, perfect for family swimming). Fully equipped kitchen, walk-in shower, local TV channels, washing machine, iron, coffee maker. Electric blinds. Possible water cuts after 6pm — keep a reserve.",
+      "distances": {
+        "beach": {
+          "name": "Pointe des Pies beach (direct access)",
+          "mode": "walk"
+        },
+        "centre": {
+          "name": "Saint-François town centre",
+          "mode": "drive"
+        },
+        "marina": {
+          "name": "Saint-François Marina",
+          "mode": "drive"
+        },
+        "airport": {
+          "name": "Pôle Caraïbes airport",
+          "mode": "drive"
+        }
+      },
+      "amenities": [
+        {
+          "icon": "terrace",
+          "label": "Electric blinds"
+        },
+        {
+          "icon": "ac",
+          "label": "AC bedrooms (remote)"
+        },
+        {
+          "icon": "shield",
+          "label": "Direct beach access — Pointe des Pies (gate 2845)"
+        },
+        {
+          "icon": "wifi",
+          "label": "Fibre WiFi"
+        },
+        {
+          "icon": "parking",
+          "label": "Parking spot + remote"
+        },
+        {
+          "icon": "kitchen",
+          "label": "Equipped kitchen"
+        },
+        {
+          "icon": "tv",
+          "label": "TV local channels"
+        }
+      ],
+      "wifi": {
+        "notes": "Password provided on arrival."
+      },
+      "security": {
+        "portail": "Residence gate closes automatically. Remote nearby, or keypad.",
+        "cles": "Keys and remote handed over at check-in by your concierge. Bin room code: À la sortie de la résidence."
+      },
+      "appliances": {
+        "wifi": "High-speed fibre WiFi throughout the villa.",
+        "tv": "Orange TV box (HDMI 1 source). Local and international channels.",
+        "coffee": "Filter coffee maker (size 4 paper filters) + Nespresso machine (capsules in supermarkets).",
+        "ac": "AC in each bedroom — use only when occupied, doors/windows closed. At night: 26 °C, auto fan.",
+        "water": "Drinkable water + 1,250 L reserve and pressure pump → ~48h autonomy during mains cuts. Outdoor garden shed tap = mains indicator.",
+        "septic": "Septic tank: no wipes, tampons, sanitary pads, bleach, oil or harsh chemicals."
+      },
+      "pool": {
+        "alarm": "⚠ Adult supervision REQUIRED. Alarm with magnet (diver logo): red light = disarmed, green = active. Auto-rearms ~15 min after calm water returns.",
+        "rules": "No sunscreen in the water (shower before), no glass, no sharp objects. Technical room is off-limits.",
+        "maintenance": "Servicing by our provider. A skimmer net is available. Contact your concierge for any issue."
+      },
+      "houseRules": [
+        "No parties / loud events without prior approval.",
+        "No smoking indoors. Smoking allowed on the outdoor terrace.",
+        "No pets unless written approval.",
+        "Respect neighbours: quiet after 10pm, moderate music.",
+        "Report any breakage or issue to your concierge — we sort it together."
+      ],
+      "trashSchedule": {
+        "ordures": "Grey containers in the bin room at the residence exit. Closed bin bags. Daily disposal recommended (heat).",
+        "tri": "Yellow container in the bin room: plastic bottles, paper/cardboard, metal/aluminium.",
+        "verre": "Green glass containers: shown by your concierge on arrival."
+      },
+      "bebettes": {
+        "intro": "In Guadeloupe, we share the home with a few visitors. Here are the friends and the less loved.",
+        "amis": [
+          {
+            "name": "Green iguanas",
+            "note": "Harmless but fond of hibiscus."
+          },
+          {
+            "name": "Hummingbirds",
+            "note": "Admire their wing-beat speed."
+          },
+          {
+            "name": "Bananaquits",
+            "note": "They'll come if you put sugar in a feeder."
+          },
+          {
+            "name": "Anoles & geckos",
+            "note": "Small harmless lizards — they eat insects."
+          }
+        ],
+        "moinsAimes": [
+          {
+            "name": "Mosquitoes",
+            "note": "Repellents + spirals. If you get a fever, see a doctor."
+          },
+          {
+            "name": "Centipedes",
+            "note": "Venomous millipede. Likes damp corners. Visible, easy to avoid."
+          },
+          {
+            "name": "Cockroaches (« ravets »)",
+            "note": "Big but harmless. Traps in the kitchen. It doesn't mean the house is dirty."
+          }
+        ]
+      },
+      "departure": [
+        "Run a load of laundry on used sheets and towels.",
+        "Empty all bins, put them out if it's a collection day.",
+        "Empty the fridge of perishables.",
+        "Clean the BBQ grill (if used).",
+        "Close windows, doors, AC and lights. Check-out at 11am."
+      ],
+      "weather": {
+        "alerte": "In case of weather alert (Jul-Oct), follow Météo France (meteofrance.gp) and Prefecture (guadeloupe.gouv.fr). Store 3 days of water and food. Concierge stays on hand.",
+        "saison": "Dry season: Dec-April (ideal). Wet season: July-October (short showers, occasional cyclones)."
+      }
+    }
+  },
+  "propertyType": "apartment"
+}
