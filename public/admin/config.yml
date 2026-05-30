@@ -6,9 +6,12 @@ backend:
   name: github
   repo: xensma/corail-livret
   branch: main
-  # OAuth PKCE flow — pas besoin de Client Secret
-  auth_type: pkce
-  app_id: Ov23likIMJ8TjjyGLCFf
+  # Auth via Personal Access Token (PAT) GitHub :
+  # — pas d'OAuth App / Client Secret / proxy nécessaires
+  # — chaque admin entre son PAT via "Sign In with Token" sur l'écran de login
+  # — le PAT est stocké uniquement dans le navigateur local de l'utilisateur
+  # — scope requis : repo (Classic PAT) ou Contents R/W sur corail-livret (Fine-grained)
+  # Doc : https://sveltiacms.app/en/docs/backends/github
 
 # Photos uploadées vont dans public/photos/ (servies depuis /photos/)
 media_folder: public/photos
