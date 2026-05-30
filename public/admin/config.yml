@@ -1,0 +1,387 @@
+# Sveltia CMS — Corail Conciergerie
+# Drop-in compat avec Decap CMS. Supporte le flow OAuth GitHub PKCE (pas de proxy nécessaire).
+# Docs: https://github.com/sveltia/sveltia-cms
+
+backend:
+  name: github
+  repo: xensma/corail-livret
+  branch: main
+  # OAuth PKCE flow — pas besoin de Client Secret
+  auth_type: pkce
+  app_id: Ov23likIMJ8TjjyGLCFf
+
+# Photos uploadées vont dans public/photos/ (servies depuis /photos/)
+media_folder: public/photos
+public_folder: /photos
+
+# Apparence de l'UI admin
+site_url: https://livrets.corailconciergerie.com
+display_url: https://livrets.corailconciergerie.com
+logo_url: /brand/logo-final.png
+locale: fr
+
+# ─────────────────────────────────────────────────────────────────────────────
+# COLLECTIONS = "tables" éditables dans l'admin
+# ─────────────────────────────────────────────────────────────────────────────
+collections:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # VILLAS — 1 entrée = 1 villa (fichier JSON)
+  # ───────────────────────────────────────────────────────────────────────────
+  - name: villas
+    label: Villas & Résidences
+    label_singular: Villa
+    description: "Les 15 livrets : Kisara, La Rhumière, Luminescence, etc."
+    folder: src/data/villas
+    format: json
+    extension: json
+    create: false
+    delete: false
+    # Format du nom de fichier (existant)
+    slug: "{{fields.id}}"
+    # Identifie chaque villa par son champ "name"
+    identifier_field: name
+    # Photos uploadées vont dans le dossier de la villa
+    media_folder: ../../public/photos/villas/{{slug}}
+    public_folder: /photos/villas/{{slug}}
+    summary: "{{name}} — {{capacity.bedrooms}} ch · {{capacity.guests}} pers"
+    sortable_fields: [name, capacity.guests]
+    fields:
+
+      # ═══ 🔥 SECTION : Souvent modifié ═══
+      - {label: "Identifiant technique (slug)", name: id, widget: string, hint: "Ne pas modifier — utilisé dans l'URL"}
+      - {label: "Nom affiché", name: name, widget: string}
+      - {label: "Type de bien", name: propertyType, widget: select, options: ["villa", "apartment"], default: "villa", required: false, hint: "apartment = pas de section piscine si vide"}
+
+      # ── WiFi
+      - label: "📡 WiFi"
+        name: wifi
+        widget: object
+        collapsed: false
+        fields:
+          - {label: "Nom du réseau (SSID)", name: ssid, widget: string}
+          - {label: "Mot de passe", name: password, widget: string}
+          - {label: "Sécurité", name: security, widget: select, options: [WPA2, WPA3, WEP], default: WPA2}
+          - {label: "Notes (optionnel)", name: notes, widget: string, required: false}
+
+      # ── Codes & sécurité
+      - label: "🔐 Codes & sécurité"
+        name: security
+        widget: object
+        collapsed: false
+        fields:
+          - {label: "Portail (description)", name: portail, widget: text}
+          - {label: "Digicode portail", name: digicode, widget: string}
+          - {label: "Portillon piéton", name: portillonPieton, widget: string}
+          - {label: "Clés / instructions check-in", name: cles, widget: text}
+
+      # ── Capacité
+      - label: "👥 Capacité"
+        name: capacity
+        widget: object
+        fields:
+          - {label: Voyageurs, name: guests, widget: number, value_type: int, min: 1, max: 20}
+          - {label: Chambres, name: bedrooms, widget: number, value_type: int, min: 1, max: 10}
+          - {label: "Salles de bain", name: bathrooms, widget: number, value_type: int, min: 1, max: 10}
+
+      # ── Localisation
+      - label: "📍 Localisation"
+        name: location
+        widget: object
+        fields:
+          - {label: Adresse, name: address, widget: string}
+          - label: "Coordonnées GPS"
+            name: coordinates
+            widget: object
+            fields:
+              - {label: Latitude, name: lat, widget: number, value_type: float, step: 0.0000001}
+              - {label: Longitude, name: lng, widget: number, value_type: float, step: 0.0000001}
+          - {label: Quartier, name: neighborhood, widget: string, required: false}
+          - {label: "Lien Google Maps", name: mapsUrl, widget: string, hint: "Ex: https://maps.app.goo.gl/..."}
+
+      # ── Photos
+      - label: "📸 Cover (photo de couverture)"
+        name: coverPhoto
+        widget: image
+        hint: "Photo héros du livret. Idéale en 1600px de large, paysage."
+      - label: "📸 Galerie photos"
+        name: photos
+        widget: list
+        summary: "{{fields.image}}"
+        field:
+          label: "Photo"
+          name: image
+          widget: image
+
+      # ═══ 📋 SECTION : Textes ═══
+      - label: "📝 Textes (FR)"
+        name: __texts_fr
+        widget: object
+        collapsed: true
+        fields:
+          - {label: "Tagline (sous-titre court)", name: tagline, widget: string}
+          - {label: "Message de bienvenue", name: welcomeMessage, widget: text}
+          - {label: "Description longue", name: description, widget: text}
+
+      # ── Distances
+      - label: "🚗 Distances vers points clés"
+        name: distances
+        widget: object
+        collapsed: true
+        fields:
+          - label: "Plage"
+            name: beach
+            widget: object
+            fields:
+              - {label: "Nom", name: name, widget: string}
+              - {label: "Minutes", name: minutes, widget: number, value_type: int}
+              - {label: "Mode", name: mode, widget: select, options: ["à pied", "voiture", "vélo"]}
+          - label: "Centre-ville"
+            name: centre
+            widget: object
+            fields:
+              - {label: "Nom", name: name, widget: string}
+              - {label: "Minutes", name: minutes, widget: number, value_type: int}
+              - {label: "Mode", name: mode, widget: select, options: ["à pied", "voiture", "vélo"]}
+          - label: "Marina"
+            name: marina
+            widget: object
+            fields:
+              - {label: "Nom", name: name, widget: string}
+              - {label: "Minutes", name: minutes, widget: number, value_type: int}
+              - {label: "Mode", name: mode, widget: select, options: ["à pied", "voiture", "vélo"]}
+          - label: "Aéroport"
+            name: airport
+            widget: object
+            fields:
+              - {label: "Nom", name: name, widget: string}
+              - {label: "Minutes", name: minutes, widget: number, value_type: int}
+              - {label: "Mode", name: mode, widget: select, options: ["à pied", "voiture", "vélo"]}
+
+      # ── Amenities (équipements)
+      - label: "✨ Équipements (badges affichés)"
+        name: amenities
+        widget: list
+        collapsed: true
+        summary: "{{fields.label}}"
+        fields:
+          - {label: Icône, name: icon, widget: select, options: [pool, ac, terrace, shield, wifi, parking, kitchen, bbq, tv, sun]}
+          - {label: Label, name: label, widget: string}
+
+      # ── Stay
+      - label: "🛏 Séjour (heures + min nuits)"
+        name: stay
+        widget: object
+        collapsed: true
+        fields:
+          - {label: "Check-in (heure)", name: checkin, widget: string, default: "16:00"}
+          - {label: "Check-out (heure)", name: checkout, widget: string, default: "10:00"}
+          - {label: "Nuits min", name: minNights, widget: number, value_type: int, default: 7}
+
+      # ── Appliances (au quotidien)
+      - label: "🏠 Au quotidien (équipements détaillés)"
+        name: appliances
+        widget: object
+        collapsed: true
+        fields:
+          - {label: WiFi, name: wifi, widget: text}
+          - {label: TV, name: tv, widget: text}
+          - {label: "Café/cafetière", name: coffee, widget: text}
+          - {label: Climatisation, name: ac, widget: text}
+          - {label: Eau, name: water, widget: text}
+          - {label: "Fosse septique", name: septic, widget: text}
+
+      # ── Pool
+      - label: "🏊 Piscine (laisser vide si pas de piscine)"
+        name: pool
+        widget: object
+        required: false
+        collapsed: true
+        fields:
+          - {label: "Alarme / surveillance", name: alarm, widget: text}
+          - {label: "Bonnes pratiques", name: rules, widget: text}
+          - {label: "Entretien", name: maintenance, widget: text}
+
+      # ── House rules
+      - label: "📜 Règles de la maison"
+        name: houseRules
+        widget: list
+        collapsed: true
+        field: {label: Règle, name: rule, widget: string}
+
+      # ── Trash
+      - label: "🗑 Tri sélectif"
+        name: trashSchedule
+        widget: object
+        collapsed: true
+        fields:
+          - {label: "Ordures ménagères", name: ordures, widget: text}
+          - {label: "Tri (bac jaune)", name: tri, widget: text}
+          - {label: "Verre", name: verre, widget: text}
+
+      # ── Bébêtes
+      - label: "🦎 Bébêtes (faune)"
+        name: bebettes
+        widget: object
+        collapsed: true
+        fields:
+          - {label: Intro, name: intro, widget: text}
+          - label: "Les amis"
+            name: amis
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - {label: Nom, name: name, widget: string}
+              - {label: Note, name: note, widget: string}
+          - label: "Les moins aimés"
+            name: moinsAimes
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - {label: Nom, name: name, widget: string}
+              - {label: Note, name: note, widget: string}
+
+      # ── Départ
+      - label: "👋 Jour du départ (checklist)"
+        name: departure
+        widget: list
+        collapsed: true
+        field: {label: Étape, name: step, widget: string}
+
+      # ── Météo
+      - label: "🌦 Météo / cyclones"
+        name: weather
+        widget: object
+        collapsed: true
+        fields:
+          - {label: "Alerte cyclonique", name: alerte, widget: text}
+          - {label: "Saisons", name: saison, widget: text}
+
+      # ── Contacts
+      - label: "📞 Contacts"
+        name: contacts
+        widget: object
+        collapsed: true
+        fields:
+          - {label: "Nom concierge", name: concierge_name, widget: string}
+          - {label: "Tél concierge", name: concierge_phone, widget: string}
+          - {label: "WhatsApp concierge", name: concierge_whatsapp, widget: string}
+          - {label: "Email concierge", name: concierge_email, widget: string}
+          - {label: "Nom propriétaire", name: owner_name, widget: string}
+          - {label: "Tél propriétaire", name: owner_phone, widget: string}
+          - {label: Instagram, name: instagram, widget: string, required: false}
+          - {label: Facebook, name: facebook, widget: string, required: false}
+
+      # ── Proches restos (mode de sélection)
+      - label: "🍽 Restaurants 'Proches' (mode auto)"
+        name: __proches_advanced
+        widget: object
+        collapsed: true
+        required: false
+        fields:
+          - label: "Mode de sélection"
+            name: prochesMode
+            widget: select
+            options: ["", "dynamic"]
+            required: false
+            hint: "Vide = utilise la liste par défaut (Kisara) ou prochesOverride. 'dynamic' = top 4 plus proches Haversine."
+          - label: "Liste curée (IDs restos)"
+            name: prochesOverride
+            widget: list
+            required: false
+            hint: "Override : liste exactement les IDs de restos à afficher dans Proches (ex: jardin-secret, rhumerie-pirate, ...)"
+            field: {label: "Resto ID", name: id, widget: string}
+
+      # ── Traduction EN (collapsible)
+      - label: "🇬🇧 Traduction EN"
+        name: i18n
+        widget: object
+        collapsed: true
+        fields:
+          - label: English
+            name: en
+            widget: object
+            fields:
+              - {label: Tagline (EN), name: tagline, widget: string}
+              - {label: "Welcome message (EN)", name: welcomeMessage, widget: text}
+              - {label: "Description (EN)", name: description, widget: text}
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # RESTAURANTS — un seul fichier JSON avec catégories
+  # ───────────────────────────────────────────────────────────────────────────
+  - name: restaurants
+    label: "🍽 Restaurants Saint-François"
+    files:
+      - label: "Restaurants (toutes catégories)"
+        name: restaurants_file
+        file: src/data/saint-francois/restaurants.json
+        format: json
+        fields:
+          - {label: "JSON (édition avancée)", name: __raw, widget: json}
+        # Note : pour les restos, l'édition fine se fait via JSON pour l'instant.
+        # On peut détailler chaque catégorie ensuite si besoin.
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # PLAGES
+  # ───────────────────────────────────────────────────────────────────────────
+  - name: beaches
+    label: "🏖 Plages"
+    files:
+      - label: "Plages (liste)"
+        name: beaches_file
+        file: src/data/saint-francois/beaches.json
+        format: json
+        fields:
+          - {label: "JSON (édition avancée)", name: __raw, widget: json}
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # ACTIVITÉS
+  # ───────────────────────────────────────────────────────────────────────────
+  - name: activities
+    label: "🎯 Activités"
+    files:
+      - label: "Activités (Gwadatrip + Suggestions)"
+        name: activities_file
+        file: src/data/saint-francois/activities.json
+        format: json
+        fields:
+          - {label: "JSON (édition avancée)", name: __raw, widget: json}
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # SERVICES CORAIL (prestations premium)
+  # ───────────────────────────────────────────────────────────────────────────
+  - name: services_corail
+    label: "💎 Services Corail (premium)"
+    files:
+      - label: "Services Corail"
+        name: services_corail_file
+        file: src/data/saint-francois/services-corail.json
+        format: json
+        fields:
+          - {label: "JSON (édition avancée)", name: __raw, widget: json}
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # SERVICES PRATIQUES (commerces, pharmacie, médecin…)
+  # ───────────────────────────────────────────────────────────────────────────
+  - name: services
+    label: "🛒 Services pratiques"
+    files:
+      - label: "Commerces, santé, services"
+        name: services_file
+        file: src/data/saint-francois/services.json
+        format: json
+        fields:
+          - {label: "JSON (édition avancée)", name: __raw, widget: json}
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # BOUTIQUES (surf shop etc.)
+  # ───────────────────────────────────────────────────────────────────────────
+  - name: shops
+    label: "🛍 Boutiques"
+    files:
+      - label: "Boutiques (surf, déco…)"
+        name: shops_file
+        file: src/data/saint-francois/shops.json
+        format: json
+        fields:
+          - {label: "JSON (édition avancée)", name: __raw, widget: json}
