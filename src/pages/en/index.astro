@@ -2,25 +2,49 @@
 import Layout from '../../layouts/Layout.astro';
 import { t, type Locale } from '../../i18n/ui';
 
+// Import villa JSONs so capacity stays in sync with single source of truth
+import kisara from '../../data/villas/kisara.json';
+import laRhumiere from '../../data/villas/la-rhumiere.json';
+import luminescence from '../../data/villas/luminescence.json';
+import pimentBleu from '../../data/villas/piment-bleu.json';
+import tikiReva from '../../data/villas/tiki-reva.json';
+import mango from '../../data/villas/mango.json';
+import verdea from '../../data/villas/verdea.json';
+import reveIndigo from '../../data/villas/reve-indigo.json';
+import prairies from '../../data/villas/prairies-turquoises.json';
+import savannah from '../../data/villas/savannah.json';
+import crystalBeach from '../../data/villas/crystal-beach.json';
+import anBaSoleyLa from '../../data/villas/an-ba-soley-la.json';
+import leDattier from '../../data/villas/le-dattier.json';
+import belEscale from '../../data/villas/bel-escale.json';
+import melyan from '../../data/villas/melyan.json';
+
 const locale: Locale = 'en';
 
-const villas = [
-  { id: 'kisara', name: 'Villa Kisara', tagline: '3 BR · 6 guests · pool · Saint-François', status: 'live' },
-  { id: 'la-rhumiere', name: 'Villa la Rhumière', tagline: '4 BR · 8 guests · 100m to Lagoon', status: 'live' },
-  { id: 'luminescence', name: 'Villa Luminescence', tagline: '3 BR · 6 guests · infinity pool + jacuzzi · Louisiana Park', status: 'live' },
-  { id: 'piment-bleu', name: 'Villa Piment Bleu', tagline: '3 BR · 6 guests · pool · Louisiana Park', status: 'live' },
-  { id: 'tiki-reva', name: 'Villa Tiki Reva', tagline: '3 BR · 6 guests · pool · Louisiana Park', status: 'live' },
-  { id: 'mango', name: 'Villa Mango Eden Green', tagline: '3 BR · 6 guests · jacuzzi · 750m Raisins Clairs', status: 'live' },
-  { id: 'verdea', name: 'Villa Verdéa', tagline: '3 suites · 6 guests · sea view · Pointe des Châteaux', status: 'live' },
-  { id: 'reve-indigo', name: 'Villa Rêve Indigo', tagline: '4 BR · 8 guests · spa-jet pool · Saint-François', status: 'live' },
-  { id: 'prairies-turquoises', name: 'Les Prairies Turquoises', tagline: '5 BR · 10 guests · beachfront · Sainte-Anne', status: 'live' },
-  { id: 'savannah', name: 'Résidence Savannah', tagline: '2 BR · 4 guests · direct beach access', status: 'live' },
-  { id: 'crystal-beach', name: 'N°72 Crystal Beach', tagline: '2 BR · 4 guests · 2 pools + badge-access beach', status: 'live' },
-  { id: 'an-ba-soley-la', name: 'Villa An Ba Soley La', tagline: '3 BR · 6 guests · private pool · « under the sun »', status: 'live' },
-  { id: 'le-dattier', name: 'Villa Le Dattier', tagline: '3 BR · 6 guests · brand-new high-end · 5 min Raisins Clairs', status: 'live' },
-  { id: 'bel-escale', name: 'Villa Bel\'Escale', tagline: '3 suites · 6 guests · pool + pétanque court', status: 'live' },
-  { id: 'melyan', name: 'Villa Melyan', tagline: '3 BR · 6 guests · pool + carbet with plancha', status: 'live' }
+const villaConfigs = [
+  { source: kisara,        extra: 'pool · Saint-François' },
+  { source: laRhumiere,    extra: '100m to Lagoon' },
+  { source: luminescence,  extra: 'infinity pool + jacuzzi · Louisiana Park' },
+  { source: pimentBleu,    extra: 'pool · Louisiana Park' },
+  { source: tikiReva,      extra: 'pool · Louisiana Park' },
+  { source: mango,         extra: 'jacuzzi · 750m Raisins Clairs' },
+  { source: verdea,        extra: 'sea view · Pointe des Châteaux', roomNoun: 'suites' },
+  { source: reveIndigo,    extra: 'spa-jet pool · Saint-François' },
+  { source: prairies,      extra: 'beachfront · Sainte-Anne' },
+  { source: savannah,      extra: 'direct beach access' },
+  { source: crystalBeach,  extra: '2 pools + badge-access beach' },
+  { source: anBaSoleyLa,   extra: 'private pool · « under the sun »' },
+  { source: leDattier,     extra: 'brand-new high-end · 5 min Raisins Clairs' },
+  { source: belEscale,     extra: 'pool + pétanque court', roomNoun: 'suites' },
+  { source: melyan,        extra: 'pool + carbet with plancha' }
 ];
+
+const villas = villaConfigs.map((c) => ({
+  id: c.source.id,
+  name: c.source.name,
+  tagline: `${c.source.capacity.bedrooms} ${c.roomNoun || 'BR'} · ${c.source.capacity.guests} guests · ${c.extra}`,
+  status: 'live' as const
+}));
 ---
 
 <Layout title={`Corail Concierge — ${t(locale, 'indexTitle')}`} description={t(locale, 'indexSubtitle')}>
