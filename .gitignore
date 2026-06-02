@@ -42,3 +42,9 @@ public/brand/*.legacy.png
 # Project root backups (anciennes covers, etc.)
 _backups/
 
+
+# Photos sources à la racine (versions traitées dans public/photos/)
+/*.jpg
+/*.jpeg
+/*.png
+
