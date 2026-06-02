@@ -74,12 +74,14 @@
       "label": "Grande terrasse"
     }
   ],
-  "wifi": {
-    "ssid": "VillaMango",
-    "password": "Guadeloupe",
-    "security": "WPA2",
-    "notes": "Mot de passe transmis à l'arrivée."
-  },
+  "wifi": [
+    {
+      "ssid": "VillaMango",
+      "password": "Guadeloupe",
+      "security": "WPA2",
+      "notes": "Mot de passe transmis à l'arrivée."
+    }
+  ],
   "stay": {
     "checkin": "16:00",
     "checkout": "10:00",

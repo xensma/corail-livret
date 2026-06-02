@@ -74,12 +74,14 @@
       "label": "Barbecue charbon"
     }
   ],
-  "wifi": {
-    "ssid": "VillaKisara",
-    "password": "Kisara971!",
-    "security": "WPA",
-    "notes": "Merci de respecter une utilisation raisonnable : pas de téléchargement illégal."
-  },
+  "wifi": [
+    {
+      "ssid": "VillaKisara",
+      "password": "Kisara971!",
+      "security": "WPA",
+      "notes": "Merci de respecter une utilisation raisonnable : pas de téléchargement illégal."
+    }
+  ],
   "stay": {
     "checkin": "16:00",
     "checkout": "10:00",

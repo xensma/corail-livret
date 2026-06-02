@@ -1,12 +1,14 @@
 {
   "id": "reve-indigo",
   "name": "Villa Rêve Indigo",
-  "wifi": {
-    "ssid": "Rêve Indigo",
-    "password": "Guadeloupe",
-    "security": "WPA2",
-    "notes": "Mot de passe transmis à l'arrivée."
-  },
+  "wifi": [
+    {
+      "ssid": "Rêve Indigo",
+      "password": "Guadeloupe",
+      "security": "WPA2",
+      "notes": "Mot de passe transmis à l'arrivée."
+    }
+  ],
   "security": {
     "portail": "Le portail de la résidence se ferme automatiquement. Télécommande/bip à proximité, ou digicode.",
     "digicode": "0310",

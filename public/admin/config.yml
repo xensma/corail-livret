@@ -56,12 +56,14 @@ collections:
       - {label: "Nom affiché", name: name, widget: string}
       - {label: "Type de bien", name: propertyType, widget: select, options: ["villa", "apartment"], default: "villa", required: false, hint: "apartment = pas de section piscine si vide"}
 
-      # ── WiFi
+      # ── WiFi (1 ou plusieurs réseaux — clic "+ Add" pour ajouter un FAI secondaire)
       - label: "📡 WiFi"
         name: wifi
-        widget: object
+        widget: list
         collapsed: false
+        summary: "{{fields.label}} — {{fields.ssid}}"
         fields:
+          - {label: "Étiquette (ex: 'Orange Fibre', 'Réseau secondaire')", name: label, widget: string, required: false, hint: "Visible seulement si plusieurs réseaux"}
           - {label: "Nom du réseau (SSID)", name: ssid, widget: string}
           - {label: "Mot de passe", name: password, widget: string}
           - {label: "Sécurité", name: security, widget: select, options: [WPA2, WPA3, WEP], default: WPA2}

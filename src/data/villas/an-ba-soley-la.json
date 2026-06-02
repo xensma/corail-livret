@@ -78,12 +78,14 @@
       "label": "Terrain de pétanque"
     }
   ],
-  "wifi": {
-    "ssid": "AnBaSoleyLa",
-    "password": "À COMMUNIQUER",
-    "security": "WPA2",
-    "notes": "Le mot de passe vous sera transmis à l'arrivée."
-  },
+  "wifi": [
+    {
+      "ssid": "AnBaSoleyLa",
+      "password": "À COMMUNIQUER",
+      "security": "WPA2",
+      "notes": "Le mot de passe vous sera transmis à l'arrivée."
+    }
+  ],
   "stay": {
     "checkin": "16:00",
     "checkout": "10:00",

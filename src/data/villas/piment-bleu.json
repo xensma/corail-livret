@@ -74,12 +74,14 @@
       "label": "Barbecue charbon"
     }
   ],
-  "wifi": {
-    "ssid": "VillaPimentBleu",
-    "password": "Guadeloupe",
-    "security": "WPA2",
-    "notes": "Mot de passe transmis à l'arrivée."
-  },
+  "wifi": [
+    {
+      "ssid": "VillaPimentBleu",
+      "password": "Guadeloupe",
+      "security": "WPA2",
+      "notes": "Mot de passe transmis à l'arrivée."
+    }
+  ],
   "stay": {
     "checkin": "16:00",
     "checkout": "10:00",

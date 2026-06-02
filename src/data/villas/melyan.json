@@ -19,28 +19,74 @@
     "mapsUrl": "https://maps.app.goo.gl/UYmDrqRwwEvSVvKc7"
   },
   "distances": {
-    "beach": { "name": "Plage des Raisins Clairs", "minutes": 8, "mode": "voiture" },
-    "centre": { "name": "Centre-ville Saint-François", "minutes": 6, "mode": "voiture" },
-    "marina": { "name": "Marina de Saint-François", "minutes": 7, "mode": "voiture" },
-    "airport": { "name": "Aéroport Pôle Caraïbes", "minutes": 50, "mode": "voiture" }
+    "beach": {
+      "name": "Plage des Raisins Clairs",
+      "minutes": 8,
+      "mode": "voiture"
+    },
+    "centre": {
+      "name": "Centre-ville Saint-François",
+      "minutes": 6,
+      "mode": "voiture"
+    },
+    "marina": {
+      "name": "Marina de Saint-François",
+      "minutes": 7,
+      "mode": "voiture"
+    },
+    "airport": {
+      "name": "Aéroport Pôle Caraïbes",
+      "minutes": 50,
+      "mode": "voiture"
+    }
   },
   "amenities": [
-    { "icon": "pool", "label": "Piscine privée + jeux gonflables" },
-    { "icon": "ac", "label": "3 chambres climatisées" },
-    { "icon": "terrace", "label": "Carbet avec plancha" },
-    { "icon": "shield", "label": "Cadre familial paisible" },
-    { "icon": "wifi", "label": "WiFi haut débit" },
-    { "icon": "parking", "label": "Parking privé" },
-    { "icon": "kitchen", "label": "Cuisine ouverte équipée (frigo américain)" },
-    { "icon": "bbq", "label": "Plancha" }
+    {
+      "icon": "pool",
+      "label": "Piscine privée + jeux gonflables"
+    },
+    {
+      "icon": "ac",
+      "label": "3 chambres climatisées"
+    },
+    {
+      "icon": "terrace",
+      "label": "Carbet avec plancha"
+    },
+    {
+      "icon": "shield",
+      "label": "Cadre familial paisible"
+    },
+    {
+      "icon": "wifi",
+      "label": "WiFi haut débit"
+    },
+    {
+      "icon": "parking",
+      "label": "Parking privé"
+    },
+    {
+      "icon": "kitchen",
+      "label": "Cuisine ouverte équipée (frigo américain)"
+    },
+    {
+      "icon": "bbq",
+      "label": "Plancha"
+    }
   ],
-  "wifi": {
-    "ssid": "Melyan",
-    "password": "À COMMUNIQUER",
-    "security": "WPA2",
-    "notes": "Mot de passe transmis à l'arrivée."
+  "wifi": [
+    {
+      "ssid": "Melyan",
+      "password": "À COMMUNIQUER",
+      "security": "WPA2",
+      "notes": "Mot de passe transmis à l'arrivée."
+    }
+  ],
+  "stay": {
+    "checkin": "16:00",
+    "checkout": "10:00",
+    "minNights": 3
   },
-  "stay": { "checkin": "16:00", "checkout": "10:00", "minNights": 3 },
   "security": {
     "portail": "Le portail se ferme automatiquement après chaque passage. Bip + clés remis à l'arrivée.",
     "digicode": "À COMMUNIQUER",
@@ -75,15 +121,36 @@
   "bebettes": {
     "intro": "En Guadeloupe, nous partageons la maison avec quelques visiteurs. Voici les amis et les moins amis.",
     "amis": [
-      { "name": "Iguanes verts", "note": "Inoffensifs mais gourmands d'hibiscus." },
-      { "name": "Colibris", "note": "Admirez la vitesse de battement d'ailes." },
-      { "name": "Sucriers", "note": "Viendront si vous mettez du sucre dans un nichoir." },
-      { "name": "Anolis & margouillats", "note": "Petits lézards sans danger — mangent les insectes." }
+      {
+        "name": "Iguanes verts",
+        "note": "Inoffensifs mais gourmands d'hibiscus."
+      },
+      {
+        "name": "Colibris",
+        "note": "Admirez la vitesse de battement d'ailes."
+      },
+      {
+        "name": "Sucriers",
+        "note": "Viendront si vous mettez du sucre dans un nichoir."
+      },
+      {
+        "name": "Anolis & margouillats",
+        "note": "Petits lézards sans danger — mangent les insectes."
+      }
     ],
     "moinsAimes": [
-      { "name": "Moustiques", "note": "Répulsifs + spirales auto-combustibles. Si fièvre, consultez un médecin." },
-      { "name": "Scolopendre", "note": "Mille-pattes venimeux. Aime les coins humides. Bien visible, à éviter." },
-      { "name": "Blattes (« ravets »)", "note": "Gros mais sans danger. Pièges dans la cuisine. Cela ne veut pas dire que la maison est sale." }
+      {
+        "name": "Moustiques",
+        "note": "Répulsifs + spirales auto-combustibles. Si fièvre, consultez un médecin."
+      },
+      {
+        "name": "Scolopendre",
+        "note": "Mille-pattes venimeux. Aime les coins humides. Bien visible, à éviter."
+      },
+      {
+        "name": "Blattes (« ravets »)",
+        "note": "Gros mais sans danger. Pièges dans la cuisine. Cela ne veut pas dire que la maison est sale."
+      }
     ]
   },
   "departure": [
@@ -119,22 +186,60 @@
       "welcomeMessage": "Welcome to Melyan. This 3-bedroom villa with private pool, garden and plancha carbet is perfect for family or friends. We remain at your service throughout your stay.",
       "description": "3-bedroom villa with pool, garden and carbet — perfect for family or friends. 3 air-conditioned bedrooms, comfortable living room with TV and outdoor lounge by the pool. 2 bathrooms with shower and WC. Open-plan equipped kitchen (American fridge, oven, microwave, hob, hood, dishwasher). Private outdoor pool with inflatable games. Carbet with plancha, perfect for convivial meals.",
       "distances": {
-        "beach": { "name": "Raisins Clairs beach", "mode": "drive" },
-        "centre": { "name": "Saint-François town centre", "mode": "drive" },
-        "marina": { "name": "Saint-François Marina", "mode": "drive" },
-        "airport": { "name": "Pôle Caraïbes airport", "mode": "drive" }
+        "beach": {
+          "name": "Raisins Clairs beach",
+          "mode": "drive"
+        },
+        "centre": {
+          "name": "Saint-François town centre",
+          "mode": "drive"
+        },
+        "marina": {
+          "name": "Saint-François Marina",
+          "mode": "drive"
+        },
+        "airport": {
+          "name": "Pôle Caraïbes airport",
+          "mode": "drive"
+        }
       },
       "amenities": [
-        { "icon": "pool", "label": "Private pool + inflatable games" },
-        { "icon": "ac", "label": "3 air-conditioned bedrooms" },
-        { "icon": "terrace", "label": "Carbet with plancha" },
-        { "icon": "shield", "label": "Peaceful family setting" },
-        { "icon": "wifi", "label": "High-speed WiFi" },
-        { "icon": "parking", "label": "Private parking" },
-        { "icon": "kitchen", "label": "Equipped open kitchen (American fridge)" },
-        { "icon": "bbq", "label": "Plancha" }
+        {
+          "icon": "pool",
+          "label": "Private pool + inflatable games"
+        },
+        {
+          "icon": "ac",
+          "label": "3 air-conditioned bedrooms"
+        },
+        {
+          "icon": "terrace",
+          "label": "Carbet with plancha"
+        },
+        {
+          "icon": "shield",
+          "label": "Peaceful family setting"
+        },
+        {
+          "icon": "wifi",
+          "label": "High-speed WiFi"
+        },
+        {
+          "icon": "parking",
+          "label": "Private parking"
+        },
+        {
+          "icon": "kitchen",
+          "label": "Equipped open kitchen (American fridge)"
+        },
+        {
+          "icon": "bbq",
+          "label": "Plancha"
+        }
       ],
-      "wifi": { "notes": "Password provided on arrival." },
+      "wifi": {
+        "notes": "Password provided on arrival."
+      },
       "security": {
         "portail": "Gate closes automatically. Remote + keys handed over on arrival.",
         "cles": "Keys handed over at check-in by your concierge."
@@ -167,15 +272,36 @@
       "bebettes": {
         "intro": "In Guadeloupe we share the home with a few visitors. Here are the friendly ones and the less-loved ones.",
         "amis": [
-          { "name": "Green iguanas", "note": "Harmless but fond of hibiscus." },
-          { "name": "Hummingbirds", "note": "Admire the wingbeat speed." },
-          { "name": "Bananaquits", "note": "Will come if you put sugar in a feeder." },
-          { "name": "Anoles & geckos", "note": "Small harmless lizards — eat insects." }
+          {
+            "name": "Green iguanas",
+            "note": "Harmless but fond of hibiscus."
+          },
+          {
+            "name": "Hummingbirds",
+            "note": "Admire the wingbeat speed."
+          },
+          {
+            "name": "Bananaquits",
+            "note": "Will come if you put sugar in a feeder."
+          },
+          {
+            "name": "Anoles & geckos",
+            "note": "Small harmless lizards — eat insects."
+          }
         ],
         "moinsAimes": [
-          { "name": "Mosquitoes", "note": "Repellents + coils. If fever, see a doctor." },
-          { "name": "Centipedes", "note": "Venomous millipedes. Like damp corners. Avoid." },
-          { "name": "Cockroaches («ravets»)", "note": "Large but harmless. Traps in the kitchen. Doesn't mean the place is dirty." }
+          {
+            "name": "Mosquitoes",
+            "note": "Repellents + coils. If fever, see a doctor."
+          },
+          {
+            "name": "Centipedes",
+            "note": "Venomous millipedes. Like damp corners. Avoid."
+          },
+          {
+            "name": "Cockroaches («ravets»)",
+            "note": "Large but harmless. Traps in the kitchen. Doesn't mean the place is dirty."
+          }
         ]
       },
       "departure": [

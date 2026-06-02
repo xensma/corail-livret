@@ -74,12 +74,14 @@
       "label": "TV chaînes locales + ventilateurs"
     }
   ],
-  "wifi": {
-    "ssid": "Airbox-D7E0",
-    "password": "Crystalbeach971",
-    "security": "WPA2",
-    "notes": "Box Airbox dans l'appartement."
-  },
+  "wifi": [
+    {
+      "ssid": "Airbox-D7E0",
+      "password": "Crystalbeach971",
+      "security": "WPA2",
+      "notes": "Box Airbox dans l'appartement."
+    }
+  ],
   "stay": {
     "checkin": "16:00",
     "checkout": "11:00",
