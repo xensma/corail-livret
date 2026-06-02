@@ -80,10 +80,20 @@ const allItemsById: Record<string, any> = {};
 for (const [, cat] of Object.entries(restaurants)) {
   for (const item of ((cat as any).items || [])) allItemsById[item.id] = item;
 }
+// Lecture résiliente : la config proches peut être au top-level (villas configurées
+// en JSON direct : Rhumière, Verdéa) OU dans __proches_advanced (objet créé par Sveltia CMS).
+const advProches = (villa as any).__proches_advanced || {};
+const overrideIds = (Array.isArray(villa.prochesOverride) && villa.prochesOverride.length > 0)
+  ? villa.prochesOverride
+  : (Array.isArray(advProches.prochesOverride) && advProches.prochesOverride.length > 0)
+    ? advProches.prochesOverride
+    : null;
+const prochesMode = villa.prochesMode || advProches.prochesMode;
+
 let procheItems: any[] = (restaurants as any).proches.items || [];
-if (Array.isArray(villa.prochesOverride) && villa.prochesOverride.length > 0) {
-  procheItems = villa.prochesOverride.map((id: string) => allItemsById[id]).filter(Boolean);
-} else if (villa.prochesMode === 'dynamic' && villaCoords) {
+if (overrideIds) {
+  procheItems = overrideIds.map((id: string) => allItemsById[id]).filter(Boolean);
+} else if (prochesMode === 'dynamic' && villaCoords) {
   procheItems = Object.values(allItemsById)
     .filter((r: any) => r.coordinates?.lat != null && r.coordinates?.lng != null)
     .map((r: any) => ({ resto: r, d: haversineKm(villaCoords, r.coordinates) }))

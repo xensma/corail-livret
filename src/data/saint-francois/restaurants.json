@@ -425,31 +425,83 @@
     "label_en": "Towards Sainte-Anne",
     "items": [
       {
-        "id": "mango-moulin",
-        "name": "Le Mango — Relais du Moulin",
-        "tagline": "Méchoui le vendredi, langouste le samedi en saison",
+        "id": "zamana",
+        "name": "Le Zamana",
+        "tagline": "Cuisine raffinée au Relais du Moulin (ex « Le Mango »)",
         "cuisine": [
           "Gastronomique"
         ],
         "priceRange": "€€€€",
-        "rating": 4.7,
-        "specialty": "Magnifique cadre, bar à cocktails",
+        "rating": 4.3,
+        "specialty": "Cadre idyllique au moulin, bar à cocktails, soirées à thème",
         "phone": "+590590884848",
         "coordinates": {
           "lat": 16.23,
           "lng": -61.35
         },
-        "photo": "/photos/restos/mango-moulin.jpg",
+        "photo": "/photos/restos/zamana.jpg",
         "i18n": {
           "en": {
-            "tagline": "Mechoui on Fridays, lobster on Saturdays in season",
+            "tagline": "Refined cuisine at Relais du Moulin (formerly « Le Mango »)",
             "cuisine": [
               "Gastronomic"
             ],
-            "specialty": "Stunning setting, cocktail bar"
+            "specialty": "Idyllic mill setting, cocktail bar, themed evenings"
           }
         },
         "website": "https://www.relaisdumoulin.com"
+      },
+      {
+        "id": "le-manaia",
+        "name": "Le Manaïa",
+        "tagline": "Table conviviale à Sainte-Anne",
+        "cuisine": [
+          "Cuisine antillaise"
+        ],
+        "priceRange": "€€€",
+        "rating": null,
+        "specialty": "",
+        "phone": null,
+        "coordinates": {
+          "lat": 16.2225461,
+          "lng": -61.3803759
+        },
+        "photo": "/photos/restos/le-manaia.jpg",
+        "website": "https://www.facebook.com/people/Le-Mana%C3%AFa/61580376594863/",
+        "i18n": {
+          "en": {
+            "tagline": "Convivial spot in Sainte-Anne",
+            "cuisine": [
+              "Caribbean"
+            ]
+          }
+        }
+      },
+      {
+        "id": "widy-grego",
+        "name": "Widy GREGO and Co",
+        "tagline": "Restaurant végan & cuisine végétale à Sainte-Anne",
+        "cuisine": [
+          "Végan"
+        ],
+        "priceRange": "€€",
+        "rating": null,
+        "specialty": "",
+        "phone": null,
+        "coordinates": {
+          "lat": 16.2408715,
+          "lng": -61.402598
+        },
+        "photo": "/photos/restos/widy-grego.jpg",
+        "website": "https://www.facebook.com/widy62/",
+        "i18n": {
+          "en": {
+            "tagline": "Vegan & plant-based restaurant in Sainte-Anne",
+            "cuisine": [
+              "Vegan"
+            ]
+          }
+        }
       }
     ]
   },

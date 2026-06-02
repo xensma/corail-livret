@@ -195,7 +195,11 @@
   },
   "__proches_advanced": {
     "prochesMode": "",
-    "prochesOverride": []
+    "prochesOverride": [
+      "le-manaia",
+      "zamana",
+      "widy-grego"
+    ]
   },
   "i18n": {
     "en": {
