@@ -108,8 +108,8 @@
     }
   ],
   "stay": {
-    "checkin": "16:00",
-    "checkout": "10:00",
+    "checkin": "17:00",
+    "checkout": "11:00",
     "minNights": 7
   },
   "appliances": {
@@ -192,6 +192,10 @@
     "owner_phone": "+33660468028",
     "instagram": "@corail_conciergerie",
     "facebook": "fb.me/villaCorailConciergerie"
+  },
+  "__proches_advanced": {
+    "prochesMode": "",
+    "prochesOverride": []
   },
   "i18n": {
     "en": {
