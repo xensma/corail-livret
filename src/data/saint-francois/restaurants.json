@@ -454,25 +454,25 @@
       {
         "id": "le-manaia",
         "name": "Le Manaïa",
-        "tagline": "Table conviviale à Sainte-Anne",
+        "tagline": "Cuisine française à Sainte-Anne",
         "cuisine": [
-          "Cuisine antillaise"
+          "Cuisine française"
         ],
         "priceRange": "€€€",
         "rating": null,
-        "specialty": "",
+        "specialty": "Table française dans le bourg de Sainte-Anne",
         "phone": null,
         "coordinates": {
           "lat": 16.2225461,
           "lng": -61.3803759
         },
         "photo": "/photos/restos/le-manaia.jpg",
-        "website": "https://www.facebook.com/people/Le-Mana%C3%AFa/61580376594863/",
+        "website": "https://www.petitfute.com/v36600-sainte-anne-97180/c1165-restaurants/c4-cuisine-francaise/2110838-le-manaia.html",
         "i18n": {
           "en": {
-            "tagline": "Convivial spot in Sainte-Anne",
+            "tagline": "French cuisine in Sainte-Anne",
             "cuisine": [
-              "Caribbean"
+              "French"
             ]
           }
         }
@@ -480,13 +480,14 @@
       {
         "id": "widy-grego",
         "name": "Widy GREGO and Co",
-        "tagline": "Restaurant végan & cuisine végétale à Sainte-Anne",
+        "tagline": "Cuisine végétale locale dans un cadre sauvage",
         "cuisine": [
-          "Végan"
+          "Végan",
+          "Cuisine locale"
         ],
         "priceRange": "€€",
         "rating": null,
-        "specialty": "",
+        "specialty": "Assiette généreuse de plats locaux — réservation conseillée, ne fonctionne pas tous les jours",
         "phone": null,
         "coordinates": {
           "lat": 16.2408715,
@@ -496,10 +497,12 @@
         "website": "https://www.facebook.com/widy62/",
         "i18n": {
           "en": {
-            "tagline": "Vegan & plant-based restaurant in Sainte-Anne",
+            "tagline": "Local plant-based cuisine in a wild garden setting",
             "cuisine": [
-              "Vegan"
-            ]
+              "Vegan",
+              "Local"
+            ],
+            "specialty": "Generous platter of local dishes — booking advised, not open daily"
           }
         }
       }
