@@ -1,9 +1,21 @@
 {
   "id": "le-dattier",
   "name": "Villa Le Dattier",
-  "tagline": "Villa neuve de standing — moins de 5 min des Raisins Clairs",
-  "welcomeMessage": "Bienvenue dans votre villa au calme à Saint-François ! Cette villa neuve de standing vous offre tout le confort moderne dans un cadre paisible, à moins de 5 minutes des magnifiques plages de Raisins Clairs et du centre-ville. Nous vous souhaitons un excellent séjour.",
-  "description": "Villa neuve de standing à Saint-François, dans un cadre paisible. 3 chambres confortables avec literie de qualité hôtelière, climatisation et rangements. 2 salles de bain modernes avec douche à l'italienne, linge de toilette fourni. Cuisine américaine entièrement équipée ouverte sur le séjour. Terrasse conviviale, idéale pour se détendre après une journée plage. À moins de 5 minutes des plages des Raisins Clairs et du centre-ville.",
+  "wifi": [
+    {
+      "label": "",
+      "ssid": "LeDattier",
+      "password": "À COMMUNIQUER",
+      "security": "WPA2",
+      "notes": "Mot de passe transmis à l'arrivée."
+    }
+  ],
+  "security": {
+    "portail": "Le portail se ferme automatiquement après chaque passage. Bip + clés remis à l'arrivée.",
+    "digicode": "À COMMUNIQUER",
+    "portillonPieton": "À COMMUNIQUER",
+    "cles": "Trousseau de clés remis lors du check-in par votre concierge."
+  },
   "capacity": {
     "guests": 6,
     "bedrooms": 3,
@@ -18,6 +30,19 @@
     "neighborhood": "Quartier résidentiel paisible — proche Raisins Clairs",
     "mapsUrl": "https://maps.app.goo.gl/3vmof3baYDchHXMC8"
   },
+  "coverPhoto": "/photos/villas/le-dattier/cover.jpg",
+  "photos": [
+    "/photos/villas/le-dattier/cover.jpg",
+    "/photos/villas/le-dattier/gallery-01.jpg",
+    "/photos/villas/le-dattier/gallery-02.jpg",
+    "/photos/villas/le-dattier/gallery-03.jpg",
+    "/photos/villas/le-dattier/gallery-04.jpg",
+    "/photos/villas/le-dattier/gallery-05.jpg",
+    "/photos/villas/le-dattier/gallery-06.jpg",
+    "/photos/villas/le-dattier/gallery-07.jpg",
+    "/photos/villas/le-dattier/gallery-08.jpg",
+    "/photos/villas/le-dattier/gallery-09.jpg"
+  ],
   "distances": {
     "beach": {
       "name": "Plage des Raisins Clairs",
@@ -41,10 +66,6 @@
     }
   },
   "amenities": [
-    {
-      "icon": "pool",
-      "label": "Piscine privée"
-    },
     {
       "icon": "ac",
       "label": "3 chambres climatisées (literie hôtelière)"
@@ -74,24 +95,10 @@
       "label": "Barbecue"
     }
   ],
-  "wifi": [
-    {
-      "ssid": "LeDattier",
-      "password": "À COMMUNIQUER",
-      "security": "WPA2",
-      "notes": "Mot de passe transmis à l'arrivée."
-    }
-  ],
   "stay": {
     "checkin": "16:00",
     "checkout": "10:00",
     "minNights": 3
-  },
-  "security": {
-    "portail": "Le portail se ferme automatiquement après chaque passage. Bip + clés remis à l'arrivée.",
-    "digicode": "À COMMUNIQUER",
-    "portillonPieton": "À COMMUNIQUER",
-    "cles": "Trousseau de clés remis lors du check-in par votre concierge."
   },
   "appliances": {
     "wifi": "WiFi haut débit dans toute la villa.",
@@ -169,147 +176,19 @@
     "concierge_phone": "+590690518468",
     "concierge_whatsapp": "590690518468",
     "concierge_email": "contact@corailconciergerie.com",
-    "owner_phone": "+33660468028",
     "owner_name": "Maxence",
+    "owner_phone": "+33660468028",
     "instagram": "@corail_conciergerie",
     "facebook": "fb.me/villaCorailConciergerie"
   },
-  "photos": [
-    "/photos/villas/le-dattier/cover.jpg",
-    "/photos/villas/le-dattier/gallery-01.jpg",
-    "/photos/villas/le-dattier/gallery-02.jpg",
-    "/photos/villas/le-dattier/gallery-03.jpg",
-    "/photos/villas/le-dattier/gallery-04.jpg",
-    "/photos/villas/le-dattier/gallery-05.jpg",
-    "/photos/villas/le-dattier/gallery-06.jpg",
-    "/photos/villas/le-dattier/gallery-07.jpg",
-    "/photos/villas/le-dattier/gallery-08.jpg",
-    "/photos/villas/le-dattier/gallery-09.jpg"
-  ],
-  "coverPhoto": "/photos/villas/le-dattier/cover.jpg",
   "i18n": {
     "en": {
       "tagline": "Brand-new high-end villa — under 5 min from Raisins Clairs",
       "welcomeMessage": "Welcome to your peaceful Saint-François villa! This brand-new high-end villa offers all modern comforts in a tranquil setting, under 5 minutes from the stunning Raisins Clairs beach and town centre. Have a wonderful stay.",
       "description": "Brand-new high-end villa in Saint-François, in a peaceful setting. 3 comfortable bedrooms with hotel-quality bedding, AC and storage. 2 modern bathrooms with walk-in shower, towels provided. Open-plan equipped American kitchen onto the living area. Convivial terrace, perfect for relaxing after a beach day. Under 5 minutes from Raisins Clairs beach and town centre.",
-      "distances": {
-        "beach": {
-          "name": "Raisins Clairs beach",
-          "mode": "drive"
-        },
-        "centre": {
-          "name": "Saint-François town centre",
-          "mode": "drive"
-        },
-        "marina": {
-          "name": "Saint-François Marina",
-          "mode": "drive"
-        },
-        "airport": {
-          "name": "Pôle Caraïbes airport",
-          "mode": "drive"
-        }
-      },
-      "amenities": [
-        {
-          "icon": "pool",
-          "label": "Private pool"
-        },
-        {
-          "icon": "ac",
-          "label": "3 AC bedrooms (hotel-quality bedding)"
-        },
-        {
-          "icon": "terrace",
-          "label": "Convivial terrace"
-        },
-        {
-          "icon": "shield",
-          "label": "Peaceful enclosed setting"
-        },
-        {
-          "icon": "wifi",
-          "label": "High-speed WiFi"
-        },
-        {
-          "icon": "parking",
-          "label": "Private parking"
-        },
-        {
-          "icon": "kitchen",
-          "label": "Equipped American kitchen"
-        },
-        {
-          "icon": "bbq",
-          "label": "Barbecue"
-        }
-      ],
-      "wifi": {
-        "notes": "Password provided on arrival."
-      },
-      "security": {
-        "portail": "Gate closes automatically. Remote + keys handed over on arrival.",
-        "cles": "Keys handed over at check-in by your concierge."
-      },
-      "appliances": {
-        "wifi": "High-speed WiFi throughout the villa.",
-        "tv": "Living room TV with local and international channels.",
-        "coffee": "Coffee maker + kettle in the equipped American kitchen.",
-        "ac": "AC in all 3 bedrooms. Please switch off when leaving the villa.",
-        "water": "Tap water drinkable. Filter jug provided.",
-        "septic": "Septic tank: NEVER flush wipes, cotton, tampons or harsh chemicals."
-      },
-      "pool": {
-        "alarm": "⚠ Adult supervision REQUIRED at all times. No swimming without an adult present. Re-secure the pool area after each use.",
-        "rules": "No sunscreen in the water (shower before swimming), no glass, no diving. Technical room is off-limits.",
-        "maintenance": "Weekly servicing by our provider. Contact your concierge for any issue."
-      },
-      "houseRules": [
-        "No parties / loud events without prior owner approval.",
-        "No smoking indoors. Smoking allowed on the outdoor terrace.",
-        "No pets unless written approval.",
-        "Respect neighbours: quiet after 10pm, moderate music.",
-        "Report any breakage or issue to your concierge — we sort it together."
-      ],
-      "trashSchedule": {
-        "ordures": "Collection per municipal schedule. Bins out the evening before.",
-        "tri": "Yellow bin: plastic bottles, paper/cardboard, metal/aluminium.",
-        "verre": "Nearest glass containers: shown by your concierge on arrival."
-      },
-      "bebettes": {
-        "intro": "In Guadeloupe we share the home with a few visitors. Here are the friendly ones and the less-loved ones.",
-        "amis": [
-          {
-            "name": "Green iguanas",
-            "note": "Harmless but fond of hibiscus."
-          },
-          {
-            "name": "Hummingbirds",
-            "note": "Admire the wingbeat speed."
-          },
-          {
-            "name": "Bananaquits",
-            "note": "Will come if you put sugar in a feeder."
-          },
-          {
-            "name": "Anoles & geckos",
-            "note": "Small harmless lizards — eat insects."
-          }
-        ],
-        "moinsAimes": [
-          {
-            "name": "Mosquitoes",
-            "note": "Repellents + coils. If fever, see a doctor."
-          },
-          {
-            "name": "Centipedes",
-            "note": "Venomous millipedes. Like damp corners. Avoid."
-          },
-          {
-            "name": "Cockroaches («ravets»)",
-            "note": "Large but harmless. Traps in the kitchen. Doesn't mean the place is dirty."
-          }
-        ]
+      "weather": {
+        "saison": "Dry season: Dec-April (ideal). Wet season: July-October (short showers, occasional cyclones).",
+        "alerte": "In case of weather alert (Jul-Oct), follow Météo France (meteofrance.gp) and Prefecture (guadeloupe.gouv.fr). Store 3 days of water and food. Concierge stays on hand."
       },
       "departure": [
         "Run a load of laundry on used sheets and towels.",
@@ -318,10 +197,128 @@
         "Clean the BBQ grill (if used).",
         "Close windows, doors, AC and lights. Check-out at 10am."
       ],
-      "weather": {
-        "alerte": "In case of weather alert (Jul-Oct), follow Météo France (meteofrance.gp) and Prefecture (guadeloupe.gouv.fr). Store 3 days of water and food. Concierge stays on hand.",
-        "saison": "Dry season: Dec-April (ideal). Wet season: July-October (short showers, occasional cyclones)."
+      "bebettes": {
+        "moinsAimes": [
+          {
+            "note": "Repellents + coils. If fever, see a doctor.",
+            "name": "Mosquitoes"
+          },
+          {
+            "note": "Venomous millipedes. Like damp corners. Avoid.",
+            "name": "Centipedes"
+          },
+          {
+            "note": "Large but harmless. Traps in the kitchen. Doesn't mean the place is dirty.",
+            "name": "Cockroaches («ravets»)"
+          }
+        ],
+        "amis": [
+          {
+            "note": "Harmless but fond of hibiscus.",
+            "name": "Green iguanas"
+          },
+          {
+            "note": "Admire the wingbeat speed.",
+            "name": "Hummingbirds"
+          },
+          {
+            "note": "Will come if you put sugar in a feeder.",
+            "name": "Bananaquits"
+          },
+          {
+            "note": "Small harmless lizards — eat insects.",
+            "name": "Anoles & geckos"
+          }
+        ],
+        "intro": "In Guadeloupe we share the home with a few visitors. Here are the friendly ones and the less-loved ones."
+      },
+      "trashSchedule": {
+        "verre": "Nearest glass containers: shown by your concierge on arrival.",
+        "tri": "Yellow bin: plastic bottles, paper/cardboard, metal/aluminium.",
+        "ordures": "Collection per municipal schedule. Bins out the evening before."
+      },
+      "houseRules": [
+        "No parties / loud events without prior owner approval.",
+        "No smoking indoors. Smoking allowed on the outdoor terrace.",
+        "No pets unless written approval.",
+        "Respect neighbours: quiet after 10pm, moderate music.",
+        "Report any breakage or issue to your concierge — we sort it together."
+      ],
+      "pool": {
+        "maintenance": "Weekly servicing by our provider. Contact your concierge for any issue.",
+        "rules": "No sunscreen in the water (shower before swimming), no glass, no diving. Technical room is off-limits.",
+        "alarm": "⚠ Adult supervision REQUIRED at all times. No swimming without an adult present. Re-secure the pool area after each use."
+      },
+      "appliances": {
+        "septic": "Septic tank: NEVER flush wipes, cotton, tampons or harsh chemicals.",
+        "water": "Tap water drinkable. Filter jug provided.",
+        "ac": "AC in all 3 bedrooms. Please switch off when leaving the villa.",
+        "coffee": "Coffee maker + kettle in the equipped American kitchen.",
+        "tv": "Living room TV with local and international channels.",
+        "wifi": "High-speed WiFi throughout the villa."
+      },
+      "security": {
+        "cles": "Keys handed over at check-in by your concierge.",
+        "portail": "Gate closes automatically. Remote + keys handed over on arrival."
+      },
+      "wifi": {
+        "notes": "Password provided on arrival."
+      },
+      "amenities": [
+        {
+          "label": "Private pool",
+          "icon": "pool"
+        },
+        {
+          "label": "3 AC bedrooms (hotel-quality bedding)",
+          "icon": "ac"
+        },
+        {
+          "label": "Convivial terrace",
+          "icon": "terrace"
+        },
+        {
+          "label": "Peaceful enclosed setting",
+          "icon": "shield"
+        },
+        {
+          "label": "High-speed WiFi",
+          "icon": "wifi"
+        },
+        {
+          "label": "Private parking",
+          "icon": "parking"
+        },
+        {
+          "label": "Equipped American kitchen",
+          "icon": "kitchen"
+        },
+        {
+          "label": "Barbecue",
+          "icon": "bbq"
+        }
+      ],
+      "distances": {
+        "airport": {
+          "mode": "drive",
+          "name": "Pôle Caraïbes airport"
+        },
+        "marina": {
+          "mode": "drive",
+          "name": "Saint-François Marina"
+        },
+        "centre": {
+          "mode": "drive",
+          "name": "Saint-François town centre"
+        },
+        "beach": {
+          "mode": "drive",
+          "name": "Raisins Clairs beach"
+        }
       }
     }
-  }
+  },
+  "description": "Villa neuve de standing à Saint-François, dans un cadre paisible. 3 chambres confortables avec literie de qualité hôtelière, climatisation et rangements. 2 salles de bain modernes avec douche à l'italienne, linge de toilette fourni. Cuisine américaine entièrement équipée ouverte sur le séjour. Terrasse conviviale, idéale pour se détendre après une journée plage. À moins de 5 minutes des plages des Raisins Clairs et du centre-ville.",
+  "welcomeMessage": "Bienvenue dans votre villa au calme à Saint-François ! Cette villa neuve de standing vous offre tout le confort moderne dans un cadre paisible, à moins de 5 minutes des magnifiques plages de Raisins Clairs et du centre-ville. Nous vous souhaitons un excellent séjour.",
+  "tagline": "Villa neuve de standing — moins de 5 min des Raisins Clairs"
 }
