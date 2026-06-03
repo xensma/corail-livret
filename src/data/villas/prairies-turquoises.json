@@ -120,7 +120,11 @@
     "water": "Eau potable + réserve 1 250 L et suppresseur → autonomie ~48h en cas de coupure réseau. Robinet extérieur du cabanon = indicateur réseau ville.",
     "septic": "Fosse septique : pas de lingettes, tampons, serviettes hygiéniques, ni javel/huile/produits chimiques."
   },
-  "pool": null,
+  "pool": {
+    "alarm": "A votre demande, une barrière dite \"Beethoven\"de sécurité peut-être installée.\nCependant, il est de votre responsabilité de surveiller la baignade des enfants.",
+    "rules": "Pas de crème solaire dans l'eau (douche avant baignade), pas de verre, pas d'objets coupants. L'accès au local technique est interdit.",
+    "maintenance": "Nettoyage assuré par notre prestataire une fois/semaine. Une épuisette est disponible. En cas de souci, contactez votre concierge."
+  },
   "houseRules": [
     "Pas de fête / événement bruyant sans accord préalable.",
     "Pas de fumée à l'intérieur. Espace fumeur sur la terrasse extérieure.",
