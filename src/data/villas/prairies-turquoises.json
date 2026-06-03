@@ -2,17 +2,27 @@
   "id": "prairies-turquoises",
   "name": "Les Prairies Turquoises",
   "propertyType": "villa",
-  "wifi": {
-    "ssid": "LES PRAIRIES TURQUOISES",
-    "password": "0663190032",
-    "security": "WPA2",
-    "notes": "Mot de passe transmis à l'arrivée."
-  },
+  "wifi": [
+    {
+      "label": "Réseau principal",
+      "ssid": "ZTE_5G_Rek3yh",
+      "password": "y4tU6sSS",
+      "security": "WPA2",
+      "notes": "Mot de passe transmis à l'arrivée."
+    },
+    {
+      "label": "Réseau secondaire",
+      "ssid": "LES PRAIRIES TURQUOISES",
+      "password": "0663190032",
+      "security": "WPA2",
+      "notes": "Mot de passe transmis à l'arrivée."
+    }
+  ],
   "security": {
-    "portail": "Le portail de la résidence se ferme automatiquement. Télécommande/bip à proximité, ou digicode",
+    "portail": "Le portail de la résidence se ferme automatiquement. Télécommande/bip à proximité, ou digicode.",
     "digicode": "24689",
     "portillonPieton": "4689",
-    "cles": "Clés et bip remis au check-in par votre concierge. Local poubelles à clé / Boîte à clés: 2205"
+    "cles": "Clés et bip remis au check-in par votre concierge. Local poubelles à code : À COMMUNIQUER."
   },
   "capacity": {
     "guests": 10,
@@ -98,8 +108,8 @@
     }
   ],
   "stay": {
-    "checkin": "16:00",
-    "checkout": "10:00",
+    "checkin": "17:00",
+    "checkout": "11:00",
     "minNights": 7
   },
   "appliances": {
@@ -110,11 +120,7 @@
     "water": "Eau potable + réserve 1 250 L et suppresseur → autonomie ~48h en cas de coupure réseau. Robinet extérieur du cabanon = indicateur réseau ville.",
     "septic": "Fosse septique : pas de lingettes, tampons, serviettes hygiéniques, ni javel/huile/produits chimiques."
   },
-  "pool": {
-    "alarm": "⚠ Surveillance enfants OBLIGATOIRE. Alarme avec aimant (logo plongeur) : voyant rouge = désactivée, vert = surveillance. La surveillance se réactive automatiquement ~15 min après la fin de baignade calme.",
-    "rules": "Pas de crème solaire dans l'eau (douche avant baignade), pas de verre, pas d'objets coupants. L'accès au local technique est interdit.",
-    "maintenance": "Nettoyage assuré par notre prestataire. Une épuisette est disponible. En cas de souci, contactez votre concierge."
-  },
+  "pool": null,
   "houseRules": [
     "Pas de fête / événement bruyant sans accord préalable.",
     "Pas de fumée à l'intérieur. Espace fumeur sur la terrasse extérieure.",
@@ -182,6 +188,10 @@
     "owner_phone": "+33660468028",
     "instagram": "@corail_conciergerie",
     "facebook": "fb.me/villaCorailConciergerie"
+  },
+  "__proches_advanced": {
+    "prochesMode": "",
+    "prochesOverride": []
   },
   "i18n": {
     "en": {
