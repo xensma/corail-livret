@@ -118,7 +118,7 @@ const title = `${villa.name} — ${locale === 'en' ? 'Welcome guide' : "Livret d
 ---
 
 <Layout title={title} description={tagline} villaName={villa.name} coverImage={villa.coverPhoto}>
-  <NavMenu locale={locale} villaName={villa.name} propertyType={villa.propertyType} hasPool={!!villa.pool} />
+  <NavMenu locale={locale} villaName={villa.name} villaSlug={villa.id} propertyType={villa.propertyType} hasPool={!!villa.pool} />
 
   <Hero
     name={villa.name}

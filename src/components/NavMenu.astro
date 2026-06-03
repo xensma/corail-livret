@@ -4,10 +4,11 @@ import { t, type Locale } from '../i18n/ui';
 interface Props {
   locale?: Locale;
   villaName?: string;
+  villaSlug?: string;
   propertyType?: 'villa' | 'apartment';
   hasPool?: boolean;
 }
-const { locale = 'fr', villaName = 'Villa Kisara', propertyType = 'villa', hasPool = true } = Astro.props;
+const { locale = 'fr', villaName = 'Villa Kisara', villaSlug = 'kisara', propertyType = 'villa', hasPool = true } = Astro.props;
 
 const isApt = propertyType === 'apartment';
 
@@ -112,8 +113,8 @@ const grouped = [
   <div class="px-6 py-6 border-t border-corail-sand/30">
     <p class="text-[10px] uppercase tracking-[0.25em] text-corail-turquoise-dark/70 mb-3">{locale === 'en' ? 'Language' : 'Langue'}</p>
     <div class="flex gap-2">
-      <a href="/kisara" class={`flex-1 text-center py-2.5 rounded-full font-medium text-sm transition-all ${locale === 'fr' ? 'bg-corail-turquoise text-white' : 'bg-white text-corail-ink/60 hover:text-corail-ink'}`}>Français</a>
-      <a href="/en/kisara" class={`flex-1 text-center py-2.5 rounded-full font-medium text-sm transition-all ${locale === 'en' ? 'bg-corail-turquoise text-white' : 'bg-white text-corail-ink/60 hover:text-corail-ink'}`}>English</a>
+      <a href={`/${villaSlug}`} class={`flex-1 text-center py-2.5 rounded-full font-medium text-sm transition-all ${locale === 'fr' ? 'bg-corail-turquoise text-white' : 'bg-white text-corail-ink/60 hover:text-corail-ink'}`}>Français</a>
+      <a href={`/en/${villaSlug}`} class={`flex-1 text-center py-2.5 rounded-full font-medium text-sm transition-all ${locale === 'en' ? 'bg-corail-turquoise text-white' : 'bg-white text-corail-ink/60 hover:text-corail-ink'}`}>English</a>
     </div>
   </div>
 </nav>
