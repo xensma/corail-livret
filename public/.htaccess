@@ -1,0 +1,26 @@
+# ─────────────────────────────────────────────────────────────
+# Corail Conciergerie — Protection de la page d'accueil
+# Protège UNIQUEMENT « / » (la liste de toutes les villas).
+# Les livrets individuels (/kisara, /melyan, …) restent ouverts
+# et accessibles par lien direct, sans mot de passe.
+# ─────────────────────────────────────────────────────────────
+
+AuthType Basic
+AuthName "Espace reserve - Corail Conciergerie"
+AuthUserFile "/home/mama4664/livrets.corailconciergerie.com.mama4664.odns.fr/.htpasswd"
+
+# Marque uniquement les requetes vers la racine ( / ou /index.html )
+SetEnvIf Request_URI "^/$" CORAIL_HOME=1
+SetEnvIf Request_URI "^/index\.html$" CORAIL_HOME=1
+
+<RequireAny>
+  # Acces libre si ce n'est PAS la page d'accueil
+  Require expr "reqenv('CORAIL_HOME') != '1'"
+  # Sinon, mot de passe requis
+  Require valid-user
+</RequireAny>
+
+# Empeche le telechargement des fichiers de configuration (.htaccess / .htpasswd)
+<FilesMatch "^\.ht">
+  Require all denied
+</FilesMatch>
