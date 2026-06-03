@@ -1,9 +1,21 @@
 {
   "id": "piment-bleu",
   "name": "Villa Piment Bleu",
-  "tagline": "Architecture lumineuse dans Louisiana Park",
-  "welcomeMessage": "Bienvenue à Piment Bleu, dans la résidence Louisiana Park. Lumière, terrasse et piscine vous attendent. À votre écoute pour toute demande pendant votre séjour.",
-  "description": "Villa au design lumineux dans la résidence privée Louisiana Park. Piscine privée, volets roulants électriques, terrasse extérieure et cuisine équipée. À 5 min des plages, 10 min du centre et de la marina.",
+  "wifi": [
+    {
+      "label": "",
+      "ssid": "VillaPimentBleu",
+      "password": "Guadeloupe",
+      "security": "WPA2",
+      "notes": "Mot de passe transmis à l'arrivée."
+    }
+  ],
+  "security": {
+    "portail": "Le portail de la résidence se ferme automatiquement. Télécommande/bip à proximité, ou digicode.",
+    "digicode": "2305 A",
+    "portillonPieton": "2306 A",
+    "cles": "Clés et bip remis au check-in par votre concierge. Local poubelles à code : 2307."
+  },
   "capacity": {
     "guests": 6,
     "bedrooms": 3,
@@ -18,6 +30,14 @@
     "neighborhood": "Résidence sécurisée Louisiana Park",
     "mapsUrl": "https://maps.app.goo.gl/F16m81yN51gdWu349"
   },
+  "coverPhoto": "/photos/villas/piment-bleu/cover.jpg",
+  "photos": [
+    "/photos/villas/piment-bleu/cover.jpg",
+    "/photos/villas/piment-bleu/gallery-01.jpg",
+    "/photos/villas/piment-bleu/gallery-02.jpg",
+    "/photos/villas/piment-bleu/gallery-03.jpg",
+    "/photos/villas/piment-bleu/gallery-04.jpg"
+  ],
   "distances": {
     "beach": {
       "name": "Plage des Raisins Clairs",
@@ -74,24 +94,10 @@
       "label": "Barbecue charbon"
     }
   ],
-  "wifi": [
-    {
-      "ssid": "VillaPimentBleu",
-      "password": "Guadeloupe",
-      "security": "WPA2",
-      "notes": "Mot de passe transmis à l'arrivée."
-    }
-  ],
   "stay": {
     "checkin": "16:00",
     "checkout": "10:00",
     "minNights": 7
-  },
-  "security": {
-    "portail": "Le portail de la résidence se ferme automatiquement. Télécommande/bip à proximité, ou digicode.",
-    "digicode": "2305 A",
-    "portillonPieton": "2306 A",
-    "cles": "Clés et bip remis au check-in par votre concierge. Local poubelles à code : 2307."
   },
   "appliances": {
     "wifi": "WiFi fibre optique haut débit dans toute la villa.",
@@ -102,7 +108,7 @@
     "septic": "Fosse septique : pas de lingettes, tampons, serviettes hygiéniques, ni javel/huile/produits chimiques."
   },
   "pool": {
-    "alarm": "⚠ Surveillance enfants OBLIGATOIRE. Alarme avec aimant (logo plongeur) : voyant rouge = désactivée, vert = surveillance. La surveillance se réactive automatiquement ~15 min après la fin de baignade calme.",
+    "alarm": "⚠ Surveillance enfants OBLIGATOIRE. Alarme avec aimant (logo plongeur) : voyant rouge = désactivée, vert = surveillance. La surveillance se réactive automatiquement ~15 min après la fin de baignade calme. Tutoriel ; https://www.youtube.com/watch?v=JNzZ9e8zeD4",
     "rules": "Pas de crème solaire dans l'eau (douche avant baignade), pas de verre, pas d'objets coupants. L'accès au local technique est interdit.",
     "maintenance": "Nettoyage assuré par notre prestataire. Une épuisette est disponible. En cas de souci, contactez votre concierge."
   },
@@ -169,142 +175,19 @@
     "concierge_phone": "+590690518468",
     "concierge_whatsapp": "590690518468",
     "concierge_email": "contact@corailconciergerie.com",
-    "owner_phone": "+33660468028",
     "owner_name": "Maxence",
+    "owner_phone": "+33660468028",
     "instagram": "@corail_conciergerie",
     "facebook": "fb.me/villaCorailConciergerie"
   },
-  "photos": [
-    "/photos/villas/piment-bleu/cover.jpg",
-    "/photos/villas/piment-bleu/gallery-01.jpg",
-    "/photos/villas/piment-bleu/gallery-02.jpg",
-    "/photos/villas/piment-bleu/gallery-03.jpg",
-    "/photos/villas/piment-bleu/gallery-04.jpg"
-  ],
-  "coverPhoto": "/photos/villas/piment-bleu/cover.jpg",
   "i18n": {
     "en": {
       "tagline": "Light-filled architecture in Louisiana Park",
       "welcomeMessage": "Welcome to Piment Bleu, in the Louisiana Park residence. Light, terrace and pool await. We're here for any need during your stay.",
       "description": "Light-filled villa in the private Louisiana Park residence. Private pool, electric roller shutters, outdoor terrace and equipped kitchen. 5 min from the beaches, 10 min from town and the marina.",
-      "distances": {
-        "beach": {
-          "name": "Raisins Clairs beach",
-          "mode": "drive"
-        },
-        "centre": {
-          "name": "Saint-François town centre",
-          "mode": "drive"
-        },
-        "marina": {
-          "name": "Saint-François Marina",
-          "mode": "drive"
-        },
-        "airport": {
-          "name": "Pôle Caraïbes airport",
-          "mode": "drive"
-        }
-      },
-      "amenities": [
-        {
-          "icon": "pool",
-          "label": "Private pool"
-        },
-        {
-          "icon": "ac",
-          "label": "Air-conditioned bedrooms"
-        },
-        {
-          "icon": "shield",
-          "label": "Secure Louisiana Park residence"
-        },
-        {
-          "icon": "wifi",
-          "label": "Fibre WiFi"
-        },
-        {
-          "icon": "parking",
-          "label": "Private parking"
-        },
-        {
-          "icon": "kitchen",
-          "label": "Equipped kitchen + Nespresso"
-        },
-        {
-          "icon": "terrace",
-          "label": "Electric roller shutters"
-        },
-        {
-          "icon": "bbq",
-          "label": "Charcoal BBQ"
-        }
-      ],
-      "wifi": {
-        "notes": "Password provided on arrival."
-      },
-      "security": {
-        "portail": "Residence gate closes automatically. Remote nearby, or keypad.",
-        "cles": "Keys and remote handed over at check-in by your concierge. Bin room code: 2307."
-      },
-      "appliances": {
-        "wifi": "High-speed fibre WiFi throughout the villa.",
-        "tv": "Orange TV box (HDMI 1 source). Local and international channels.",
-        "coffee": "Filter coffee maker (size 4 paper filters) + Nespresso machine (capsules in supermarkets).",
-        "ac": "AC in each bedroom — use only when occupied, doors/windows closed. At night: 26 °C, auto fan.",
-        "water": "Drinkable water + 1,250 L reserve and pressure pump → ~48h autonomy during mains cuts. Outdoor garden shed tap = mains indicator.",
-        "septic": "Septic tank: no wipes, tampons, sanitary pads, bleach, oil or harsh chemicals."
-      },
-      "pool": {
-        "alarm": "⚠ Adult supervision REQUIRED. Alarm with magnet (diver logo): red light = disarmed, green = active. Auto-rearms ~15 min after calm water returns.",
-        "rules": "No sunscreen in the water (shower before), no glass, no sharp objects. Technical room is off-limits.",
-        "maintenance": "Servicing by our provider. A skimmer net is available. Contact your concierge for any issue."
-      },
-      "houseRules": [
-        "No parties / loud events without prior approval.",
-        "No smoking indoors. Smoking allowed on the outdoor terrace.",
-        "No pets unless written approval.",
-        "Respect neighbours: quiet after 10pm, moderate music.",
-        "Report any breakage or issue to your concierge — we sort it together."
-      ],
-      "trashSchedule": {
-        "ordures": "Grey containers in the bin room at the residence exit. Closed bin bags. Daily disposal recommended (heat).",
-        "tri": "Yellow container in the bin room: plastic bottles, paper/cardboard, metal/aluminium.",
-        "verre": "Green glass containers: 600m towards Saint-François, by the roadside."
-      },
-      "bebettes": {
-        "intro": "In Guadeloupe, we share the home with a few visitors. Here are the friends and the less loved.",
-        "amis": [
-          {
-            "name": "Green iguanas",
-            "note": "Harmless but fond of hibiscus."
-          },
-          {
-            "name": "Hummingbirds",
-            "note": "Admire their wing-beat speed."
-          },
-          {
-            "name": "Bananaquits",
-            "note": "They'll come if you put sugar in a feeder."
-          },
-          {
-            "name": "Anoles & geckos",
-            "note": "Small harmless lizards — they eat insects."
-          }
-        ],
-        "moinsAimes": [
-          {
-            "name": "Mosquitoes",
-            "note": "Repellents + spirals. If you get a fever, see a doctor."
-          },
-          {
-            "name": "Centipedes",
-            "note": "Venomous millipede. Likes damp corners. Visible, easy to avoid."
-          },
-          {
-            "name": "Cockroaches (« ravets »)",
-            "note": "Big but harmless. Traps in the kitchen. It doesn't mean the house is dirty."
-          }
-        ]
+      "weather": {
+        "saison": "Dry season: Dec-April (ideal). Wet season: July-October (short showers, occasional cyclones).",
+        "alerte": "In case of weather alert (Jul-Oct), follow Météo France (meteofrance.gp) and Prefecture (guadeloupe.gouv.fr). Store 3 days of water and food. Concierge stays on hand."
       },
       "departure": [
         "Run a load of laundry on used sheets and towels.",
@@ -313,10 +196,128 @@
         "Clean the BBQ grill (if used).",
         "Close windows, doors, AC and lights. Check-out at 10am."
       ],
-      "weather": {
-        "alerte": "In case of weather alert (Jul-Oct), follow Météo France (meteofrance.gp) and Prefecture (guadeloupe.gouv.fr). Store 3 days of water and food. Concierge stays on hand.",
-        "saison": "Dry season: Dec-April (ideal). Wet season: July-October (short showers, occasional cyclones)."
+      "bebettes": {
+        "moinsAimes": [
+          {
+            "note": "Repellents + spirals. If you get a fever, see a doctor.",
+            "name": "Mosquitoes"
+          },
+          {
+            "note": "Venomous millipede. Likes damp corners. Visible, easy to avoid.",
+            "name": "Centipedes"
+          },
+          {
+            "note": "Big but harmless. Traps in the kitchen. It doesn't mean the house is dirty.",
+            "name": "Cockroaches (« ravets »)"
+          }
+        ],
+        "amis": [
+          {
+            "note": "Harmless but fond of hibiscus.",
+            "name": "Green iguanas"
+          },
+          {
+            "note": "Admire their wing-beat speed.",
+            "name": "Hummingbirds"
+          },
+          {
+            "note": "They'll come if you put sugar in a feeder.",
+            "name": "Bananaquits"
+          },
+          {
+            "note": "Small harmless lizards — they eat insects.",
+            "name": "Anoles & geckos"
+          }
+        ],
+        "intro": "In Guadeloupe, we share the home with a few visitors. Here are the friends and the less loved."
+      },
+      "trashSchedule": {
+        "verre": "Green glass containers: 600m towards Saint-François, by the roadside.",
+        "tri": "Yellow container in the bin room: plastic bottles, paper/cardboard, metal/aluminium.",
+        "ordures": "Grey containers in the bin room at the residence exit. Closed bin bags. Daily disposal recommended (heat)."
+      },
+      "houseRules": [
+        "No parties / loud events without prior approval.",
+        "No smoking indoors. Smoking allowed on the outdoor terrace.",
+        "No pets unless written approval.",
+        "Respect neighbours: quiet after 10pm, moderate music.",
+        "Report any breakage or issue to your concierge — we sort it together."
+      ],
+      "pool": {
+        "maintenance": "Servicing by our provider. A skimmer net is available. Contact your concierge for any issue.",
+        "rules": "No sunscreen in the water (shower before), no glass, no sharp objects. Technical room is off-limits.",
+        "alarm": "⚠ Adult supervision REQUIRED. Alarm with magnet (diver logo): red light = disarmed, green = active. Auto-rearms ~15 min after calm water returns."
+      },
+      "appliances": {
+        "septic": "Septic tank: no wipes, tampons, sanitary pads, bleach, oil or harsh chemicals.",
+        "water": "Drinkable water + 1,250 L reserve and pressure pump → ~48h autonomy during mains cuts. Outdoor garden shed tap = mains indicator.",
+        "ac": "AC in each bedroom — use only when occupied, doors/windows closed. At night: 26 °C, auto fan.",
+        "coffee": "Filter coffee maker (size 4 paper filters) + Nespresso machine (capsules in supermarkets).",
+        "tv": "Orange TV box (HDMI 1 source). Local and international channels.",
+        "wifi": "High-speed fibre WiFi throughout the villa."
+      },
+      "security": {
+        "cles": "Keys and remote handed over at check-in by your concierge. Bin room code: 2307.",
+        "portail": "Residence gate closes automatically. Remote nearby, or keypad."
+      },
+      "wifi": {
+        "notes": "Password provided on arrival."
+      },
+      "amenities": [
+        {
+          "label": "Private pool",
+          "icon": "pool"
+        },
+        {
+          "label": "Air-conditioned bedrooms",
+          "icon": "ac"
+        },
+        {
+          "label": "Secure Louisiana Park residence",
+          "icon": "shield"
+        },
+        {
+          "label": "Fibre WiFi",
+          "icon": "wifi"
+        },
+        {
+          "label": "Private parking",
+          "icon": "parking"
+        },
+        {
+          "label": "Equipped kitchen + Nespresso",
+          "icon": "kitchen"
+        },
+        {
+          "label": "Electric roller shutters",
+          "icon": "terrace"
+        },
+        {
+          "label": "Charcoal BBQ",
+          "icon": "bbq"
+        }
+      ],
+      "distances": {
+        "airport": {
+          "mode": "drive",
+          "name": "Pôle Caraïbes airport"
+        },
+        "marina": {
+          "mode": "drive",
+          "name": "Saint-François Marina"
+        },
+        "centre": {
+          "mode": "drive",
+          "name": "Saint-François town centre"
+        },
+        "beach": {
+          "mode": "drive",
+          "name": "Raisins Clairs beach"
+        }
       }
     }
-  }
+  },
+  "description": "Villa au design lumineux dans la résidence privée Louisiana Park. Piscine privée, volets roulants électriques, terrasse extérieure et cuisine équipée. À 5 min des plages, 10 min du centre et de la marina.",
+  "welcomeMessage": "Bienvenue à Piment Bleu, dans la résidence Louisiana Park. Lumière, terrasse et piscine vous attendent. À votre écoute pour toute demande pendant votre séjour.",
+  "tagline": "Architecture lumineuse dans Louisiana Park"
 }
