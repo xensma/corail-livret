@@ -76,10 +76,11 @@
   ],
   "wifi": [
     {
-      "ssid": "VillaKisara",
-      "password": "Kisara971!",
-      "security": "WPA",
-      "notes": "Merci de respecter une utilisation raisonnable : pas de téléchargement illégal."
+      "ssid": "Livebox-3E00",
+      "password": "ptoUfQ6kaR53dhjWss",
+      "security": "WPA3",
+      "notes": "Merci de respecter une utilisation raisonnable : pas de téléchargement illégal.",
+      "label": "Orange"
     }
   ],
   "stay": {
