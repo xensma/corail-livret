@@ -17,6 +17,7 @@
     "portillonPieton": "2306 A",
     "cles": "Clés et bip remis au check-in par votre concierge. Local poubelles à code : 2307."
   },
+  "kidsGames": true,
   "capacity": {
     "guests": 6,
     "bedrooms": 3,

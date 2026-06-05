@@ -5,6 +5,7 @@
   "tagline": "Une parenthèse moderne au cœur de Saint-François",
   "welcomeMessage": "Soyez les bienvenus à Kisara. Nous vous souhaitons un excellent séjour et restons à votre disposition pour toutes informations complémentaires.\n\nClaire & Maxence — Corail Conciergerie",
   "description": "Villa moderne nichée dans une résidence privée et sécurisée. Trois chambres climatisées, une piscine pour vous seuls, et une grande terrasse pour les soirées qui s'étirent. À deux minutes de la plage des Raisins Clairs.",
+  "kidsGames": true,
   "capacity": {
     "guests": 6,
     "bedrooms": 3,

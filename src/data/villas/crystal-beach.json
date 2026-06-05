@@ -4,6 +4,7 @@
   "tagline": "Appartement à Crystal Beach — 2 piscines + accès direct plage par badge",
   "welcomeMessage": "Bienvenue chez vous pour les prochains jours. Nous sommes ravis de vous accueillir au sein de cet appartement N°72 à Crystal Beach. Vous disposez de 2 piscines en accès libre dans la résidence ET d'un accès direct à la plage via un portillon (badge fourni) situé devant la grande piscine, au bout du jardin. Appartement non-fumeur, animaux non acceptés.",
   "description": "Appartement N°72 dans la résidence Crystal Beach à Saint-François. Cuisine entièrement équipée, salle de bain avec sèche-cheveux, climatisation dans chaque chambre (télécommande dédiée), store électrique commandé depuis la chambre parentale, TV chaînes locales, deux grands ventilateurs sur pieds, machine à laver, fer à repasser, glacière et jeux d'enfants. Vous disposez de 2 piscines en accès libre (7h-20h) et d'un accès direct à la plage par badge. À deux pas de la boulangerie Aléonard, du Carré, de L'Atelier Crystal Beach et de La Plage Crystal Beach.",
+  "kidsGames": true,
   "capacity": {
     "guests": 4,
     "bedrooms": 2,

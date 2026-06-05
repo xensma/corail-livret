@@ -17,6 +17,7 @@
     "portillonPieton": "À COMMUNIQUER",
     "cles": "Clés et bip remis au check-in par votre concierge. Local poubelles à code : À COMMUNIQUER."
   },
+  "kidsGames": true,
   "capacity": {
     "guests": 6,
     "bedrooms": 3,

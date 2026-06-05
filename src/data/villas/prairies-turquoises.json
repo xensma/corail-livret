@@ -24,6 +24,7 @@
     "portillonPieton": "4689",
     "cles": "Clés et bip remis au check-in par votre concierge. Local poubelles à code : À COMMUNIQUER."
   },
+  "kidsGames": true,
   "capacity": {
     "guests": 10,
     "bedrooms": 5,

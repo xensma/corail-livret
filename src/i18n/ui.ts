@@ -56,6 +56,10 @@ export const ui = {
     lClimatisation: 'Climatisation',
     lEauPotable: 'Eau potable',
     lFosseSeptique: 'Fosse septique',
+    lKidsTitle: 'Pour les enfants',
+    lKidsBadge: 'Jeux de plage pour enfants',
+    lKidsGames: 'Un panier de jeux de plage — ballon, pelle, seaux, râteaux, moules et bouées — est à votre disposition.',
+    lKidsCare: 'Merci de les rincer à l\'eau douce après la plage, pour les prochains petits hôtes 🌊',
     lAlerteCyclone: 'Alerte cyclonique',
 
     // Section: Piscine
@@ -235,6 +239,10 @@ export const ui = {
     lClimatisation: 'Air conditioning',
     lEauPotable: 'Drinking water',
     lFosseSeptique: 'Septic tank',
+    lKidsTitle: 'For the kids',
+    lKidsBadge: 'Beach toys for kids',
+    lKidsGames: 'A basket of beach toys — ball, shovel, buckets, rakes, sand moulds and floats — is at your disposal.',
+    lKidsCare: 'Please rinse them with fresh water after the beach, for the next little guests 🌊',
     lAlerteCyclone: 'Cyclone alert',
 
     // Section: Pool

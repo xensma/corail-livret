@@ -55,6 +55,7 @@ collections:
       - {label: "Identifiant technique (slug)", name: id, widget: string, hint: "Ne pas modifier — utilisé dans l'URL"}
       - {label: "Nom affiché", name: name, widget: string}
       - {label: "Type de bien", name: propertyType, widget: select, options: ["villa", "apartment"], default: "villa", required: false, hint: "apartment = pas de section piscine si vide"}
+      - {label: "🏖 Jeux de plage enfants", name: kidsGames, widget: boolean, default: false, required: false, hint: "Coché = affiche le badge + l'encart « Pour les enfants » (ballon, pelle, seaux, râteaux, moules, bouées)"}
 
       # ── WiFi (1 ou plusieurs réseaux — clic "+ Add" pour ajouter un FAI secondaire)
       - label: "📡 WiFi"

@@ -17,6 +17,7 @@
     "portillonPieton": "À COMMUNIQUER",
     "cles": "Trousseau de clés remis lors du check-in par votre concierge."
   },
+  "kidsGames": true,
   "capacity": {
     "guests": 6,
     "bedrooms": 3,
