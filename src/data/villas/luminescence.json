@@ -119,7 +119,7 @@
   },
   "pool": {
     "safetyType": "code",
-    "alarmCode": "",
+    "alarmCode": "1234",
     "alarm": "⚠ Surveillance enfants OBLIGATOIRE. Alarme avec aimant (logo plongeur) : voyant rouge = désactivée, vert = surveillance. La surveillance se réactive automatiquement ~15 min après la fin de baignade calme.",
     "rules": "Pas de crème solaire dans l'eau (douche avant baignade), pas de verre, pas d'objets coupants. L'accès au local technique est interdit.",
     "maintenance": "Nettoyage assuré par notre prestataire. Une épuisette est disponible. En cas de souci, contactez votre concierge."
@@ -266,7 +266,7 @@
       },
       "pool": {
     "safetyType": "code",
-    "alarmCode": "",
+    "alarmCode": "1234",
         "alarm": "⚠ Adult supervision REQUIRED. Alarm with magnet (diver logo): red light = disarmed, green = active. Auto-rearms ~15 min after calm water returns.",
         "rules": "No sunscreen in the water (shower before), no glass, no sharp objects. Technical room is off-limits.",
         "maintenance": "Servicing by our provider. A skimmer net is available. Contact your concierge for any issue."

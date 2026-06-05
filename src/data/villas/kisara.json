@@ -106,7 +106,7 @@
   },
   "pool": {
     "safetyType": "code",
-    "alarmCode": "",
+    "alarmCode": "1234",
     "alarm": "Alarme à aimant. Avant chaque baignade : passer l'aimant sur le logo plongeur (voyant rouge). Réactivation automatique 15 min après.",
     "rules": "Pas de crèmes solaires, boissons ni objets dans le bassin. Douche extérieure obligatoire après la plage.",
     "maintenance": "Nettoyage assuré 1 fois par semaine. Si vous voyez des feuilles : épuisette sur le côté de la villa."
@@ -260,7 +260,7 @@
       },
       "pool": {
     "safetyType": "code",
-    "alarmCode": "",
+    "alarmCode": "1234",
         "alarm": "Magnet alarm. Before each swim: pass the magnet over the diver logo (red light). Auto-reactivates 15 min after.",
         "rules": "No sunscreen, drinks or objects in the water. Outdoor shower required after the beach.",
         "maintenance": "Cleaning once a week. If you see leaves: the net is on the side of the villa."
