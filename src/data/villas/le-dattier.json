@@ -110,11 +110,6 @@
     "water": "Eau du robinet potable. Une carafe filtrante est mise à disposition.",
     "septic": "Fosse septique : merci de ne JAMAIS jeter lingettes, cotons, tampons ou produits chimiques agressifs dans les WC."
   },
-  "pool": {
-    "alarm": "⚠ Surveillance enfants OBLIGATOIRE à tout moment. Pas de baignade sans adulte présent au bord. Refermez systématiquement les abords après baignade.",
-    "rules": "Pas de crème solaire dans l'eau (douche avant baignade), pas de verre près du bassin, pas de plongeons. L'accès au local technique est interdit.",
-    "maintenance": "Entretien hebdomadaire assuré par notre prestataire. Pour tout souci (pompe, niveau d'eau, propreté inhabituelle), contactez votre concierge."
-  },
   "houseRules": [
     "Pas de fête / événement bruyant sans accord préalable du propriétaire.",
     "Pas de fumée à l'intérieur. Espace fumeur sur la terrasse extérieure.",
@@ -255,12 +250,7 @@
         "water": "Tap water drinkable. Filter jug provided.",
         "septic": "Septic tank: NEVER flush wipes, cotton, tampons or harsh chemicals."
       },
-      "pool": {
-        "alarm": "⚠ Adult supervision REQUIRED at all times. No swimming without an adult present. Re-secure the pool area after each use.",
-        "rules": "No sunscreen in the water (shower before swimming), no glass, no diving. Technical room is off-limits.",
-        "maintenance": "Weekly servicing by our provider. Contact your concierge for any issue."
-      },
-      "houseRules": [
+          "houseRules": [
         "No parties / loud events without prior owner approval.",
         "No smoking indoors. Smoking allowed on the outdoor terrace.",
         "No pets unless written approval.",

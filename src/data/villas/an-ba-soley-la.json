@@ -119,6 +119,8 @@
     "septic": "Fosse septique : merci de ne JAMAIS jeter lingettes, cotons, tampons ou produits chimiques agressifs dans les WC."
   },
   "pool": {
+    "safetyType": "code",
+    "alarmCode": "",
     "alarm": "⚠ Surveillance enfants OBLIGATOIRE à tout moment. Pas de baignade sans adulte présent au bord. Refermez systématiquement les abords après baignade.",
     "rules": "Pas de crème solaire dans l'eau (douche avant baignade), pas de verre près du bassin, pas de plongeons. L'accès au local technique est interdit.",
     "maintenance": "Entretien hebdomadaire assuré par notre prestataire. Pour tout souci (pompe, niveau d'eau, propreté inhabituelle), contactez votre concierge."
@@ -255,6 +257,8 @@
         "Report any breakage or issue to your concierge — we sort it together."
       ],
       "pool": {
+    "safetyType": "code",
+    "alarmCode": "",
         "maintenance": "Weekly servicing by our provider. Contact your concierge for any issue.",
         "rules": "No sunscreen in the water (shower before swimming), no glass, no diving. Technical room is off-limits.",
         "alarm": "⚠ Adult supervision REQUIRED at all times. No swimming without an adult present. Re-secure the pool area after each use."

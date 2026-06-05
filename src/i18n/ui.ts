@@ -60,12 +60,20 @@ export const ui = {
     lKidsBadge: 'Jeux de plage pour enfants',
     lKidsGames: 'Un panier de jeux de plage — ballon, pelle, seaux, râteaux, moules et bouées — est à votre disposition.',
     lKidsCare: 'Merci de les rincer à l\'eau douce après la plage, pour les prochains petits hôtes 🌊',
+    lPoolKey: '🟢 Vert = piscine protégée · 🔴 Rouge = alarme désactivée',
+    lPoolCodeLabel: 'Code alarme :',
+    lPoolMagnetBefore: 'Avant la baignade : passez l\'aimant (porte-clé près de la piscine) sur le symbole « Baigneur » jusqu\'au bip → le voyant passe au rouge 🔴.',
+    lPoolMagnetAfter: 'En sortant de l\'eau : l\'alarme se réarme seule dès que l\'eau est calme → voyant vert 🟢. Pour accélérer, repassez l\'aimant sur le « Baigneur ».',
+    lPoolCodeBefore: 'Avant la baignade : tapez le code de l\'alarme sur le clavier de la centrale → le voyant passe au rouge 🔴.',
+    lPoolCodeAfter: 'En sortant de l\'eau : l\'alarme se réarme seule dès que l\'eau est calme → voyant vert 🟢. Pour accélérer, appuyez 2× sur OK.',
+    lPoolBarrier: 'Barrière de sécurité « Beethoven » installée autour du bassin. Refermez et verrouillez toujours le portillon derrière vous, surtout avec des enfants.',
+    lPoolWatch: 'Aucun dispositif ne remplace la surveillance : ne quittez jamais des yeux les enfants près du bassin.',
     lAlerteCyclone: 'Alerte cyclonique',
 
     // Section: Piscine
     kDetente: 'Détente',
     tVotrePiscine: 'Votre piscine',
-    lAlarme: '⚠ Alarme — Surveillance enfants',
+    lAlarme: '⚠ Sécurité du bassin',
     lBonnesPratiques: 'Bonnes pratiques',
     lEntretien: 'Entretien',
 
@@ -243,12 +251,20 @@ export const ui = {
     lKidsBadge: 'Beach toys for kids',
     lKidsGames: 'A basket of beach toys — ball, shovel, buckets, rakes, sand moulds and floats — is at your disposal.',
     lKidsCare: 'Please rinse them with fresh water after the beach, for the next little guests 🌊',
+    lPoolKey: '🟢 Green = pool protected · 🔴 Red = alarm off',
+    lPoolCodeLabel: 'Alarm code:',
+    lPoolMagnetBefore: 'Before swimming: hold the magnet (key fob near the pool) over the "Swimmer" symbol until it beeps → the light turns red 🔴.',
+    lPoolMagnetAfter: 'When you get out: the alarm re-arms by itself once the water is calm → green light 🟢. To speed it up, pass the magnet over the "Swimmer" again.',
+    lPoolCodeBefore: 'Before swimming: enter the alarm code on the keypad → the light turns red 🔴.',
+    lPoolCodeAfter: 'When you get out: the alarm re-arms by itself once the water is calm → green light 🟢. To speed it up, press OK twice.',
+    lPoolBarrier: 'A "Beethoven" safety fence surrounds the pool. Always close and latch the gate behind you, especially with children.',
+    lPoolWatch: 'No device replaces supervision: never take your eyes off children near the pool.',
     lAlerteCyclone: 'Cyclone alert',
 
     // Section: Pool
     kDetente: 'Relax',
     tVotrePiscine: 'Your pool',
-    lAlarme: '⚠ Alarm — Child supervision',
+    lAlarme: '⚠ Pool safety',
     lBonnesPratiques: 'Best practices',
     lEntretien: 'Maintenance',
 

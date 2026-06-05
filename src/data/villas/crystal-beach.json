@@ -103,6 +103,7 @@
     "septic": "Tout-à-l'égout : merci de ne pas jeter lingettes, tampons, serviettes hygiéniques ou produits chimiques dans les WC."
   },
   "pool": {
+    "safetyType": "residence",
     "alarm": "2 piscines en accès libre dans la résidence (7h-20h) + accès direct plage par portillon (badge) au bout du jardin. ⚠ Surveillance enfants OBLIGATOIRE à tout moment, autour des bassins comme sur la plage. 1 piscine spéciale enfants avec pataugeoire et 1,4 m de profondeur. 1 piscine d'1,6 m.",
     "rules": "Pas de crème solaire dans l'eau (douche avant baignade), pas de verre, pas d'objets coupants. Refermez les portillons après chaque passage.",
     "maintenance": "Entretien des piscines assuré par la résidence. En cas de souci visible, signalez-le à votre concierge."
@@ -254,6 +255,7 @@
         "septic": "Mains drainage: no wipes, tampons, sanitary pads or harsh chemicals down the toilet."
       },
       "pool": {
+    "safetyType": "residence",
         "alarm": "2 free-access pools in the residence (7am-8pm) + direct beach access via gate (badge) at the end of the garden. ⚠ Adult supervision REQUIRED at all times, by the pools and on the beach. 1 dedicated children's pool with paddling area and 1.4 m depth. 1 pool of 1.6 m depth.",
         "rules": "No sunscreen in the water (shower before swimming), no glass, no sharp objects. Close gates after passage.",
         "maintenance": "Pool servicing by the residence. Report any visible issue to your concierge."

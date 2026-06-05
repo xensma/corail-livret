@@ -122,6 +122,7 @@
     "septic": "Fosse septique : pas de lingettes, tampons, serviettes hygiéniques, ni javel/huile/produits chimiques."
   },
   "pool": {
+    "safetyType": "barriere",
     "alarm": "A votre demande, une barrière dite \"Beethoven\"de sécurité peut-être installée.\nCependant, il est de votre responsabilité de surveiller la baignade des enfants.",
     "rules": "Pas de crème solaire dans l'eau (douche avant baignade), pas de verre, pas d'objets coupants. L'accès au local technique est interdit.",
     "maintenance": "Nettoyage assuré par notre prestataire une fois/semaine. Une épuisette est disponible. En cas de souci, contactez votre concierge."
@@ -262,6 +263,7 @@
         "Report any breakage or issue to your concierge — we sort it together."
       ],
       "pool": {
+    "safetyType": "barriere",
         "maintenance": "Servicing by our provider. A skimmer net is available. Contact your concierge for any issue.",
         "rules": "No sunscreen in the water (shower before), no glass, no sharp objects. Technical room is off-limits.",
         "alarm": "⚠ Adult supervision REQUIRED. Alarm with magnet (diver logo): red light = disarmed, green = active. Auto-rearms ~15 min after calm water returns."

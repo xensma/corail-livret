@@ -39,6 +39,8 @@ const distances = tField(villa, 'distances', locale);
 const security = tField(villa, 'security', locale);
 const appliances = tField(villa, 'appliances', locale);
 const pool = tField(villa, 'pool', locale);
+const poolType = (pool && pool.safetyType) || '';
+const poolCode = (pool && pool.alarmCode) || '';
 const houseRules = tField(villa, 'houseRules', locale);
 const trashSchedule = tField(villa, 'trashSchedule', locale);
 const bebettes = tField(villa, 'bebettes', locale);
@@ -248,7 +250,26 @@ const title = `${villa.name} — ${locale === 'en' ? 'Welcome guide' : "Livret d
       <div class="grid md:grid-cols-3 gap-4 max-w-5xl">
         <div class="card p-5 md:col-span-2 bg-corail-accent/5 border-corail-accent/30">
           <p class="text-xs uppercase tracking-wider text-corail-accent mb-2">{t(locale, 'lAlarme')}</p>
-          <p class="text-sm text-corail-ink/80" set:html={linkify(pool.alarm)}></p>
+          {(poolType === 'aimant' || poolType === 'code') && (
+            <div>
+              <p class="text-xs font-semibold text-corail-ink/70 mb-2">{t(locale, 'lPoolKey')}</p>
+              {poolType === 'code' && poolCode && (
+                <p class="text-sm mb-1">{t(locale, 'lPoolCodeLabel')} <code class="font-mono font-semibold text-corail-ink">{poolCode}</code></p>
+              )}
+              <p class="text-sm text-corail-ink/80">{poolType === 'aimant' ? t(locale, 'lPoolMagnetBefore') : t(locale, 'lPoolCodeBefore')}</p>
+              <p class="text-sm text-corail-ink/80 mt-1">{poolType === 'aimant' ? t(locale, 'lPoolMagnetAfter') : t(locale, 'lPoolCodeAfter')}</p>
+              <p class="text-xs text-corail-accent mt-2 font-medium">{t(locale, 'lPoolWatch')}</p>
+            </div>
+          )}
+          {poolType === 'barriere' && (
+            <div>
+              <p class="text-sm text-corail-ink/80">{t(locale, 'lPoolBarrier')}</p>
+              <p class="text-xs text-corail-accent mt-2 font-medium">{t(locale, 'lPoolWatch')}</p>
+            </div>
+          )}
+          {(poolType === '' || poolType === 'residence') && (
+            <p class="text-sm text-corail-ink/80" set:html={linkify(pool.alarm)}></p>
+          )}
         </div>
         <div class="card p-5"><p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lBonnesPratiques')}</p><p class="text-sm text-corail-ink/80" set:html={linkify(pool.rules)}></p></div>
         <div class="card p-5 md:col-span-3"><p class="text-xs uppercase tracking-wider text-corail-turquoise-dark mb-2">{t(locale, 'lEntretien')}</p><p class="text-sm text-corail-ink/80" set:html={linkify(pool.maintenance)}></p></div>
