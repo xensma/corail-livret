@@ -4,7 +4,7 @@
   "tagline": "Appartement Saint-François — accès direct à la plage de la Pointe des Pies",
   "welcomeMessage": "Bienvenue dans la Résidence Savannah. Appartement non-fumeur, animaux non acceptés. La plage de la Pointe des Pies est accessible directement depuis la résidence via le portillon au bout de l'allée centrale (code 2845). ⚠ Coupures d'eau possibles le soir après 18h — pensez à remplir une réserve.",
   "description": "Appartement à la résidence Savannah à Saint-François, avec accès direct à la plage de la Pointe des Pies (eaux calmes protégées par la barrière de corail, idéale pour la baignade en famille). Cuisine entièrement équipée, douche italienne, télévision chaînes locales, lave-linge, fer à repasser, machine à café. Stores électriques. Coupures d'eau possibles le soir après 18h — bonne réserve recommandée.",
-  "kidsGames": true,
+  "kidsGames": false,
   "capacity": {
     "guests": 4,
     "bedrooms": 2,
