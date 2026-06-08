@@ -132,6 +132,14 @@ const title = `${villa.name} — ${locale === 'en' ? 'Welcome guide' : "Livret d
     villaSlug={villa.id}
   />
 
+  <!-- Bandeau titre réservé à l'impression / PDF (le hero visuel est masqué à l'impression) -->
+  <div class="print-only px-1 pt-1 pb-2">
+    <p class="text-[8pt] uppercase tracking-[0.2em] text-corail-turquoise-dark">{locale === 'en' ? 'Welcome book · Corail Conciergerie' : 'Livret d\'accueil · Corail Conciergerie'}</p>
+    <h1 class="text-2xl font-display leading-tight">{villa.name}</h1>
+    {tagline && <p class="italic text-corail-ink/70 font-display">{tagline}</p>}
+    {welcomeMessage && <p class="text-sm mt-1 whitespace-pre-line">{welcomeMessage}</p>}
+  </div>
+
   <!-- ═══════════════ A. SECTION VILLA ═══════════════ -->
 
   <Section id="maison" kicker={t(locale, 'kVotreMaison')} title={`${t(locale, 'tToutSavoir')} ${villa.name}`} background="white">

@@ -72,24 +72,57 @@
 .scroll-snap-x > * { scroll-snap-align: start; }
 
 /* ─────────────────────────────────────────────────────────
-   Impression / « Enregistrer en PDF » — pour consultation hors-ligne
-   Nettoie la page : masque l'UI flottante, garde le contenu + codes + QR WiFi
+   Impression / « Enregistrer en PDF » — document compact hors-ligne
+   Objectif : un livret court et lisible (le pratique d'abord).
+   On masque les photos (le QR WiFi est un <svg>, il reste), le hero plein
+   écran et l'UI flottante, et on resserre fortement les espacements.
    ───────────────────────────────────────────────────────── */
+.print-only { display: none; }
+
 @media print {
-  /* Conserver les couleurs (codes, cartes d'alerte, identité de marque) */
+  /* Couleurs fidèles (codes, cartes d'alerte, QR, identité de marque) */
   *, *::before, *::after {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
-  /* Masquer toute l'interface flottante (burger, menu, barre contact, bannières)
-     + les cartes Google Maps qui s'impriment mal */
-  .fixed, .no-print, .pwa-banner, iframe { display: none !important; }
-  html { scroll-behavior: auto; }
-  body { padding: 0 !important; background: #fff !important; }
-  /* Éviter de couper un bloc/carte au milieu d'une page */
-  .card, li, figure, img { break-inside: avoid; page-break-inside: avoid; }
-  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
-  img { max-height: 72vh; }
-  a { text-decoration: none !important; }
-  @page { margin: 14mm; }
+
+  /* Masquer : UI flottante, maps, hero plein écran, et TOUTES les photos.
+     (Le QR WiFi est un <svg>, pas un <img> → il reste visible.) */
+  .fixed, .no-print, .pwa-banner, iframe,
+  img, [class*="aspect-"],
+  header.relative { display: none !important; }
+
+  /* Masquer aussi : le footer (décoratif), les sections « découverte »
+     (restos/activités/plages/boutiques — à parcourir en ligne avec photos+cartes),
+     et les boutons d'action (non cliquables sur papier). */
+  footer,
+  #restos, #activites, #suggestions, #plages, #boutiques,
+  .btn-ghost, .btn-primary, .btn-secondary { display: none !important; }
+
+  /* Afficher le bandeau titre réservé à l'impression */
+  .print-only { display: block !important; }
+
+  html { scroll-behavior: auto !important; }
+  body { padding: 0 !important; background: #fff !important; font-size: 10.5pt !important; }
+
+  /* Sections : padding resserré, fond blanc (plus de grandes bandes colorées) */
+  section { padding: 3mm 0 !important; background: #fff !important; }
+  section > .container-wide { max-width: 100% !important; padding: 0 !important; }
+  section > .container-wide > header { margin-bottom: 1.5mm !important; }
+  .section-title { font-size: 14pt !important; line-height: 1.1 !important; margin-bottom: 0 !important; }
+  .section-subtitle { font-size: 7.5pt !important; margin-bottom: .5mm !important; }
+  h3 { font-size: 11pt !important; }
+
+  /* Cartes : compactes, sans ombre, insécables */
+  .card { box-shadow: none !important; border-color: #e7e0d2 !important; }
+  .card, article, .bg-corail-cream, li, figure { break-inside: avoid !important; page-break-inside: avoid !important; }
+  h1, h2, h3, h4 { break-after: avoid !important; page-break-after: avoid !important; }
+  .grid { gap: 2.5mm !important; }
+
+  /* QR WiFi conservé, taille raisonnable */
+  .qr-svg { display: block !important; width: 30mm !important; height: 30mm !important; }
+  .qr-svg svg { display: block !important; width: 100% !important; height: 100% !important; }
+
+  a { text-decoration: none !important; color: inherit !important; }
+  @page { margin: 11mm; }
 }
