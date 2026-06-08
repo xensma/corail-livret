@@ -89,15 +89,19 @@
   /* Masquer : UI flottante, maps, hero plein écran, et TOUTES les photos.
      (Le QR WiFi est un <svg>, pas un <img> → il reste visible.) */
   .fixed, .no-print, .pwa-banner, iframe,
-  img, [class*="aspect-"],
-  header.relative { display: none !important; }
+  img, [class*="aspect-"] { display: none !important; }
 
-  /* Masquer aussi : le footer (décoratif), les sections « découverte »
-     (restos/activités/plages/boutiques — à parcourir en ligne avec photos+cartes),
-     et les boutons d'action (non cliquables sur papier). */
+  /* Masquer : le footer (décoratif) + les boutons d'action (non cliquables sur papier).
+     Les sections « découverte » (restos/activités/plages/boutiques) sont CONSERVÉES
+     en version compacte (texte seul — leurs photos sont masquées ci-dessus). */
   footer,
-  #restos, #activites, #suggestions, #plages, #boutiques,
   .btn-ghost, .btn-primary, .btn-secondary { display: none !important; }
+
+  /* HERO : conservé en bandeau compact (image de couverture, ~46 mm).
+     Le texte du hero est masqué — il est repris en clair juste en dessous (.print-only). */
+  header.relative { display: block !important; height: 46mm !important; min-height: 0 !important; overflow: hidden !important; }
+  header.relative img { display: block !important; }
+  header.relative .absolute.bottom-0, header.relative .absolute.top-0 { display: none !important; }
 
   /* Afficher le bandeau titre réservé à l'impression */
   .print-only { display: block !important; }
