@@ -2,12 +2,11 @@
   "id": "mango",
   "name": "Villa Mango Eden Green",
   "propertyType": "villa",
-  "kidsGames": true,
   "wifi": [
     {
       "label": "",
-      "ssid": "Livebox-Mango",
-      "password": "mango971",
+      "ssid": "VillaMango",
+      "password": "Guadeloupe",
       "security": "WPA2",
       "notes": "Mot de passe transmis à l'arrivée."
     }
@@ -18,6 +17,7 @@
     "portillonPieton": "À COMMUNIQUER",
     "cles": "Clés et bip remis au check-in par votre concierge. Local poubelles à code : À COMMUNIQUER."
   },
+  "kidsGames": true,
   "capacity": {
     "guests": 6,
     "bedrooms": 3,
@@ -118,8 +118,7 @@
     "septic": "Fosse septique : pas de lingettes, tampons, serviettes hygiéniques, ni javel/huile/produits chimiques."
   },
   "pool": {
-    "safetyType": "aimant",
-    "alarmCode": "1234",
+    "safetyType": "aimant_bip",
     "alarm": "⚠ Surveillance enfants OBLIGATOIRE. Alarme avec aimant (logo plongeur) : voyant rouge = désactivée, vert = surveillance. La surveillance se réactive automatiquement ~15 min après la fin de baignade calme.",
     "rules": "Pas de crème solaire dans l'eau (douche avant baignade), pas de verre, pas d'objets coupants. L'accès au local technique est interdit.",
     "maintenance": "Nettoyage assuré par notre prestataire. Une épuisette est disponible. En cas de souci, contactez votre concierge."
@@ -197,126 +196,9 @@
       "tagline": "Discreet luxury steps from Raisins Clairs",
       "welcomeMessage": "Welcome to Mango Eden Green. Enjoy the secure pool and 5-seat jacuzzi in this 4★ setting 750m from Raisins Clairs beach.",
       "description": "4★ villa 750m from Raisins Clairs and Manganao beaches. Spacious living room, open kitchen onto the terrace, child-safe pool and 5-seat jacuzzi. 3 equivalent bedrooms each with private bathroom.",
-      "distances": {
-        "beach": {
-          "name": "Raisins Clairs beach",
-          "mode": "metres"
-        },
-        "centre": {
-          "name": "Saint-François town centre",
-          "mode": "drive"
-        },
-        "marina": {
-          "name": "Saint-François Marina",
-          "mode": "drive"
-        },
-        "airport": {
-          "name": "Pôle Caraïbes airport",
-          "mode": "drive"
-        }
-      },
-      "amenities": [
-        {
-          "icon": "pool",
-          "label": "Secure pool"
-        },
-        {
-          "icon": "pool",
-          "label": "5-seat jacuzzi"
-        },
-        {
-          "icon": "ac",
-          "label": "3 air-conditioned bedrooms"
-        },
-        {
-          "icon": "shield",
-          "label": "Secure setting"
-        },
-        {
-          "icon": "wifi",
-          "label": "Fibre WiFi"
-        },
-        {
-          "icon": "parking",
-          "label": "Private parking"
-        },
-        {
-          "icon": "kitchen",
-          "label": "Open equipped kitchen"
-        },
-        {
-          "icon": "terrace",
-          "label": "Large terrace"
-        }
-      ],
-      "wifi": {
-        "notes": "Password provided on arrival."
-      },
-      "security": {
-        "portail": "Residence gate closes automatically. Remote nearby, or keypad.",
-        "cles": "Keys and remote handed over at check-in by your concierge. Bin room code: À COMMUNIQUER."
-      },
-      "appliances": {
-        "wifi": "High-speed fibre WiFi throughout the villa.",
-        "tv": "Orange TV box (HDMI 1 source). Local and international channels.",
-        "coffee": "Filter coffee maker (size 4 paper filters) + Nespresso machine (capsules in supermarkets).",
-        "ac": "AC in each bedroom — use only when occupied, doors/windows closed. At night: 26 °C, auto fan.",
-        "water": "Drinkable water + 1,250 L reserve and pressure pump → ~48h autonomy during mains cuts. Outdoor garden shed tap = mains indicator.",
-        "septic": "Septic tank: no wipes, tampons, sanitary pads, bleach, oil or harsh chemicals."
-      },
-      "pool": {
-        "alarm": "⚠ Adult supervision REQUIRED. Alarm with magnet (diver logo): red light = disarmed, green = active. Auto-rearms ~15 min after calm water returns.",
-        "rules": "No sunscreen in the water (shower before), no glass, no sharp objects. Technical room is off-limits.",
-        "maintenance": "Servicing by our provider. A skimmer net is available. Contact your concierge for any issue.",
-        "alarmCode": "1234",
-        "safetyType": "code"
-      },
-      "houseRules": [
-        "No parties / loud events without prior approval.",
-        "No smoking indoors. Smoking allowed on the outdoor terrace.",
-        "No pets unless written approval.",
-        "Respect neighbours: quiet after 10pm, moderate music.",
-        "Report any breakage or issue to your concierge — we sort it together."
-      ],
-      "trashSchedule": {
-        "ordures": "Grey containers in the bin room at the residence exit. Closed bin bags. Daily disposal recommended (heat).",
-        "tri": "Yellow container in the bin room: plastic bottles, paper/cardboard, metal/aluminium.",
-        "verre": "Green glass containers: nearby, shown by your concierge on arrival."
-      },
-      "bebettes": {
-        "intro": "In Guadeloupe, we share the home with a few visitors. Here are the friends and the less loved.",
-        "amis": [
-          {
-            "name": "Green iguanas",
-            "note": "Harmless but fond of hibiscus."
-          },
-          {
-            "name": "Hummingbirds",
-            "note": "Admire their wing-beat speed."
-          },
-          {
-            "name": "Bananaquits",
-            "note": "They'll come if you put sugar in a feeder."
-          },
-          {
-            "name": "Anoles & geckos",
-            "note": "Small harmless lizards — they eat insects."
-          }
-        ],
-        "moinsAimes": [
-          {
-            "name": "Mosquitoes",
-            "note": "Repellents + spirals. If you get a fever, see a doctor."
-          },
-          {
-            "name": "Centipedes",
-            "note": "Venomous millipede. Likes damp corners. Visible, easy to avoid."
-          },
-          {
-            "name": "Cockroaches (« ravets »)",
-            "note": "Big but harmless. Traps in the kitchen. It doesn't mean the house is dirty."
-          }
-        ]
+      "weather": {
+        "saison": "Dry season: Dec-April (ideal). Wet season: July-October (short showers, occasional cyclones).",
+        "alerte": "In case of weather alert (Jul-Oct), follow Météo France (meteofrance.gp) and Prefecture (guadeloupe.gouv.fr). Store 3 days of water and food. Concierge stays on hand."
       },
       "departure": [
         "Run a load of laundry on used sheets and towels.",
@@ -325,13 +207,129 @@
         "Clean the BBQ grill (if used).",
         "Close windows, doors, AC and lights. Check-out at 10am."
       ],
-      "weather": {
-        "alerte": "In case of weather alert (Jul-Oct), follow Météo France (meteofrance.gp) and Prefecture (guadeloupe.gouv.fr). Store 3 days of water and food. Concierge stays on hand.",
-        "saison": "Dry season: Dec-April (ideal). Wet season: July-October (short showers, occasional cyclones)."
+      "bebettes": {
+        "moinsAimes": [
+          {
+            "note": "Repellents + spirals. If you get a fever, see a doctor.",
+            "name": "Mosquitoes"
+          },
+          {
+            "note": "Venomous millipede. Likes damp corners. Visible, easy to avoid.",
+            "name": "Centipedes"
+          },
+          {
+            "note": "Big but harmless. Traps in the kitchen. It doesn't mean the house is dirty.",
+            "name": "Cockroaches (« ravets »)"
+          }
+        ],
+        "amis": [
+          {
+            "note": "Harmless but fond of hibiscus.",
+            "name": "Green iguanas"
+          },
+          {
+            "note": "Admire their wing-beat speed.",
+            "name": "Hummingbirds"
+          },
+          {
+            "note": "They'll come if you put sugar in a feeder.",
+            "name": "Bananaquits"
+          },
+          {
+            "note": "Small harmless lizards — they eat insects.",
+            "name": "Anoles & geckos"
+          }
+        ],
+        "intro": "In Guadeloupe, we share the home with a few visitors. Here are the friends and the less loved."
+      },
+      "trashSchedule": {
+        "verre": "Green glass containers: nearby, shown by your concierge on arrival.",
+        "tri": "Yellow container in the bin room: plastic bottles, paper/cardboard, metal/aluminium.",
+        "ordures": "Grey containers in the bin room at the residence exit. Closed bin bags. Daily disposal recommended (heat)."
+      },
+      "houseRules": [
+        "No parties / loud events without prior approval.",
+        "No smoking indoors. Smoking allowed on the outdoor terrace.",
+        "No pets unless written approval.",
+        "Respect neighbours: quiet after 10pm, moderate music.",
+        "Report any breakage or issue to your concierge — we sort it together."
+      ],
+      "pool": {
+    "safetyType": "aimant_bip",
+        "maintenance": "Servicing by our provider. A skimmer net is available. Contact your concierge for any issue.",
+        "rules": "No sunscreen in the water (shower before), no glass, no sharp objects. Technical room is off-limits.",
+        "alarm": "⚠ Adult supervision REQUIRED. Alarm with magnet (diver logo): red light = disarmed, green = active. Auto-rearms ~15 min after calm water returns."
+      },
+      "appliances": {
+        "septic": "Septic tank: no wipes, tampons, sanitary pads, bleach, oil or harsh chemicals.",
+        "water": "Drinkable water + 1,250 L reserve and pressure pump → ~48h autonomy during mains cuts. Outdoor garden shed tap = mains indicator.",
+        "ac": "AC in each bedroom — use only when occupied, doors/windows closed. At night: 26 °C, auto fan.",
+        "coffee": "Filter coffee maker (size 4 paper filters) + Nespresso machine (capsules in supermarkets).",
+        "tv": "Orange TV box (HDMI 1 source). Local and international channels.",
+        "wifi": "High-speed fibre WiFi throughout the villa."
+      },
+      "security": {
+        "cles": "Keys and remote handed over at check-in by your concierge. Bin room code: À COMMUNIQUER.",
+        "portail": "Residence gate closes automatically. Remote nearby, or keypad."
+      },
+      "wifi": {
+        "notes": "Password provided on arrival."
+      },
+      "amenities": [
+        {
+          "label": "Secure pool",
+          "icon": "pool"
+        },
+        {
+          "label": "5-seat jacuzzi",
+          "icon": "pool"
+        },
+        {
+          "label": "3 air-conditioned bedrooms",
+          "icon": "ac"
+        },
+        {
+          "label": "Secure setting",
+          "icon": "shield"
+        },
+        {
+          "label": "Fibre WiFi",
+          "icon": "wifi"
+        },
+        {
+          "label": "Private parking",
+          "icon": "parking"
+        },
+        {
+          "label": "Open equipped kitchen",
+          "icon": "kitchen"
+        },
+        {
+          "label": "Large terrace",
+          "icon": "terrace"
+        }
+      ],
+      "distances": {
+        "airport": {
+          "mode": "drive",
+          "name": "Pôle Caraïbes airport"
+        },
+        "marina": {
+          "mode": "drive",
+          "name": "Saint-François Marina"
+        },
+        "centre": {
+          "mode": "drive",
+          "name": "Saint-François town centre"
+        },
+        "beach": {
+          "mode": "metres",
+          "name": "Raisins Clairs beach"
+        }
       }
     }
   },
   "description": "Villa 4★ à 750m des plages des Raisins Clairs et du Manganao. Vaste salon, cuisine ouverte sur la terrasse, piscine sécurisée pour enfants et jacuzzi 5 places. 3 chambres équivalentes avec salles d'eau privatives.",
-  "tagline": "Luxe discret à deux pas de Raisins Clairs",
-  "welcomeMessage": "Bienvenue à Mango Eden Green. Profitez de la piscine sécurisée et du jacuzzi 5 places dans ce cadre 4★ à 750m de la plage des Raisins Clairs."
+  "welcomeMessage": "Bienvenue à Mango Eden Green. Profitez de la piscine sécurisée et du jacuzzi 5 places dans ce cadre 4★ à 750m de la plage des Raisins Clairs.",
+  "tagline": "Luxe discret à deux pas de Raisins Clairs"
 }

@@ -204,7 +204,7 @@ collections:
         required: false
         collapsed: true
         fields:
-          - {label: "🔐 Sécurité piscine (génère le texte auto)", name: safetyType, widget: select, default: "", required: false, options: [{label: "— Texte libre (champ Alarme ci-dessous)", value: ""}, {label: "🧲 Alarme à aimant", value: "aimant"}, {label: "🔢 Alarme à code", value: "code"}, {label: "🚧 Barrière Beethoven", value: "barriere"}, {label: "🏝️ Piscine(s) de résidence", value: "residence"}], hint: "Choisis le type : le livret écrit la consigne standardisée FR+EN. « Texte libre » et « Résidence » utilisent le champ Alarme ci-dessous."}
+          - {label: "🔐 Sécurité piscine (génère le texte auto)", name: safetyType, widget: select, default: "", required: false, options: [{label: "— Texte libre (champ Alarme ci-dessous)", value: ""}, {label: "🧲 Aimant — à voyants (Sensor Premium)", value: "aimant"}, {label: "🧲 Aimant — à bips (sur margelle)", value: "aimant_bip"}, {label: "🔢 Alarme à code", value: "code"}, {label: "🚧 Barrière Beethoven", value: "barriere"}, {label: "🏝️ Piscine(s) de résidence", value: "residence"}], hint: "Choisis le type : le livret écrit la consigne standardisée FR+EN. « Texte libre » et « Résidence » utilisent le champ Alarme ci-dessous."}
           - {label: "🔢 Code alarme (si type = Code)", name: alarmCode, widget: string, required: false, hint: "Ex : 1234. Affiché dans le livret pour désactiver l'alarme avant la baignade. Laisse vide pour ne pas l'afficher."}
           - {label: "Alarme / surveillance (texte libre)", name: alarm, widget: text, required: false}
           - {label: "Bonnes pratiques", name: rules, widget: text}
