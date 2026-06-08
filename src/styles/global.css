@@ -70,3 +70,26 @@
 }
 .scroll-snap-x::-webkit-scrollbar { display: none; }
 .scroll-snap-x > * { scroll-snap-align: start; }
+
+/* ─────────────────────────────────────────────────────────
+   Impression / « Enregistrer en PDF » — pour consultation hors-ligne
+   Nettoie la page : masque l'UI flottante, garde le contenu + codes + QR WiFi
+   ───────────────────────────────────────────────────────── */
+@media print {
+  /* Conserver les couleurs (codes, cartes d'alerte, identité de marque) */
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  /* Masquer toute l'interface flottante (burger, menu, barre contact, bannières)
+     + les cartes Google Maps qui s'impriment mal */
+  .fixed, .no-print, .pwa-banner, iframe { display: none !important; }
+  html { scroll-behavior: auto; }
+  body { padding: 0 !important; background: #fff !important; }
+  /* Éviter de couper un bloc/carte au milieu d'une page */
+  .card, li, figure, img { break-inside: avoid; page-break-inside: avoid; }
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  img { max-height: 72vh; }
+  a { text-decoration: none !important; }
+  @page { margin: 14mm; }
+}

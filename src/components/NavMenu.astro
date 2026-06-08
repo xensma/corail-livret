@@ -117,6 +117,15 @@ const grouped = [
       <a href={`/en/${villaSlug}`} class={`flex-1 text-center py-2.5 rounded-full font-medium text-sm transition-all ${locale === 'en' ? 'bg-corail-turquoise text-white' : 'bg-white text-corail-ink/60 hover:text-corail-ink'}`}>English</a>
     </div>
   </div>
+
+  <!-- Télécharger / Enregistrer en PDF (pour consultation hors-ligne) -->
+  <div class="px-6 pb-8">
+    <button id="nav-print" type="button" class="w-full flex items-center justify-center gap-2 py-2.5 rounded-full bg-white text-corail-ink/80 hover:text-corail-turquoise-dark border border-corail-sand/40 hover:border-corail-turquoise transition-all text-sm font-medium">
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      {locale === 'en' ? 'Save as PDF' : 'Enregistrer en PDF'}
+    </button>
+    <p class="text-[11px] text-corail-ink/45 mt-2 text-center leading-snug">{locale === 'en' ? 'Save it before you travel to read it offline.' : 'Enregistrez-le avant de partir pour le consulter hors-ligne.'}</p>
+  </div>
 </nav>
 
 <script>
@@ -153,6 +162,12 @@ const grouped = [
   });
   close?.addEventListener('click', closeMenu);
   backdrop?.addEventListener('click', closeMenu);
+
+  // Enregistrer en PDF / Imprimer : ferme le menu puis ouvre la boîte d'impression
+  document.getElementById('nav-print')?.addEventListener('click', () => {
+    closeMenu();
+    setTimeout(() => window.print(), 350);
+  });
 
   // Close on link click + smooth scroll with offset for sticky bar
   document.querySelectorAll('[data-nav-link]').forEach((link) => {
