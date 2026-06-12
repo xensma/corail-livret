@@ -133,8 +133,8 @@
     "Signalez toute casse ou souci à votre concierge — on règle ensemble."
   ],
   "trashSchedule": {
-    "ordures": "Collecte selon planning communal. Sortir les bacs la veille au soir.",
-    "tri": "Bac jaune : bouteilles plastique, papier/carton, fer/aluminium.",
+    "ordures": "Bac gris, collecte le lundi. Sortir les bacs la veille au soir.",
+    "tri": "Bac jaune, collecte le mercredi : bouteilles plastique, papier/carton, fer/aluminium.",
     "verre": "Conteneurs verre les plus proches : indiqués par votre concierge à l'arrivée."
   },
   "bebettes": {
