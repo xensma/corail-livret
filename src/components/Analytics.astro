@@ -1,32 +1,57 @@
 ---
 // ───────────────────────────────────────────────────────────────────────────
-// Analytics — mesure d'audience respectueuse de la vie privée.
-//
-// Provider : Plausible — SANS cookie, SANS donnée personnelle, agrégé.
-//   → Aucun bandeau de consentement RGPD requis.
-//   → Variante "outbound-links" : suit AUTOMATIQUEMENT tous les clics vers
-//     l'extérieur (excursions, restaurants, cartes Google Maps, sites
-//     officiels, lien WhatsApp wa.me…). C'est ça, le tunnel de vente.
-//   → Variante "tagged-events" : événements nommés via une simple classe
-//     CSS  plausible-event-name=...  (cf. bouton PDF, WhatsApp, Appel).
-//
-// ▶ POUR ACTIVER (1 seule action, côté Plausible — je ne peux pas créer le
-//   compte à ta place) : sur plausible.io, ajoute un site dont le domaine est
-//   exactement « livrets.corailconciergerie.com » (essai 30 j, puis ~9 €/mois,
-//   ou auto-hébergement). Dès que le domaine existe côté Plausible, les
-//   données remontent — aucune autre modif de code.
-//
-// ▶ Changer de provider (GoatCounter, Plausible self-host, etc.) = remplacer
-//   uniquement la balise <script src=...> ci-dessous. window.track() reste
-//   disponible pour des événements custom à venir.
+// Analytics maison (first-party) — envoie les événements à /collect.php (O2switch).
+// SANS cookie, SANS IP stockée (hash quotidien anonyme côté serveur) → aucun
+// bandeau RGPD. Échecs silencieux : si le backend n'est pas (encore) configuré,
+// le livret n'est ni cassé ni ralenti.
+//   • page vue      : à chaque chargement
+//   • clic sortant  : tout lien <a> vers un autre domaine (excursions, restos,
+//                     cartes, sites officiels, WhatsApp wa.me…)
+//   • événement     : tout élément portant  data-event="Nom"
+//   • helper global : window.track('Nom')  pour des événements custom à venir
 // ───────────────────────────────────────────────────────────────────────────
 ---
 
 <script is:inline>
-  // Stub : permet d'appeler plausible() même avant le chargement du script,
-  // et ne casse rien si l'analytics est bloqué (adblock) ou pas encore activé.
-  window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments); };
-  // Helper provider-agnostique pour d'éventuels événements custom : track('Nom', {prop: 'x'})
-  window.track = function (name, props) { try { window.plausible(name, props ? { props: props } : undefined); } catch (e) {} };
+  (function () {
+    var EP = '/collect.php';
+    function send(p) {
+      try {
+        var body = JSON.stringify(p);
+        if (navigator.sendBeacon) {
+          navigator.sendBeacon(EP, new Blob([body], { type: 'application/json' }));
+        } else {
+          fetch(EP, { method: 'POST', body: body, headers: { 'Content-Type': 'application/json' }, keepalive: true }).catch(function () {});
+        }
+      } catch (e) {}
+    }
+    // villa + langue déduites du chemin : /mango → villa=mango ; /en/mango → en + mango
+    var segs = location.pathname.split('/').filter(Boolean);
+    var locale = 'fr', villa = null;
+    if (segs[0] === 'en') { locale = 'en'; villa = segs[1] || null; }
+    else { villa = segs[0] || null; }
+
+    // Helper provider-agnostique pour des événements custom : track('Nom')
+    window.track = function (name) {
+      send({ t: 'event', n: String(name || ''), p: location.pathname, v: villa, l: locale });
+    };
+
+    // 1) page vue
+    send({ t: 'pageview', p: location.pathname, v: villa, l: locale, r: (document.referrer || '').slice(0, 255) });
+
+    // 2) clics sortants + 3) éléments data-event (capture pour attraper les clics sur enfants)
+    document.addEventListener('click', function (e) {
+      var el = e.target && e.target.closest ? e.target.closest('a[href],[data-event]') : null;
+      if (!el) return;
+      var ev = el.getAttribute('data-event');
+      if (ev) send({ t: 'event', n: ev, p: location.pathname, v: villa, l: locale });
+      var href = el.getAttribute('href');
+      if (href && /^https?:\/\//i.test(href)) {
+        var a = document.createElement('a'); a.href = href;
+        if (a.host && a.host !== location.host) {
+          send({ t: 'outbound', u: href.slice(0, 512), n: a.host, p: location.pathname, v: villa, l: locale });
+        }
+      }
+    }, true);
+  })();
 </script>
-<script is:inline defer data-domain="livrets.corailconciergerie.com" src="https://plausible.io/js/script.outbound-links.tagged-events.js"></script>
